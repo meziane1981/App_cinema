@@ -22,6 +22,7 @@ struct UserExampleView: View {
                         .fontWeight(.thin)
                 }
             }
+            Text(userData.profileDescription)
         }
     }
 }
