@@ -15,6 +15,32 @@ struct UserData: Codable {
     var firstName: String
     var lastName: String
     var image: String
+    var isOnline: Bool
+}
+
+struct Question: Codable {
+    var text: String
+    var image: String
+    var correctAnswer: Int
+    var options: [String]
+}
+
+final class GameManager {
+    var userData: [UserData]
+    var questions: [Question]
+    
+    private static var instance = GameManager(userFile: "UserData", quizFile: "QuizData")
+    
+    func getInstance() -> GameManager {
+        return Self.instance
+    }
+    
+    private init(userFile: String, quizFile: String) {
+        self.userData = loadJSON(userFile)
+        self.questions = loadJSON(quizFile)
+    }
+    
+    
 }
 
 
