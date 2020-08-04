@@ -16,3 +16,4 @@ struct UserData: Codable {
     var lastName: String
     var image: String
 }
+

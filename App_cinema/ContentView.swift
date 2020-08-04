@@ -15,7 +15,12 @@ struct UserExampleView: View {
         VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "person.circle.fill")
-                Text(userData.username)
+                HStack(alignment: .center, spacing: 0) {
+                    Text(userData.username)
+                    Text("(\(userData.id))")
+                        .font(.caption)
+                        .fontWeight(.thin)
+                }
             }
         }
     }
