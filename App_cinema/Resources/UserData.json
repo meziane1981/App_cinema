@@ -8,16 +8,16 @@
     },
     {
         "id": 10002,
-        "username": "guyTwo",
-        "firstName": "Harry",
-        "lastName": "Lastname",
+        "username": "uname2",
+        "firstName": "fname2",
+        "lastName": "lname2",
         "image": "user_10002_small"
     },
     {
         "id": 10003,
-        "username": "anotherUsername",
-        "firstName": "Kate",
-        "lastName": "Smith",
+        "username": "uname3",
+        "firstName": "fname3",
+        "lastName": "lname3",
         "image": "user_10003_small"
     }
 ]
