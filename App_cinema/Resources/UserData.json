@@ -1,0 +1,23 @@
+[
+    {
+        "id": 10001,
+        "username": "djones",
+        "firstName": "Douglas",
+        "lastName": "Jones",
+        "image": "user_10001_small"
+    },
+    {
+        "id": 10002,
+        "username": "guyTwo",
+        "firstName": "Harry",
+        "lastName": "Lastname",
+        "image": "user_10002_small"
+    },
+    {
+        "id": 10003,
+        "username": "anotherUsername",
+        "firstName": "Kate",
+        "lastName": "Smith",
+        "image": "user_10003_small"
+    }
+]

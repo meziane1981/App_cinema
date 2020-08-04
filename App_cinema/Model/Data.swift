@@ -8,23 +8,30 @@
 
 import SwiftUI
 
-func load<T: Decodable>(fileName: String) -> T {
+// For decoding a json file as long as it coforms to Decodable
+func loadJSON<T: Decodable>(fileName: String) -> T {
     
-    guard let file = Bundle.main.url(forResource: fileName, withExtension: nil) else {
+    // Attempt to file file
+    guard let file = Bundle.main.url(forResource: fileName, withExtension: ".json") else {
         fatalError("failed to find file")
     }
     
-    let data: Data
+    // Attempt to load the contents of the file
+    let fileContents: Data
     do {
-        data = try Data(contentsOf: file)
-    }
-    catch {
+        fileContents = try Data(contentsOf: file)
+    } catch {
         fatalError("failed to load contents of file: \(error)")
     }
+    
+    // Attempt to decode the file to the type T from data
     do {
-        return try JSONDecoder().decode(T.self, from: data)
-    }
-    catch {
+        return try JSONDecoder().decode(T.self, from: fileContents)
+    } catch {
         fatalError("failed to decode file: \(error)")
     }
+}
+
+func loadImage(fileName: String) -> CGImage {
+    fatalError()
 }
