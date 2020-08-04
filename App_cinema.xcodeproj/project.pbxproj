@@ -15,6 +15,7 @@
 		D789777524D8433100AD4DDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789777424D8433100AD4DDB /* ContentView.swift */; };
 		D789777724D8433300AD4DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D789777624D8433300AD4DDB /* Assets.xcassets */; };
 		D789777A24D8433300AD4DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D789777924D8433300AD4DDB /* Preview Assets.xcassets */; };
+		D789778724D96ABA00AD4DDB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789778624D96ABA00AD4DDB /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D789777624D8433300AD4DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D789777924D8433300AD4DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D789777E24D8433300AD4DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D789778624D96ABA00AD4DDB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			children = (
 				8C11E1ED24D94A9700D4CAB4 /* Data.swift */,
 				8C11E1F424D94DC300D4CAB4 /* ApplicationData.swift */,
+				D789778624D96ABA00AD4DDB /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				D789777124D8433100AD4DDB /* AppDelegate.swift in Sources */,
 				D789777324D8433100AD4DDB /* SceneDelegate.swift in Sources */,
 				D789777524D8433100AD4DDB /* ContentView.swift in Sources */,
+				D789778724D96ABA00AD4DDB /* Model.swift in Sources */,
 				8C11E1F524D94DC300D4CAB4 /* ApplicationData.swift in Sources */,
 				8C11E1EE24D94A9700D4CAB4 /* Data.swift in Sources */,
 			);
