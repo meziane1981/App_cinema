@@ -9,6 +9,7 @@
 import SwiftUI
 
 let userData: [UserData] = loadJSON("UserData")
+let userDataJSON: String = writeJSON(userData)
 
 // For decoding a json file as long as it coforms to Decodable
 func loadJSON<T: Decodable>(_ fileName: String) -> T {
@@ -34,14 +35,18 @@ func loadJSON<T: Decodable>(_ fileName: String) -> T {
     }
 }
 
-func writeJSON<T: Codable>(_ data: T) -> Bool {
+func writeJSON<T: Codable>(_ data: T) -> String {
     let fileContents: Data
     do {
         fileContents = try JSONEncoder().encode(data)
     } catch {
         fatalError("failed to encode JSON file")
     }
-    fatalError()
+    
+    guard let returnValue = String(data: fileContents, encoding: .utf8) else {
+        fatalError("failed to convert encoded value to String")
+    }
+    return returnValue
 }
 
 func loadImage(fileName: String) -> CGImage {

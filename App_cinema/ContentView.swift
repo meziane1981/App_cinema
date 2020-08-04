@@ -27,6 +27,7 @@ struct ContentView: View {
             ForEach(userData, id: \.id) { uData in
                 UserExampleView(userData: uData)
             }
+            Text(userDataJSON)
         }
     }
 }
