@@ -8,12 +8,14 @@
 
 import SwiftUI
 
+let userData: [UserData] = loadJSON("UserData")
+
 // For decoding a json file as long as it coforms to Decodable
-func loadJSON<T: Decodable>(fileName: String) -> T {
+func loadJSON<T: Decodable>(_ fileName: String) -> T {
     
     // Attempt to file file
     guard let file = Bundle.main.url(forResource: fileName, withExtension: ".json") else {
-        fatalError("failed to find file")
+        fatalError("failed to find JSON file")
     }
     
     // Attempt to load the contents of the file
@@ -30,6 +32,16 @@ func loadJSON<T: Decodable>(fileName: String) -> T {
     } catch {
         fatalError("failed to decode file: \(error)")
     }
+}
+
+func writeJSON<T: Codable>(_ data: T) -> Bool {
+    let fileContents: Data
+    do {
+        fileContents = try JSONEncoder().encode(data)
+    } catch {
+        fatalError("failed to encode JSON file")
+    }
+    fatalError()
 }
 
 func loadImage(fileName: String) -> CGImage {

@@ -8,9 +8,26 @@
 
 import SwiftUI
 
+struct UserExampleView: View {
+    var userData: UserData
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: "person.circle.fill")
+                Text(userData.username)
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            ForEach(userData, id: \.id) { uData in
+                UserExampleView(userData: uData)
+            }
+        }
     }
 }
 

@@ -8,9 +8,10 @@
 
 import SwiftUI
 
-struct UserData: Decodable {
+struct UserData: Codable {
     var id: Int
     var username: String
+    var profileDescription: String
     var firstName: String
     var lastName: String
     var image: String

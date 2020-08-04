@@ -2,6 +2,7 @@
     {
         "id": 10001,
         "username": "djones",
+        "profileDescription": "insert description here",
         "firstName": "Douglas",
         "lastName": "Jones",
         "image": "user_10001_small"
@@ -9,6 +10,7 @@
     {
         "id": 10002,
         "username": "uname2",
+        "profileDescription": "insert description here",
         "firstName": "fname2",
         "lastName": "lname2",
         "image": "user_10002_small"
@@ -16,6 +18,7 @@
     {
         "id": 10003,
         "username": "uname3",
+        "profileDescription": "insert description here",
         "firstName": "fname3",
         "lastName": "lname3",
         "image": "user_10003_small"
