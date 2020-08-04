@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct UserData: Codable {
+struct UserData: Codable, Identifiable {
     var id: Int
     var username: String
     var profileDescription: String
@@ -18,7 +18,8 @@ struct UserData: Codable {
     var isOnline: Bool
 }
 
-struct Question: Codable {
+struct Question: Codable, Identifiable {
+    var id: String
     var text: String
     var image: String
     var correctAnswer: Int
