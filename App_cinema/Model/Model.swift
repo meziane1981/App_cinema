@@ -22,6 +22,11 @@ struct User: Identifiable {
     var time: Double
     let rewards: [Reward]
     let statistics: [Statistic]
+    var friends: [Int] // tableau d'ID
+    
+    mutating func addFriend() {
+        self.friends.append(self.id)
+    }
 }
 
 struct Reward: Identifiable {
@@ -29,6 +34,13 @@ struct Reward: Identifiable {
     var id = UUID()
     let name: String
     let icon: String
+    let price: Double
+}
+
+struct Shop {
+    
+    let rewards: [Reward]
+    var coin: Int
 }
 
 struct Statistic {
@@ -50,5 +62,5 @@ struct Game {
     let question: String
     let answer: String
     let time: Double
-    
+    let maxNumberOfQuestions: Int
 }
