@@ -66,8 +66,10 @@ final class GameManager {
     }
     
     func findUsers<PropertyType: Equatable>(_ searchFor: PropertyType, _ keyPath: KeyPath<BasicUserData, PropertyType>) -> Array<BasicUserData> {
+        // Anything that matches searchFor
         var matchedSearch: Array<BasicUserData> = []
         
+        // Inefficient fix later, maybe we should sort the array first but that might slow things down further unless we just keep an array of sorted references
         for basicUser in publicUserData {
             if basicUser[keyPath: keyPath] == searchFor {
                 matchedSearch.append(basicUser)

@@ -17,8 +17,13 @@ struct QuizButtonStyle: ButtonStyle {
             .foregroundColor(fgColor)
             .padding()
             .background(bgColor)
-            .cornerRadius(20)
+            .cornerRadius(10)
     }
+}
+
+struct ButtonData {
+    let pushValue: Int
+    
 }
 
 struct QuestionTestingView: View {
@@ -26,7 +31,7 @@ struct QuestionTestingView: View {
     @State private var response: Int? = nil
  
     @State private var bgColour: Color = Color.white
-    @State private var primaryTextColor: Color = Color.black
+    @State private var primaryTextColor: Color = Color.gray
     @State private var secondaryTextColor: Color = Color.white
     
     var body: some View {
@@ -34,13 +39,14 @@ struct QuestionTestingView: View {
             
             bgColour
             
+            // The question
             Text("\(question[0].text + "?")")
                 .fontWeight(.semibold)
                 .foregroundColor(primaryTextColor)
                 .padding(20)
                 .font(.title)
             
-            
+            // The answers
             VStack(alignment: .center, spacing: 0) {
                 Spacer(minLength: 690)
                 
@@ -70,7 +76,7 @@ struct QuestionTestingView: View {
                                 .frame(width: 120, height: 30)
                         }
                     }
-                    .buttonStyle(QuizButtonStyle(fgColor: .white, bgColor: primaryTextColor))
+                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
                     
                 }
                 .padding(20)
@@ -87,7 +93,7 @@ struct QuestionTestingView: View {
                                 .frame(width: 120, height: 30)
                         }
                     }
-                    .buttonStyle(QuizButtonStyle(fgColor: .white, bgColor: primaryTextColor))
+                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
                     
                     Spacer()
                     
@@ -101,7 +107,7 @@ struct QuestionTestingView: View {
                                 .frame(width: 120, height: 30)
                         }
                     }
-                    .buttonStyle(QuizButtonStyle(fgColor: .white, bgColor: primaryTextColor))
+                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
                 }
                 .padding(20)
                 
@@ -117,10 +123,12 @@ struct QuestionTestingView: View {
             // Do something
             self.bgColour = Color.green
             self.primaryTextColor = Color.white
+            self.secondaryTextColor = Color.black
         }
         else {
             self.bgColour = Color.red
             self.primaryTextColor = Color.white
+            self.secondaryTextColor = Color.black
         }
     }
 }

@@ -36,9 +36,7 @@ struct UserExampleView: View {
 
 struct ContentView: View {
     //
-    @State var users: [BasicUserData] = GameManager.getInstance().findUsers("Tim", \.firstName)
-    @State var searchingSelection: Int = 0
-    
+    @State var users: [BasicUserData] = []
     @State var searchStr: String = ""
     
 //    var questions = GameManager.getInstance().questions
@@ -50,9 +48,10 @@ struct ContentView: View {
                 TextField("search for user", text: $searchStr)
                 
                 Button(action: {
-                    print("searching")
+                    self.users = GameManager.getInstance().findUsers(self.searchStr, \.firstName)
                 }) {
                     Image(systemName: "magnifyingglass.circle.fill")
+                        .font(Font.system(size: 30))
                 }
             }.padding(20)
             
