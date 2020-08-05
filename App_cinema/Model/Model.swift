@@ -57,10 +57,13 @@ struct Statistic {
 
 
 //game screen
-struct Game {
+struct Quizz: Identifiable {
     
+    let id: Int
     let question: String
     let answer: String
     let time: Double
     let maxNumberOfQuestions: Int
+    let correctAnswer: Int
+    let image: String
 }
