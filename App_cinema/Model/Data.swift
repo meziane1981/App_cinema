@@ -14,7 +14,7 @@ import SwiftUI
 // For decoding a json file as long as it coforms to Decodable
 func loadJSON<T: Decodable>(_ fileName: String) -> T {
     
-    // Attempt to file file
+    // Attempt to find file
     guard let file = Bundle.main.url(forResource: fileName, withExtension: ".json") else {
         fatalError("failed to find JSON file")
     }
