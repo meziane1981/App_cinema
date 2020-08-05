@@ -9,32 +9,71 @@
 import SwiftUI
 
 struct UserExampleView: View {
-    var userData: UserData
+    var userData: BasicUserData
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "person.circle.fill")
                 HStack(alignment: .center, spacing: 0) {
-                    Text(userData.username)
-                    Text("(\(userData.id))")
+                    Text(userData.userName)
+                    Text("(#\(userData.id))")
                         .font(.caption)
                         .fontWeight(.thin)
                 }
+
             }
-            Text(userData.profileDescription)
+            
+            HStack() {
+                Text("\(userData.firstName) \(userData.lastName)(\(userData.gender.rawValue == Gender.male.rawValue ? "m" : "f"))")
+            }
         }
+//            Text(userData.profileDescription)
     }
 }
 
+
+
 struct ContentView: View {
+    //
+    @State var users: [BasicUserData] = GameManager.getInstance().findUsers("Tim", \.firstName)
+    @State var searchingSelection: Int = 0
+    
+    @State var searchStr: String = ""
+    
+//    var questions = GameManager.getInstance().questions
     var body: some View {
+        
         VStack {
-            ForEach(userData, id: \.id) { uData in
-                UserExampleView(userData: uData)
+            
+            HStack {
+                TextField("search for user", text: $searchStr)
+                
+                Button(action: {
+                    print("searching")
+                }) {
+                    Image(systemName: "magnifyingglass.circle.fill")
+                }
+            }.padding(20)
+            
+            ForEach(users) {
+                UserExampleView(userData: $0)
             }
-            Text(userDataJSON)
+//            Text("Everything is under control, don't panic!")
+//                .padding(.bottom, 50)
+//            UserExampleView(userData: users[0])
+            
+//            QuestionTestingView(question: questions)
+            
+            
         }
+        
+//        VStack {
+//            ForEach(userData, id: \.id) { uData in
+//                UserExampleView(userData: uData)
+//            }
+//            Text(userDataJSON)
+//        }
     }
 }
 

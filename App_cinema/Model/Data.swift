@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-let userData: [UserData] = loadJSON("UserData")
-let userDataJSON: String = writeJSON(userData)
+//let userData: [UserData] = loadJSON("UserData")
+//let userDataJSON: String = writeJSON(userData)
 
 // For decoding a json file as long as it coforms to Decodable
 func loadJSON<T: Decodable>(_ fileName: String) -> T {
