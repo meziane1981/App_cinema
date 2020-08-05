@@ -23,11 +23,12 @@ struct QuizButtonStyle: ButtonStyle {
 
 struct ButtonData {
     let pushValue: Int
+    let Symbol: String
     
 }
 
 struct QuestionTestingView: View {
-    var question: [Question]
+    var questions: [Question]
     @State private var response: Int? = nil
  
     @State private var bgColour: Color = Color.white
@@ -40,7 +41,7 @@ struct QuestionTestingView: View {
             bgColour
             
             // The question
-            Text("\(question[0].text + "?")")
+            Text("\(questions[0].text + "?")")
                 .fontWeight(.semibold)
                 .foregroundColor(primaryTextColor)
                 .padding(20)
@@ -48,70 +49,21 @@ struct QuestionTestingView: View {
             
             // The answers
             VStack(alignment: .center, spacing: 0) {
-                Spacer(minLength: 690)
+                Spacer()
                 
                 // Top row
-                HStack {
+                ForEach(0..<questions[0].options.count) { index in
                     Button(action: {
-                        self.submitAnswer(answerIndex: 0)
+                        self.submitAnswer(answerIndex: index)
                     }) {
                         HStack {
-                            Image(systemName: "a.circle.fill")
-                            Text(question[0].options[0])
-                                .font(.subheadline)
-                                .frame(width: 120, height: 30)
+                            Image(systemName: "circle.fill")
+                            Text(self.questions[0].options[index])
                         }
-                    }
-                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
                     
-                    Spacer()
+                    }.buttonStyle(QuizButtonStyle(fgColor: self.secondaryTextColor, bgColor: self.primaryTextColor))
                     
-                    Button(action: {
-                        self.submitAnswer(answerIndex: 1)
-                    }) {
-                        HStack {
-                            Image(systemName: "b.circle.fill")
-                            Text(question[0].options[1])
-                                .font(.subheadline)
-                                .frame(width: 120, height: 30)
-                        }
-                    }
-                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
-                    
-                }
-                .padding(20)
-                
-                // Bottom row
-                HStack {
-                    Button(action: {
-                        self.submitAnswer(answerIndex: 2)
-                    }) {
-                        HStack {
-                            Image(systemName: "c.circle.fill")
-                            Text(question[0].options[2])
-                                .font(.subheadline)
-                                .frame(width: 120, height: 30)
-                        }
-                    }
-                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        self.submitAnswer(answerIndex: 3)
-                    }) {
-                        HStack {
-                            Image(systemName: "d.circle.fill")
-                            Text(question[0].options[3])
-                                .font(.subheadline)
-                                .frame(width: 120, height: 30)
-                        }
-                    }
-                    .buttonStyle(QuizButtonStyle(fgColor: secondaryTextColor, bgColor: primaryTextColor))
-                }
-                .padding(20)
-                
-                Spacer()
+                }.padding(2.5)
             }
             
         }.foregroundColor(secondaryTextColor)
@@ -119,7 +71,7 @@ struct QuestionTestingView: View {
     }
     
     func submitAnswer(answerIndex: Int) {
-        if answerIndex == self.question[0].correctAnswer.rawValue {
+        if answerIndex == self.questions[0].correctAnswer.rawValue {
             // Do something
             self.bgColour = Color.green
             self.primaryTextColor = Color.white
@@ -135,6 +87,6 @@ struct QuestionTestingView: View {
 
 struct Quiz_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionTestingView(question: GameManager.getInstance().questions)
+        QuestionTestingView(questions: GameManager.getInstance().questions)
     }
 }

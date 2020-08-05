@@ -39,7 +39,7 @@ struct ContentView: View {
     @State var users: [BasicUserData] = []
     @State var searchStr: String = ""
     
-//    var questions = GameManager.getInstance().questions
+    //    var questions = GameManager.getInstance().questions
     var body: some View {
         
         VStack {
@@ -58,21 +58,8 @@ struct ContentView: View {
             ForEach(users) {
                 UserExampleView(userData: $0)
             }
-//            Text("Everything is under control, don't panic!")
-//                .padding(.bottom, 50)
-//            UserExampleView(userData: users[0])
-            
-//            QuestionTestingView(question: questions)
-            
-            
+            // Text("Everything is under control, don't panic!")
         }
-        
-//        VStack {
-//            ForEach(userData, id: \.id) { uData in
-//                UserExampleView(userData: uData)
-//            }
-//            Text(userDataJSON)
-//        }
     }
 }
 
