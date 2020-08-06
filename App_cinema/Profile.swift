@@ -21,7 +21,7 @@ struct UserProfilePreview: View {
                 Image(systemName: "person.circle.fill")
                 HStack(alignment: .center, spacing: 0) {
                     Text(userData.userName)
-                    Text("(#\(userData.id))")
+                    Text("#\(userData.id)")
                         .font(.caption)
                         .fontWeight(.thin)
                 }
@@ -30,6 +30,43 @@ struct UserProfilePreview: View {
             // To be removed
             HStack() {
                 Text("\(userData.firstName) \(userData.lastName)(\(userData.gender.rawValue == Gender.male.rawValue ? "m" : "f"))")
+            }
+        }
+    }
+}
+
+struct UserTopRankProfileView: View {
+    var userData: BasicUserData
+    
+    var body: some View {
+        VStack(alignment: .center) {
+            
+                Image(systemName: "person.circle.fill")
+                
+                    Text(userData.userName)
+                    Text("#\(userData.id)")
+                        .font(.caption)
+                        .fontWeight(.thin)
+                    Text("score")
+        }
+    }
+}
+
+struct UserRankProfileView: View {
+    var userData: BasicUserData
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: "person.circle.fill")
+                VStack {
+                        Text(userData.userName)
+                        Text("#\(userData.id)")
+                            .font(.caption)
+                            .fontWeight(.thin)
+                }
+                Text("Score")
+                    .multilineTextAlignment(.trailing)
             }
         }
     }

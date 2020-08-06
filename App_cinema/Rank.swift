@@ -57,7 +57,7 @@ struct RankView: View {
                 HStack {
                     ForEach(0...2, id: \.self) { index in
                         VStack {
-                            UserProfilePreview(userData: self.users[index])
+                            UserTopRankProfileView(userData: self.users[index])
                                 .padding(.leading, 10)
                                 .padding(.trailing, 10)
                         }
@@ -65,24 +65,25 @@ struct RankView: View {
                 }
                 .padding(.top, 40)
                 .padding(.bottom, 40)
+                .frame(maxWidth: .infinity)
                 .background(Color.white)
             }
             
             Spacer()
             ScrollView {
+                Spacer()
                 VStack {
-                    ForEach(users) { user in
+                    ForEach(3...50, id: \.self) { index in
                         HStack {
-                            UserProfilePreview(userData: user)
-                            Text("score")
+                            UserRankProfileView(userData: self.users[index])
                         }
                         .padding()
-                        .frame(width: 250.0, height: 80.0)
+                        .frame(width: 280.0, height: 80.0)
                         .background(Color.white)
                         .cornerRadius(50)
                     }
                 }
-                Spacer()
+                
             }
             
         }
