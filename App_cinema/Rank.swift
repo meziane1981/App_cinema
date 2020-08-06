@@ -32,45 +32,48 @@ struct RankView: View {
     
     @State var pickerSelection = 0
     init() {
-            UISegmentedControl.appearance().selectedSegmentTintColor = .blue
-            UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-            UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
+        UISegmentedControl.appearance().selectedSegmentTintColor = .blue
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
         self.users = GameManager.getInstance().publicUserData
     }
-        
-
+    
+    
     var body: some View {
-        ZStack {
+        VStack {
             VStack {
                 Text("Classement")
                     .font(.title)
                     .foregroundColor(Color.white)
                     .fontWeight(.heavy)
-                 Picker(selection: $pickerSelection, label: Text("rank")) {
-                        Text("Today").tag(0)
-                        Text("Week").tag(1)
-                        Text("Month").tag(2)
-                    }
-                    .padding()
-                    .pickerStyle(SegmentedPickerStyle())
-                ZStack {
-                    
-                        ForEach(users) { user in
-                            HStack {
-                            UserProfilePreview(userData: user)
-                                .padding(50)
+                Picker(selection: $pickerSelection, label: Text("rank")) {
+                    Text("Today").tag(0)
+                    Text("Week").tag(1)
+                    Text("Month").tag(2)
+                }
+                .padding()
+                .pickerStyle(SegmentedPickerStyle())
+                
+                HStack {
+                    ForEach(0...2, id: \.self) { index in
+                        VStack {
+                            UserProfilePreview(userData: self.users[index])
+                                .padding(.leading, 10)
+                                .padding(.trailing, 10)
                         }
                     }
-                    .background(Color.white)
                 }
-                Spacer()
+                .padding(.top, 40)
+                .padding(.bottom, 40)
+                .background(Color.white)
+            }
+            
+            Spacer()
+            ScrollView {
                 VStack {
                     ForEach(users) { user in
                         HStack {
-                            Image(systemName: "person.circle.fill")
-                            VStack {
-                                UserProfilePreview(userData: user)
-                            }
+                            UserProfilePreview(userData: user)
                             Text("score")
                         }
                         .padding()
@@ -81,6 +84,7 @@ struct RankView: View {
                 }
                 Spacer()
             }
+            
         }
         .background(Color(0x041353))
     }
