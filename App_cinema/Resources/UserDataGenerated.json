@@ -8,7 +8,7 @@
         "gender": "male",
         "age": 22,
         "image": "user_1000001_small",
-        "isOnline": false
+        "isOnline": true
     },
     {
         "id": 100002,

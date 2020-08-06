@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+// User data
+//var friendIDs: [Int] = [100003, 100007, 100009, 100012]
+//var friends: [BasicUserData] = []
+//
+//for index in friendIDs {
+//    GameManager.find
+//}
 
 enum Gender: String, Codable {
     case male, female
@@ -46,6 +53,7 @@ struct Question: Codable, Identifiable {
 }
 
 final class GameManager {
+    private var currentUserID: Int
     private var userData: [UserData]
     var publicUserData: [BasicUserData]
     var questions: [Question]
@@ -61,8 +69,24 @@ final class GameManager {
         self.publicUserData = self.userData.map {
             BasicUserData(id: $0.id, userName: $0.userName, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
         }
-        
         self.questions = loadJSON(quizFile)
+        
+            // For permissions
+        self.currentUserID = userData[0].id
+        }
+        
+        
+    
+    
+    // computed property that is the relevant info depending on whether the current user is friends with the other user
+    // this will be removed only exists so we can test permission
+    func requestUserDetails(_ id: Int) -> Optional<UserData> {
+        for user in userData {
+            if user.id == id {
+                return user
+            }
+        }
+        return nil
     }
     
     func findUsers<PropertyType: Equatable>(_ searchFor: PropertyType, _ keyPath: KeyPath<BasicUserData, PropertyType>) -> Array<BasicUserData> {
