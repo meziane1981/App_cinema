@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+extension Color {
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
+}
+
 struct UserProfilePreview: View {
     var userData: BasicUserData
     
@@ -32,7 +36,11 @@ struct UserProfilePreview: View {
 }
 
 struct Profile: View {
-    var percentage: Int = 100
+    
+    let user = GameManager.getInstance().requestUserDetails(100001)!
+
+    // Progression
+    var percentage: Int = 75
     
     // Style
     var primaryViewColor = Color(red: 4 / 255, green: 19 / 255, blue: 83 / 255)
@@ -46,9 +54,53 @@ struct Profile: View {
     ]), startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-        Text("Something here")
+        ZStack {
+            primaryViewColor
+            
+            VStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(Color.offWhite)
+                        .frame(width: UIScreen.main.bounds.size.width, height: 300)
+                    
+                    ZStack {
+                        Image("user_10001_medium")
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.white, lineWidth: 5))
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                        
+                        VStack(alignment: .center, spacing: 0) {
+                            HStack(alignment: .center, spacing: 5) {
+                                Text(user.userName)
+                                    .font(.headline)
+                                Circle()
+                                    .fill(user.isOnline ? onlineIndicatorGradient : offlineIndicatorGradient)
+                                    .frame(width: 10, height: 10)
+                            }
+                            Text("#\(user.id)")
+                                .font(Font.system(size: 10))
+                        }
+                        .padding(.top, 170)
+                        
+                    }
+                    .foregroundColor(.black)
+                }
+                
+                Spacer()
+                
+            }
+            
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
+
+//struct Profile_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Profile(user: GameManager, friends: [BasicUserData])
+//    }
+//}
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {

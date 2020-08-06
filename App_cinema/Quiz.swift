@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct QuizButtonStyle: ButtonStyle {
+    
     var fgColor: Color
     var bgColor: Color
     
@@ -17,76 +18,101 @@ struct QuizButtonStyle: ButtonStyle {
             .foregroundColor(fgColor)
             .padding()
             .background(bgColor)
-            .cornerRadius(10)
+            .cornerRadius(15)
     }
 }
 
-struct ButtonData {
-    let pushValue: Int
-    let Symbol: String
+//struct ButtonData {
+//    let Symbol: String
+//    let label: String
+//    let pushValue: Int
+//
+//
+//}
+
+struct QuizButton: View {
+    @Binding var response: Int?
     
+    let label: String
+    let pushValue: Int
+    
+    // Style, parent is in charge of this
+    let parentTextColor: Color
+    let textColor: Color
+    let bgColor: Color
+    
+    var body: some View {
+        Button(action: {
+            self.response = self.pushValue
+        }) {
+            Text(label)
+                .frame(maxWidth: .infinity)
+            
+        }
+        .disabled(response == nil ? false : true)
+        .buttonStyle(QuizButtonStyle(fgColor: self.textColor, bgColor: self.parentTextColor.opacity(0.2)))
+    }
 }
 
 struct QuestionTestingView: View {
-    var questions: [Question]
+    // Now only a single question, will create a parent view called game that will handle this
+    var question: Question
     @State private var response: Int? = nil
- 
+    
+    // Style
     @State private var bgColour: Color = Color.white
-    @State private var primaryTextColor: Color = Color.gray
+    @State private var primaryTextColor: Color = Color.white
     @State private var secondaryTextColor: Color = Color.white
     
     var body: some View {
         ZStack {
-            
-            bgColour
+//            bgColour
+            LinearGradient(gradient: Gradient(colors: [.orange, .purple]), startPoint:    .topLeading, endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(.all)
             
             // The question
-            Text("\(questions[0].text + "?")")
+            Text("\(question.text + "?")")
                 .fontWeight(.semibold)
                 .foregroundColor(primaryTextColor)
-                .padding(20)
+                .padding(40)
                 .font(.title)
             
             // The answers
             VStack(alignment: .center, spacing: 0) {
                 Spacer()
                 
-                // Top row
-                ForEach(0..<questions[0].options.count) { index in
-                    Button(action: {
-                        self.submitAnswer(answerIndex: index)
-                    }) {
-                        HStack {
-                            Image(systemName: "circle.fill")
-                            Text(self.questions[0].options[index])
-                        }
-                    
-                    }.buttonStyle(QuizButtonStyle(fgColor: self.secondaryTextColor, bgColor: self.primaryTextColor))
+                ForEach(0..<question.options.count) { index in
+                    QuizButton(response: self.$response, label: self.question.options[index], pushValue: index, parentTextColor: self.primaryTextColor, textColor: self.secondaryTextColor, bgColor: .orange)
                     
                 }.padding(2.5)
-            }
+                .padding(5)
+                    
+            }.padding(.bottom, 10)
             
-        }.foregroundColor(secondaryTextColor)
-            .edgesIgnoringSafeArea(.all)
+        }
+        .foregroundColor(secondaryTextColor)
+        .edgesIgnoringSafeArea(.all)
     }
     
-    func submitAnswer(answerIndex: Int) {
-        if answerIndex == self.questions[0].correctAnswer.rawValue {
-            // Do something
-            self.bgColour = Color.green
-            self.primaryTextColor = Color.white
-            self.secondaryTextColor = Color.black
-        }
-        else {
-            self.bgColour = Color.red
-            self.primaryTextColor = Color.white
-            self.secondaryTextColor = Color.black
-        }
-    }
+//    func submitAnswer(answerIndex: Int) {
+//        if answerIndex == self.questions[0].correctAnswer.rawValue {
+//            // Do something
+//            self.bgColour = Color.green
+//            self.primaryTextColor = Color.white
+//            self.secondaryTextColor = Color.black
+//        }
+//        else {
+//            self.bgColour = Color.red
+//            self.primaryTextColor = Color.white
+//            self.secondaryTextColor = Color.black
+//        }
+//    }
 }
 
 struct Quiz_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionTestingView(questions: GameManager.getInstance().questions)
+        QuestionTestingView(question: GameManager.getInstance().questions[0])
     }
 }
+
+
