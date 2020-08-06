@@ -8,86 +8,51 @@
 
 import SwiftUI
 
-prefix operator ⋮
-prefix func ⋮(hex:UInt32) -> Color {
-    return Color(hex)
-}
-
-extension Color {
-    init(_ hex: UInt32, opacity:Double = 1.0) {
-        let red = Double((hex & 0xff0000) >> 16) / 255.0
-        let green = Double((hex & 0xff00) >> 8) / 255.0
-        let blue = Double((hex & 0xff) >> 0) / 255.0
-        self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
-    }
-}
-
-let hexColor:(UInt32) -> (Color) = {
-    return Color($0)
-}
-
 struct RankView: View {
     
     var users: [BasicUserData]
-    
     @State var pickerSelection = 0
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = .blue
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
         self.users = GameManager.getInstance().publicUserData
     }
     
-    
     var body: some View {
-        VStack {
+        ZStack{
+            Color("041353").edgesIgnoringSafeArea(.all)
             VStack {
-                Text("Classement")
-                    .font(.title)
-                    .foregroundColor(Color.white)
-                    .fontWeight(.heavy)
-                Picker(selection: $pickerSelection, label: Text("rank")) {
-                    Text("Today").tag(0)
-                    Text("Week").tag(1)
-                    Text("Month").tag(2)
-                }
-                .padding()
-                .pickerStyle(SegmentedPickerStyle())
-                
-                HStack {
-                    ForEach(0...2, id: \.self) { index in
-                        VStack {
-                            UserTopRankProfileView(userData: self.users[index])
-                                .padding(.leading, 10)
-                                .padding(.trailing, 10)
-                        }
-                    }
-                }
-                .padding(.top, 40)
-                .padding(.bottom, 40)
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
-            }
-            
-            Spacer()
-            ScrollView {
-                Spacer()
                 VStack {
-                    ForEach(3...50, id: \.self) { index in
-                        HStack {
-                            UserRankProfileView(userData: self.users[index])
+                    Text("Classement")
+                        .font(.title)
+                        .foregroundColor(Color.white)
+                        .fontWeight(.heavy)
+                    Picker(selection: $pickerSelection, label: Text("rank")) {
+                        Text("Today").tag(0)
+                        Text("Week").tag(1)
+                        Text("Month").tag(2)
+                    }
+                    .padding()
+                    .pickerStyle(SegmentedPickerStyle())
+                    HStack {
+                        ForEach(0...2, id: \.self) { index in
+                            UserTopRankProfileView(userData: self.users[index], rank: index + 1)
                         }
-                        .padding()
-                        .frame(width: 280.0, height: 80.0)
-                        .background(Color.white)
-                        .cornerRadius(50)
+                    }
+                    .padding(.top, 40)
+                    .padding(.bottom, 20)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                }
+                Spacer()
+                ScrollView {
+                    Spacer()
+                    VStack(alignment: .leading) {
+                        ForEach(3..<50, id: \.self) { index in
+                            UserRankProfileView(userData: self.users[index], rank: index + 1)
+                        }
                     }
                 }
-                
             }
-            
         }
-        .background(Color(0x041353))
     }
 }
 

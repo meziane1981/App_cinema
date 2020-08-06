@@ -35,43 +35,6 @@ struct UserProfilePreview: View {
     }
 }
 
-struct UserTopRankProfileView: View {
-    var userData: BasicUserData
-    
-    var body: some View {
-        VStack(alignment: .center) {
-            
-                Image(systemName: "person.circle.fill")
-                
-                    Text(userData.userName)
-                    Text("#\(userData.id)")
-                        .font(.caption)
-                        .fontWeight(.thin)
-                    Text("score")
-        }
-    }
-}
-
-struct UserRankProfileView: View {
-    var userData: BasicUserData
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "person.circle.fill")
-                VStack {
-                        Text(userData.userName)
-                        Text("#\(userData.id)")
-                            .font(.caption)
-                            .fontWeight(.thin)
-                }
-                Text("Score")
-                    .multilineTextAlignment(.trailing)
-            }
-        }
-    }
-}
-
 struct Profile: View {
     
     let user = GameManager.getInstance().requestUserDetails(100001)!

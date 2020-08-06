@@ -24,10 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: ContentView)
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        UISegmentedControl.appearance().selectedSegmentTintColor = .blue
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

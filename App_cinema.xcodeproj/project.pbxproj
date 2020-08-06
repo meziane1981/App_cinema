@@ -16,6 +16,9 @@
 		8CC034DF24D9FB7300C53191 /* UserDataGenerated.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CC034DE24D9FB7300C53191 /* UserDataGenerated.json */; };
 		8CC034E124DA04BD00C53191 /* QuizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CC034E024DA04BD00C53191 /* QuizData.json */; };
 		BD7436E324DBEEAB00AAA10B /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7436E224DBEEAB00AAA10B /* Rank.swift */; };
+		BD7436E724DC3DBD00AAA10B /* Colorextensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7436E624DC3DBD00AAA10B /* Colorextensions.swift */; };
+		BD7436E924DC3E3200AAA10B /* UserTopRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7436E824DC3E3200AAA10B /* UserTopRankView.swift */; };
+		BD7436EB24DC3E7800AAA10B /* UserRankProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7436EA24DC3E7800AAA10B /* UserRankProfileView.swift */; };
 		D789777124D8433100AD4DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789777024D8433100AD4DDB /* AppDelegate.swift */; };
 		D789777324D8433100AD4DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789777224D8433100AD4DDB /* SceneDelegate.swift */; };
 		D789777524D8433100AD4DDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789777424D8433100AD4DDB /* ContentView.swift */; };
@@ -34,6 +37,9 @@
 		8CC034DE24D9FB7300C53191 /* UserDataGenerated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDataGenerated.json; sourceTree = "<group>"; };
 		8CC034E024DA04BD00C53191 /* QuizData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizData.json; sourceTree = "<group>"; };
 		BD7436E224DBEEAB00AAA10B /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		BD7436E624DC3DBD00AAA10B /* Colorextensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colorextensions.swift; sourceTree = "<group>"; };
+		BD7436E824DC3E3200AAA10B /* UserTopRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTopRankView.swift; sourceTree = "<group>"; };
+		BD7436EA24DC3E7800AAA10B /* UserRankProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRankProfileView.swift; sourceTree = "<group>"; };
 		D789776D24D8433100AD4DDB /* App_cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_cinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D789777024D8433100AD4DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D789777224D8433100AD4DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,8 +84,11 @@
 		D789776424D8433100AD4DDB = {
 			isa = PBXGroup;
 			children = (
+				BD7436EA24DC3E7800AAA10B /* UserRankProfileView.swift */,
+				BD7436E824DC3E3200AAA10B /* UserTopRankView.swift */,
 				D789776F24D8433100AD4DDB /* App_cinema */,
 				D789776E24D8433100AD4DDB /* Products */,
+				BD7436E624DC3DBD00AAA10B /* Colorextensions.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,12 +203,15 @@
 				D789777124D8433100AD4DDB /* AppDelegate.swift in Sources */,
 				D789777324D8433100AD4DDB /* SceneDelegate.swift in Sources */,
 				8C4C70D924DA80CC00C68B86 /* Quiz.swift in Sources */,
+				BD7436E724DC3DBD00AAA10B /* Colorextensions.swift in Sources */,
 				BD7436E324DBEEAB00AAA10B /* Rank.swift in Sources */,
+				BD7436E924DC3E3200AAA10B /* UserTopRankView.swift in Sources */,
 				D789777524D8433100AD4DDB /* ContentView.swift in Sources */,
 				D789778724D96ABA00AD4DDB /* Model.swift in Sources */,
 				8C4C70DB24DAE9B300C68B86 /* Search.swift in Sources */,
 				8C11E1F524D94DC300D4CAB4 /* ApplicationData.swift in Sources */,
 				8C4C70DD24DAEA9C00C68B86 /* Profile.swift in Sources */,
+				BD7436EB24DC3E7800AAA10B /* UserRankProfileView.swift in Sources */,
 				8C11E1EE24D94A9700D4CAB4 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
