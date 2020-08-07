@@ -54,12 +54,7 @@ struct RankView: View {
     ]
     
     init() {
-        sortedArrayToday = array.sorted(by: { $0.pointToday > $1.pointToday })
-        sortedArrayWeek = array.sorted(by: {
-            $0.pointWeek > $1.pointWeek })
-        sortedArrayMonth = array.sorted(by : {
-            $0.pointMonth  > $1.pointMonth })
-        self.users = GameManager.getInstance().publicUserData
+
     }
     
     var body: some View {

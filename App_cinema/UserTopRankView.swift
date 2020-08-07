@@ -15,9 +15,12 @@ struct UserTopRankProfileView: View {
     var body: some View {
         VStack {
             VStack(alignment: .center) {
-                Image(systemName: "person.circle.fill")
-                    .font(.system(size: 50, weight: .regular))
-                Text(userData.userName)
+                userData.getProfileImage(size: PictureSize.small)
+                .clipShape(Circle())
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                
+                Text(userData.nickName)
                 Text("#\(userData.id)")
                     .font(.caption)
                     .fontWeight(.thin)
