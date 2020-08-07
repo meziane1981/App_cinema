@@ -23,7 +23,7 @@ struct UserTopRankProfileView: View {
                     .fontWeight(.thin)
                 Text("score")
                     .fontWeight(.heavy)
-                    .font(.title)
+                    .font(.headline)
             }
             .padding(.leading, 10)
             .padding(.trailing, 10)

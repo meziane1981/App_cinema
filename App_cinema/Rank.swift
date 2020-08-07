@@ -26,9 +26,9 @@ struct RankView: View {
                         .foregroundColor(Color.white)
                         .fontWeight(.heavy)
                     Picker(selection: $pickerSelection, label: Text("rank")) {
-                        Text("Today").tag(0)
-                        Text("Week").tag(1)
-                        Text("Month").tag(2)
+                        Text("TODAY").tag(0)
+                        Text("WEEK").tag(1)
+                        Text("MONTH").tag(2)
                     }
                     .padding()
                     .pickerStyle(SegmentedPickerStyle())
@@ -41,6 +41,8 @@ struct RankView: View {
                     .padding(.bottom, 20)
                     .frame(maxWidth: .infinity)
                     .background(Color.white)
+                    .cornerRadius(50)
+                    .shadow(color: Color("3779F4"), radius: 25)
                 }
                 Spacer()
                 ScrollView {

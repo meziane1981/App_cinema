@@ -30,13 +30,13 @@ struct UserRankProfileView: View {
                 }
                 Spacer()
                 Text("Score")
-                    .fontWeight(.heavy)
-                    .font(.title)
-                .frame(alignment: .trailing)
+                    .fontWeight(.semibold)
+                    .font(.headline)
             }
             .padding()
             .background(Color.white)
             .cornerRadius(50)
+            .shadow(color: Color("3779F4"), radius: 15)
         }
         .padding(.trailing, 40)
     }
