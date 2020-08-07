@@ -8,11 +8,57 @@
 
 import SwiftUI
 
+struct DataUser: Identifiable {
+    
+    var id = UUID()
+    let name: String
+    let lastname: String
+    let nickname: String
+    let pointToday: Int
+    let pointWeek: Int
+    let pointMonth: Int
+}
+
 struct RankView: View {
     
-    var users: [BasicUserData]
+    
     @State var pickerSelection = 0
+    var selectedSortedArray: [DataUser]{
+        switch pickerSelection {
+        case 0:
+            return sortedArrayToday
+        case 1:
+            return sortedArrayWeek
+        case 2:
+            return sortedArrayMonth
+        default:
+            return sortedArrayToday
+        }
+    }
+    
+    var users: [BasicUserData]
+    //    /////////////////////////////////
+    
+    
+    let sortedArrayToday: [DataUser]
+    let sortedArrayWeek: [DataUser]
+    let sortedArrayMonth: [DataUser]
+    
+    var array: [DataUser] = [
+        DataUser(name: "john", lastname: "doe", nickname: "JD", pointToday: 1200, pointWeek: 5008, pointMonth: 7000),
+        DataUser(name: "henry", lastname: "bbb", nickname: "HB", pointToday: 1345, pointWeek: 2690, pointMonth: 12000),
+        DataUser(name: "jean", lastname: "michel", nickname: "JM", pointToday: 900, pointWeek: 4560, pointMonth: 10000),
+        DataUser(name: "lucie", lastname: "sa", nickname: "LS", pointToday: 2365, pointWeek: 3000, pointMonth: 9900),
+        DataUser(name: "pascal", lastname: "lo", nickname: "PL", pointToday: 230, pointWeek: 3400, pointMonth: 14900),
+        DataUser(name: "ho", lastname: "ho", nickname: "HH", pointToday: 895, pointWeek: 2900, pointMonth: 14000)
+    ]
+    
     init() {
+        sortedArrayToday = array.sorted(by: { $0.pointToday > $1.pointToday })
+        sortedArrayWeek = array.sorted(by: {
+            $0.pointWeek > $1.pointWeek })
+        sortedArrayMonth = array.sorted(by : {
+            $0.pointMonth  > $1.pointMonth })
         self.users = GameManager.getInstance().publicUserData
     }
     
@@ -34,7 +80,7 @@ struct RankView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     HStack {
                         ForEach(0...2, id: \.self) { index in
-                            UserTopRankProfileView(userData: self.users[index], rank: index + 1)
+                            UserTopRankProfileView(userData: self.selectedSortedArray[index], rank: index + 1)
                         }
                     }
                     .padding(.top, 40)
@@ -49,7 +95,7 @@ struct RankView: View {
                     Spacer()
                     VStack(alignment: .leading) {
                         ForEach(3..<50, id: \.self) { index in
-                            UserRankProfileView(userData: self.users[index], rank: index + 1)
+                            UserRankProfileView(userData: self.selectedSortedArray[index], rank: index + 1)
                         }
                     }
                 }
