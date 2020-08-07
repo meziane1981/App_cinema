@@ -13,7 +13,7 @@ struct RankView: View {
     var users: [BasicUserData]
     @State var pickerSelection = 0
     init() {
-        self.users = GameManager.getInstance().publicUserData
+        self.users = GameManager.instance.publicUserData
     }
     
     var body: some View {

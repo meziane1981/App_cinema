@@ -43,7 +43,10 @@ struct QuizButton: View {
     
     var body: some View {
         Button(action: {
-            self.response = self.pushValue
+            withAnimation(.easeInOut(duration: 0.5)) {
+                self.response = self.pushValue
+                
+            }
         }) {
             Text(label)
                 .frame(maxWidth: .infinity)
@@ -60,6 +63,10 @@ struct QuestionTestingView: View {
     @State private var response: Int? = nil
     
     // Style
+    @State private var gradientNeutral = [Color.orange, Color.purple]
+    @State private var gradientCorrect = [Color.green, Color.blue]
+    @State private var gradientIncorrect = [Color.pink, Color.red]
+    
     @State private var bgColour: Color = Color.white
     @State private var primaryTextColor: Color = Color.white
     @State private var secondaryTextColor: Color = Color.white
@@ -67,8 +74,10 @@ struct QuestionTestingView: View {
     var body: some View {
         ZStack {
 //            bgColour
-            LinearGradient(gradient: Gradient(colors: [.orange, .purple]), startPoint:    .topLeading, endPoint: .bottomTrailing)
-            .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: gradientNeutral), startPoint:    .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: response == question.correctAnswer.rawValue ? gradientCorrect : gradientIncorrect), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .opacity(response == nil ? 0 : 1)
+            
             
             // The question
             Text("\(question.text + "?")")
@@ -111,7 +120,7 @@ struct QuestionTestingView: View {
 
 struct Quiz_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionTestingView(question: GameManager.getInstance().questions[0])
+        QuestionTestingView(question: GameManager.instance.questions[0])
     }
 }
 

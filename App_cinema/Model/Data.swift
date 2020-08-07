@@ -7,9 +7,7 @@
 //
 
 import SwiftUI
-
-//let userData: [UserData] = loadJSON("UserData")
-//let userDataJSON: String = writeJSON(userData)
+import os.log
 
 // For decoding a json file as long as it coforms to Decodable
 func loadJSON<T: Decodable>(_ fileName: String) -> T {
@@ -49,6 +47,53 @@ func writeJSON<T: Codable>(_ data: T) -> String {
     return returnValue
 }
 
-func loadImage(fileName: String) -> CGImage {
-    fatalError()
+final class ImageStore {
+    private var storedImages: Dictionary<String, CGImage> = [:]
+    
+    public private(set) static var instance = ImageStore()
+    
+    func getImage(imageName key: String) -> Image? {
+        // if the image is not currently stored
+        guard let image = storedImages[key] else {
+            guard let rawImage = loadImage(fileName: key) else {
+                return nil
+            }
+            return Image(rawImage, scale: 1, label: Text("some kind of image"))
+        }
+        
+        // Return the image
+        return Image(image, scale: 1, label: Text("some kind of image"))
+    }
+    
+    func getCGImage(imageName key: String) -> CGImage? {
+        guard let image = storedImages[key] else {
+            // If the image is not currently stored we try to load it
+            guard let rawImage = loadImage(fileName: key) else {
+                // If it is missing we return nil
+                return nil
+            }
+            // If not we return the CGImage.
+            return rawImage
+        }
+        
+        // return the image
+        return image
+    }
+    
+    private func loadImage(fileName: String) -> CGImage? {
+        guard
+            let url = Bundle.main.url(forResource: fileName, withExtension: "png"),
+            let imageSource = CGImageSourceCreateWithURL(url as NSURL, nil),
+            let image = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
+            else {
+                os_log("Failed to load image %@", log: .default, type: .fault, fileName)
+                return nil
+            }
+        return image
+    }
+
+
 }
+
+
+

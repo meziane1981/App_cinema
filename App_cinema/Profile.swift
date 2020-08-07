@@ -13,15 +13,19 @@ extension Color {
 }
 
 struct UserProfilePreview: View {
-    var userData: BasicUserData
+    var user: BasicUserData
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: "person.circle.fill")
+                user.getProfileImage(size: PictureSize.small)
+                .clipShape(Circle())
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                
                 HStack(alignment: .center, spacing: 0) {
-                    Text(userData.userName)
-                    Text("#\(userData.id)")
+                    Text(user.nickName)
+                    Text("#\(user.id)")
                         .font(.caption)
                         .fontWeight(.thin)
                 }
@@ -29,7 +33,7 @@ struct UserProfilePreview: View {
             }
             // To be removed
             HStack() {
-                Text("\(userData.firstName) \(userData.lastName)(\(userData.gender.rawValue == Gender.male.rawValue ? "m" : "f"))")
+                Text("\(user.firstName) \(user.lastName)(\(user.gender.rawValue == Gender.male.rawValue ? "m" : "f"))")
             }
         }
     }
@@ -37,7 +41,7 @@ struct UserProfilePreview: View {
 
 struct Profile: View {
     
-    let user = GameManager.getInstance().requestUserDetails(100001)!
+    let user = GameManager.instance.requestUserDetails(10001)!
 
     // Progression
     var percentage: Int = 75
@@ -59,48 +63,39 @@ struct Profile: View {
             
             VStack {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(Color.offWhite)
+                    Rectangle()
+                        .fill(Color.offWhite.opacity(0.95))
                         .frame(width: UIScreen.main.bounds.size.width, height: 300)
                     
                     ZStack {
-                        Image("user_10001_medium")
+                        user.getProfileImage(size: PictureSize.medium)
                             .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.white, lineWidth: 5))
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                         
-                        VStack(alignment: .center, spacing: 0) {
+                        VStack(spacing: 0) {
                             HStack(alignment: .center, spacing: 5) {
-                                Text(user.userName)
+                                Text(user.firstName)
                                     .font(.headline)
+                                    .fontWeight(.bold)
                                 Circle()
                                     .fill(user.isOnline ? onlineIndicatorGradient : offlineIndicatorGradient)
                                     .frame(width: 10, height: 10)
+                                    .shadow(color: Color.green.opacity(0.7), radius: 2, x: 1.5, y: 1.5)
                             }
                             Text("#\(user.id)")
                                 .font(Font.system(size: 10))
                         }
                         .padding(.top, 170)
-                        
                     }
                     .foregroundColor(.black)
                 }
-                
                 Spacer()
-                
             }
-            
         }
         .edgesIgnoringSafeArea(.all)
     }
 }
-
-//struct Profile_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Profile(user: GameManager, friends: [BasicUserData])
-//    }
-//}
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
