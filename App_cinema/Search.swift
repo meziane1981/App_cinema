@@ -20,7 +20,7 @@ struct SearchView: View {
                 TextField("search for user", text: $searchStr)
                 
                 Button(action: {
-                    self.users = GameManager.getInstance().findUsers(self.searchStr, \.firstName)
+                    self.users = GameManager.instance.findUsers(self.searchStr, \.firstName)
                 }) {
                     Image(systemName: "magnifyingglass.circle.fill")
                         .font(Font.system(size: 30))
@@ -28,7 +28,7 @@ struct SearchView: View {
             }.padding(20)
             
             ForEach(users) {
-                UserProfilePreview(userData: $0)
+                UserProfilePreview(user: $0)
                 Divider()
             }.padding(.horizontal, 20)
             Spacer()

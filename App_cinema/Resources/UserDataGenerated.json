@@ -1,1102 +1,1702 @@
 [
     {
-        "id": 100001,
-        "userName": "uname001",
-        "profileDescription": "insert description here",
+        "id": 10001,
+        "firstName": "Anthony",
+        "lastName": "Blair",
+        "gender": "male",
+        "age": 24,
+        "nickName": "nName001",
+        "image": "user_10001",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10076, 10052, 10047, 10004, 10016, 10013, 10020, 10027],
+        "statistics": {
+            "coins": 498,
+            "hoursPlayed": 29.00,
+            "pointsLast30Days": [15, 31, 16, 43, 45, 22, 44, 27, 29, 23, 0, 0, 0, 17, 31, 31, 29, 20, 31, 14, 30, 21, 34, 50, 0, 18, 0, 43, 30, 18, 0]
+        }
+    },
+    {
+        "id": 10002,
+        "firstName": "Beverly",
+        "lastName": "Berlin",
+        "gender": "female",
+        "age": 26,
+        "nickName": "nName002",
+        "image": "user_10002",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10037],
+        "statistics": {
+            "coins": 686,
+            "hoursPlayed": 4.00,
+            "pointsLast30Days": [23, 43, 0, 31, 43, 20, 0, 23, 0, 43, 10, 42, 46, 0, 38, 27, 12, 50, 0, 0, 0, 29, 0, 0, 0, 40, 48, 47, 12, 0, 47]
+        }
+    },
+    {
+        "id": 10003,
+        "firstName": "Freddie",
+        "lastName": "Abbot",
+        "gender": "male",
+        "age": 19,
+        "nickName": "nName003",
+        "image": "user_10003",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10026, 10025, 10059, 10021, 10062],
+        "statistics": {
+            "coins": 299,
+            "hoursPlayed": 12.00,
+            "pointsLast30Days": [28, 35, 35, 31, 47, 28, 15, 39, 40, 22, 49, 10, 12, 12, 0, 48, 21, 17, 39, 0, 37, 0, 0, 0, 29, 45, 18, 39, 38, 0, 20]
+        }
+    },
+    {
+        "id": 10004,
+        "firstName": "Robert",
+        "lastName": "Kennedy",
+        "gender": "male",
+        "age": 25,
+        "nickName": "nName004",
+        "image": "user_10004",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10034, 10024, 10007, 10015, 10001, 10076, 10026, 10008],
+        "statistics": {
+            "coins": 781,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [29, 0, 37, 47, 0, 48, 34, 32, 0, 36, 49, 45, 0, 0, 19, 43, 41, 0, 49, 36, 12, 29, 30, 12, 0, 43, 50, 24, 31, 19, 0]
+        }
+    },
+    {
+        "id": 10005,
+        "firstName": "Paul",
+        "lastName": "Briggs",
+        "gender": "male",
+        "age": 22,
+        "nickName": "nName005",
+        "image": "user_10005",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10055, 10080, 10016, 10087, 10061, 10020, 10027, 10091],
+        "statistics": {
+            "coins": 479,
+            "hoursPlayed": 10.00,
+            "pointsLast30Days": [45, 0, 0, 35, 45, 23, 11, 0, 49, 0, 35, 47, 36, 27, 37, 45, 41, 49, 39, 29, 49, 27, 34, 15, 0, 25, 32, 35, 0, 42, 0]
+        }
+    },
+    {
+        "id": 10006,
+        "firstName": "Freddie",
+        "lastName": "Essex",
+        "gender": "male",
+        "age": 30,
+        "nickName": "nName006",
+        "image": "user_10006",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10077],
+        "statistics": {
+            "coins": 170,
+            "hoursPlayed": 13.00,
+            "pointsLast30Days": [0, 24, 33, 23, 45, 0, 19, 23, 12, 32, 47, 39, 23, 44, 44, 27, 25, 0, 26, 0, 36, 13, 42, 0, 39, 21, 31, 43, 22, 14, 44]
+        }
+    },
+    {
+        "id": 10007,
+        "firstName": "Thomas",
+        "lastName": "Garry",
+        "gender": "male",
+        "age": 24,
+        "nickName": "nName007",
+        "image": "user_10007",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10061, 10099, 10042, 10073, 10004, 10043, 10045],
+        "statistics": {
+            "coins": 785,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [18, 37, 19, 40, 30, 27, 38, 18, 20, 48, 39, 40, 21, 35, 0, 0, 0, 19, 0, 48, 0, 45, 49, 28, 0, 44, 45, 18, 46, 0, 44]
+        }
+    },
+    {
+        "id": 10008,
+        "firstName": "Doug",
+        "lastName": "Davidson",
+        "gender": "male",
+        "age": 26,
+        "nickName": "nName008",
+        "image": "user_10008",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10016, 10080, 10032, 10038, 10004],
+        "statistics": {
+            "coins": 780,
+            "hoursPlayed": 22.00,
+            "pointsLast30Days": [0, 22, 25, 25, 43, 17, 19, 0, 28, 26, 37, 0, 25, 48, 29, 45, 30, 0, 47, 33, 34, 41, 34, 28, 42, 41, 50, 32, 26, 33, 41]
+        }
+    },
+    {
+        "id": 10009,
+        "firstName": "Elise",
+        "lastName": "Newton",
+        "gender": "female",
+        "age": 29,
+        "nickName": "nName009",
+        "image": "user_10009",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10075, 10050, 10015],
+        "statistics": {
+            "coins": 263,
+            "hoursPlayed": 2.00,
+            "pointsLast30Days": [0, 0, 34, 0, 18, 36, 32, 38, 0, 20, 0, 19, 47, 50, 22, 35, 0, 34, 28, 43, 44, 43, 0, 0, 0, 26, 44, 45, 0, 35, 0]
+        }
+    },
+    {
+        "id": 10010,
+        "firstName": "Carol",
+        "lastName": "Jackson",
+        "gender": "female",
+        "age": 19,
+        "nickName": "nName010",
+        "image": "user_10010",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10076, 10091, 10058],
+        "statistics": {
+            "coins": 913,
+            "hoursPlayed": 11.00,
+            "pointsLast30Days": [37, 0, 48, 22, 23, 43, 35, 35, 43, 12, 12, 14, 17, 46, 27, 35, 29, 32, 40, 22, 20, 41, 24, 13, 50, 32, 27, 48, 34, 26, 42]
+        }
+    },
+    {
+        "id": 10011,
+        "firstName": "Katie",
+        "lastName": "Richardson",
+        "gender": "female",
+        "age": 22,
+        "nickName": "nName011",
+        "image": "user_10011",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10058, 10036, 10019, 10088, 10022, 10048, 10080, 10056],
+        "statistics": {
+            "coins": 593,
+            "hoursPlayed": 16.00,
+            "pointsLast30Days": [38, 50, 0, 0, 35, 46, 35, 42, 31, 36, 18, 32, 0, 21, 44, 50, 41, 29, 24, 49, 32, 0, 15, 42, 20, 49, 17, 30, 16, 46, 45]
+        }
+    },
+    {
+        "id": 10012,
+        "firstName": "Heather",
+        "lastName": "Blackburn",
+        "gender": "female",
+        "age": 19,
+        "nickName": "nName012",
+        "image": "user_10012",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10088, 10099, 10038],
+        "statistics": {
+            "coins": 641,
+            "hoursPlayed": 27.00,
+            "pointsLast30Days": [45, 49, 0, 41, 35, 25, 25, 0, 0, 10, 0, 37, 43, 27, 46, 33, 0, 25, 0, 22, 12, 0, 34, 47, 37, 14, 0, 47, 17, 25, 39]
+        }
+    },
+    {
+        "id": 10013,
         "firstName": "Freddie",
         "lastName": "Sherman",
         "gender": "male",
-        "age": 22,
-        "image": "user_1000001_small",
-        "isOnline": true
-    },
-    {
-        "id": 100002,
-        "userName": "uname002",
-        "profileDescription": "insert description here",
-        "firstName": "Gabrielle",
-        "lastName": "Scully",
-        "gender": "female",
-        "age": 24,
-        "image": "user_1000002_small",
-        "isOnline": false
-    },
-    {
-        "id": 100003,
-        "userName": "uname003",
-        "profileDescription": "insert description here",
-        "firstName": "Tim",
-        "lastName": "Skinner",
-        "gender": "male",
-        "age": 19,
-        "image": "user_1000003_small",
-        "isOnline": false
-    },
-    {
-        "id": 100004,
-        "userName": "uname004",
-        "profileDescription": "insert description here",
-        "firstName": "Connie",
-        "lastName": "Marx",
-        "gender": "female",
-        "age": 20,
-        "image": "user_1000004_small",
-        "isOnline": false
-    },
-    {
-        "id": 100005,
-        "userName": "uname005",
-        "profileDescription": "insert description here",
-        "firstName": "Doug",
-        "lastName": "Robertson",
-        "gender": "male",
-        "age": 21,
-        "image": "user_1000005_small",
-        "isOnline": false
-    },
-    {
-        "id": 100006,
-        "userName": "uname006",
-        "profileDescription": "insert description here",
-        "firstName": "Ben",
-        "lastName": "Richardson",
-        "gender": "male",
-        "age": 23,
-        "image": "user_1000006_small",
-        "isOnline": false
-    },
-    {
-        "id": 100007,
-        "userName": "uname007",
-        "profileDescription": "insert description here",
-        "firstName": "Kathy",
-        "lastName": "Sherman",
-        "gender": "female",
-        "age": 25,
-        "image": "user_1000007_small",
-        "isOnline": false
-    },
-    {
-        "id": 100008,
-        "userName": "uname008",
-        "profileDescription": "insert description here",
-        "firstName": "Jenny",
-        "lastName": "Hugo",
-        "gender": "female",
         "age": 30,
-        "image": "user_1000008_small",
-        "isOnline": false
+        "nickName": "nName013",
+        "image": "user_10013",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10001, 10096],
+        "statistics": {
+            "coins": 663,
+            "hoursPlayed": 8.00,
+            "pointsLast30Days": [33, 10, 0, 47, 0, 44, 28, 15, 44, 17, 0, 0, 13, 0, 18, 50, 15, 0, 0, 27, 38, 34, 0, 50, 27, 0, 34, 45, 32, 46, 46]
+        }
     },
     {
-        "id": 100009,
-        "userName": "uname009",
-        "profileDescription": "insert description here",
-        "firstName": "Adrian",
-        "lastName": "Jacoby",
-        "gender": "male",
-        "age": 24,
-        "image": "user_1000009_small",
-        "isOnline": false
-    },
-    {
-        "id": 100010,
-        "userName": "uname010",
-        "profileDescription": "insert description here",
-        "firstName": "Benjamin",
-        "lastName": "Lee",
-        "gender": "male",
-        "age": 20,
-        "image": "user_1000010_small",
-        "isOnline": false
-    },
-    {
-        "id": 100011,
-        "userName": "uname011",
-        "profileDescription": "insert description here",
-        "firstName": "Karen",
-        "lastName": "Davidson",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000011_small",
-        "isOnline": false
-    },
-    {
-        "id": 100012,
-        "userName": "uname012",
-        "profileDescription": "insert description here",
-        "firstName": "Kate",
-        "lastName": "Philipps",
-        "gender": "female",
-        "age": 30,
-        "image": "user_1000012_small",
-        "isOnline": false
-    },
-    {
-        "id": 100013,
-        "userName": "uname013",
-        "profileDescription": "insert description here",
-        "firstName": "Grace",
-        "lastName": "Cole",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000013_small",
-        "isOnline": false
-    },
-    {
-        "id": 100014,
-        "userName": "uname014",
-        "profileDescription": "insert description here",
-        "firstName": "Heather",
-        "lastName": "Jamesson",
-        "gender": "female",
-        "age": 21,
-        "image": "user_1000014_small",
-        "isOnline": false
-    },
-    {
-        "id": 100015,
-        "userName": "uname015",
-        "profileDescription": "insert description here",
-        "firstName": "Connie",
-        "lastName": "Berlin",
-        "gender": "female",
-        "age": 20,
-        "image": "user_1000015_small",
-        "isOnline": false
-    },
-    {
-        "id": 100016,
-        "userName": "uname016",
-        "profileDescription": "insert description here",
-        "firstName": "Fred",
-        "lastName": "Robertson",
-        "gender": "male",
-        "age": 18,
-        "image": "user_1000016_small",
-        "isOnline": false
-    },
-    {
-        "id": 100017,
-        "userName": "uname017",
-        "profileDescription": "insert description here",
-        "firstName": "Peter",
-        "lastName": "Blackburn",
-        "gender": "male",
-        "age": 27,
-        "image": "user_1000017_small",
-        "isOnline": false
-    },
-    {
-        "id": 100018,
-        "userName": "uname018",
-        "profileDescription": "insert description here",
-        "firstName": "Connie",
-        "lastName": "Blum",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000018_small",
-        "isOnline": false
-    },
-    {
-        "id": 100019,
-        "userName": "uname019",
-        "profileDescription": "insert description here",
-        "firstName": "Steven",
-        "lastName": "Robertson",
-        "gender": "male",
-        "age": 26,
-        "image": "user_1000019_small",
-        "isOnline": false
-    },
-    {
-        "id": 100020,
-        "userName": "uname020",
-        "profileDescription": "insert description here",
-        "firstName": "Charlie",
-        "lastName": "Jackson",
-        "gender": "male",
-        "age": 25,
-        "image": "user_1000020_small",
-        "isOnline": false
-    },
-    {
-        "id": 100021,
-        "userName": "uname021",
-        "profileDescription": "insert description here",
-        "firstName": "Zoe",
+        "id": 10014,
+        "firstName": "Madeline",
         "lastName": "Abbot",
         "gender": "female",
-        "age": 27,
-        "image": "user_1000021_small",
-        "isOnline": false
+        "age": 26,
+        "nickName": "nName014",
+        "image": "user_10014",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10047, 10060],
+        "statistics": {
+            "coins": 163,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [13, 0, 17, 24, 30, 41, 42, 40, 0, 44, 16, 48, 22, 49, 11, 25, 18, 28, 0, 0, 38, 47, 15, 48, 0, 24, 47, 0, 49, 38, 20]
+        }
     },
     {
-        "id": 100022,
-        "userName": "uname022",
-        "profileDescription": "insert description here",
-        "firstName": "Eve",
-        "lastName": "Ellis",
+        "id": 10015,
+        "firstName": "Kathy",
+        "lastName": "Lee",
         "gender": "female",
-        "age": 21,
-        "image": "user_1000022_small",
-        "isOnline": false
+        "age": 28,
+        "nickName": "nName015",
+        "image": "user_10015",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10061, 10063, 10096, 10004, 10026, 10009],
+        "statistics": {
+            "coins": 342,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [27, 15, 0, 17, 15, 22, 0, 37, 46, 38, 0, 34, 0, 24, 23, 41, 18, 29, 42, 0, 31, 21, 46, 0, 49, 15, 26, 47, 0, 38, 0]
+        }
     },
     {
-        "id": 100023,
-        "userName": "uname023",
-        "profileDescription": "insert description here",
-        "firstName": "Paul",
-        "lastName": "Robertson",
+        "id": 10016,
+        "firstName": "Daniel",
+        "lastName": "Rockwell",
         "gender": "male",
         "age": 20,
-        "image": "user_1000023_small",
-        "isOnline": false
+        "nickName": "nName016",
+        "image": "user_10016",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10062, 10017, 10086, 10059, 10005, 10008, 10068, 10061, 10001, 10023],
+        "statistics": {
+            "coins": 235,
+            "hoursPlayed": 8.00,
+            "pointsLast30Days": [49, 32, 24, 0, 47, 0, 34, 13, 27, 11, 31, 41, 20, 35, 19, 16, 12, 0, 29, 31, 39, 0, 14, 45, 31, 38, 26, 37, 16, 34, 18]
+        }
     },
     {
-        "id": 100024,
-        "userName": "uname024",
-        "profileDescription": "insert description here",
-        "firstName": "Steven",
-        "lastName": "Jamesson",
+        "id": 10017,
+        "firstName": "Freddy",
+        "lastName": "Lee",
         "gender": "male",
-        "age": 19,
-        "image": "user_1000024_small",
-        "isOnline": false
+        "age": 21,
+        "nickName": "nName017",
+        "image": "user_10017",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10016, 10048, 10034, 10019],
+        "statistics": {
+            "coins": 357,
+            "hoursPlayed": 3.00,
+            "pointsLast30Days": [26, 14, 25, 22, 30, 34, 24, 0, 0, 24, 42, 48, 27, 13, 19, 41, 27, 14, 24, 32, 37, 45, 19, 37, 0, 42, 23, 26, 42, 39, 0]
+        }
     },
     {
-        "id": 100025,
-        "userName": "uname025",
-        "profileDescription": "insert description here",
-        "firstName": "Robert",
-        "lastName": "Smith",
+        "id": 10018,
+        "firstName": "Emma",
+        "lastName": "Berlin",
+        "gender": "female",
+        "age": 26,
+        "nickName": "nName018",
+        "image": "user_10018",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10034, 10032],
+        "statistics": {
+            "coins": 482,
+            "hoursPlayed": 29.00,
+            "pointsLast30Days": [42, 23, 26, 49, 38, 17, 40, 39, 20, 22, 45, 0, 0, 19, 28, 40, 50, 0, 20, 18, 41, 30, 38, 0, 35, 23, 18, 42, 17, 39, 24]
+        }
+    },
+    {
+        "id": 10019,
+        "firstName": "Paul",
+        "lastName": "Lee",
+        "gender": "male",
+        "age": 18,
+        "nickName": "nName019",
+        "image": "user_10019",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10011, 10073, 10056, 10049, 10046, 10017, 10094],
+        "statistics": {
+            "coins": 432,
+            "hoursPlayed": 13.00,
+            "pointsLast30Days": [0, 46, 30, 12, 46, 15, 18, 21, 47, 38, 47, 24, 29, 37, 31, 0, 38, 20, 0, 0, 31, 17, 16, 22, 45, 0, 20, 15, 48, 0, 49]
+        }
+    },
+    {
+        "id": 10020,
+        "firstName": "Douglas",
+        "lastName": "Jennings",
+        "gender": "male",
+        "age": 20,
+        "nickName": "nName020",
+        "image": "user_10020",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10022, 10028, 10005, 10001],
+        "statistics": {
+            "coins": 668,
+            "hoursPlayed": 9.00,
+            "pointsLast30Days": [41, 0, 19, 13, 45, 29, 47, 0, 40, 38, 41, 31, 12, 22, 10, 37, 14, 31, 19, 31, 10, 20, 0, 28, 19, 31, 0, 26, 0, 35, 28]
+        }
+    },
+    {
+        "id": 10021,
+        "firstName": "Tony",
+        "lastName": "Benedict",
         "gender": "male",
         "age": 23,
-        "image": "user_1000025_small",
-        "isOnline": false
+        "nickName": "nName021",
+        "image": "user_10021",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10086, 10062, 10043, 10003],
+        "statistics": {
+            "coins": 335,
+            "hoursPlayed": 14.00,
+            "pointsLast30Days": [14, 26, 25, 0, 48, 26, 45, 41, 48, 10, 0, 16, 14, 27, 14, 32, 38, 23, 13, 0, 0, 24, 0, 46, 43, 43, 19, 26, 25, 35, 27]
+        }
     },
     {
-        "id": 100026,
-        "userName": "uname026",
-        "profileDescription": "insert description here",
-        "firstName": "Hunter",
-        "lastName": "Bishop",
+        "id": 10022,
+        "firstName": "Paul",
+        "lastName": "Jones",
+        "gender": "male",
+        "age": 20,
+        "nickName": "nName022",
+        "image": "user_10022",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10066, 10011, 10020, 10070, 10078, 10099],
+        "statistics": {
+            "coins": 355,
+            "hoursPlayed": 20.00,
+            "pointsLast30Days": [22, 50, 25, 11, 46, 26, 0, 0, 29, 0, 0, 44, 11, 35, 31, 10, 0, 12, 49, 38, 27, 0, 28, 15, 14, 11, 0, 44, 42, 42, 30]
+        }
+    },
+    {
+        "id": 10023,
+        "firstName": "Mike",
+        "lastName": "Jacoby",
+        "gender": "male",
+        "age": 20,
+        "nickName": "nName023",
+        "image": "user_10023",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10078, 10016, 10049],
+        "statistics": {
+            "coins": 352,
+            "hoursPlayed": 27.00,
+            "pointsLast30Days": [31, 42, 0, 48, 27, 0, 17, 0, 21, 47, 0, 19, 0, 13, 37, 17, 19, 30, 0, 40, 28, 43, 16, 16, 0, 29, 46, 0, 32, 50, 47]
+        }
+    },
+    {
+        "id": 10024,
+        "firstName": "Hillary",
+        "lastName": "Jamesson",
+        "gender": "female",
+        "age": 28,
+        "nickName": "nName024",
+        "image": "user_10024",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10032, 10004],
+        "statistics": {
+            "coins": 545,
+            "hoursPlayed": 4.00,
+            "pointsLast30Days": [0, 24, 0, 31, 17, 27, 21, 19, 50, 0, 0, 0, 26, 35, 0, 42, 0, 10, 43, 0, 42, 0, 40, 24, 17, 40, 47, 30, 42, 0, 33]
+        }
+    },
+    {
+        "id": 10025,
+        "firstName": "Boris",
+        "lastName": "Benjamin",
+        "gender": "male",
+        "age": 18,
+        "nickName": "nName025",
+        "image": "user_10025",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10095, 10003, 10052, 10031],
+        "statistics": {
+            "coins": 643,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [45, 22, 21, 23, 18, 21, 47, 39, 20, 23, 23, 0, 44, 11, 24, 18, 45, 0, 25, 34, 17, 18, 38, 17, 45, 25, 44, 50, 0, 46, 22]
+        }
+    },
+    {
+        "id": 10026,
+        "firstName": "Harry",
+        "lastName": "Berlin",
         "gender": "male",
         "age": 26,
-        "image": "user_1000026_small",
-        "isOnline": false
+        "nickName": "nName026",
+        "image": "user_10026",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10003, 10015, 10004],
+        "statistics": {
+            "coins": 772,
+            "hoursPlayed": 17.00,
+            "pointsLast30Days": [48, 15, 24, 0, 24, 35, 0, 30, 0, 45, 50, 19, 32, 37, 0, 27, 0, 31, 0, 0, 18, 0, 17, 26, 33, 38, 48, 45, 32, 22, 41]
+        }
     },
     {
-        "id": 100027,
-        "userName": "uname027",
-        "profileDescription": "insert description here",
-        "firstName": "Norma",
-        "lastName": "Sherman",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000027_small",
-        "isOnline": false
-    },
-    {
-        "id": 100028,
-        "userName": "uname028",
-        "profileDescription": "insert description here",
-        "firstName": "Sally",
-        "lastName": "Bevin",
-        "gender": "female",
-        "age": 20,
-        "image": "user_1000028_small",
-        "isOnline": false
-    },
-    {
-        "id": 100029,
-        "userName": "uname029",
-        "profileDescription": "insert description here",
-        "firstName": "Gabrielle",
-        "lastName": "Jackson",
-        "gender": "female",
-        "age": 20,
-        "image": "user_1000029_small",
-        "isOnline": false
-    },
-    {
-        "id": 100030,
-        "userName": "uname030",
-        "profileDescription": "insert description here",
-        "firstName": "Wilson",
-        "lastName": "Johnson",
+        "id": 10027,
+        "firstName": "Mike",
+        "lastName": "Jeffries",
         "gender": "male",
-        "age": 23,
-        "image": "user_1000030_small",
-        "isOnline": false
+        "age": 21,
+        "nickName": "nName027",
+        "image": "user_10027",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10056, 10073, 10063, 10047, 10005, 10001],
+        "statistics": {
+            "coins": 425,
+            "hoursPlayed": 21.00,
+            "pointsLast30Days": [41, 31, 0, 29, 48, 18, 11, 48, 10, 17, 49, 41, 17, 49, 45, 48, 22, 14, 10, 21, 20, 36, 0, 45, 16, 11, 40, 43, 15, 15, 17]
+        }
     },
     {
-        "id": 100031,
-        "userName": "uname031",
-        "profileDescription": "insert description here",
-        "firstName": "Kathy",
-        "lastName": "Jackson",
-        "gender": "female",
-        "age": 27,
-        "image": "user_1000031_small",
-        "isOnline": false
-    },
-    {
-        "id": 100032,
-        "userName": "uname032",
-        "profileDescription": "insert description here",
-        "firstName": "Joseph",
-        "lastName": "Smith",
+        "id": 10028,
+        "firstName": "Jack",
+        "lastName": "Philipps",
         "gender": "male",
         "age": 24,
-        "image": "user_1000032_small",
-        "isOnline": false
+        "nickName": "nName028",
+        "image": "user_10028",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10047, 10078, 10020, 10082, 10031],
+        "statistics": {
+            "coins": 431,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [15, 13, 32, 20, 20, 17, 0, 14, 18, 12, 50, 45, 25, 0, 17, 0, 13, 21, 37, 27, 27, 0, 11, 43, 15, 20, 27, 47, 20, 0, 47]
+        }
     },
     {
-        "id": 100033,
-        "userName": "uname033",
-        "profileDescription": "insert description here",
-        "firstName": "Stuart",
+        "id": 10029,
+        "firstName": "Anthony",
+        "lastName": "Sherman",
+        "gender": "male",
+        "age": 29,
+        "nickName": "nName029",
+        "image": "user_10029",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10069, 10056, 10098],
+        "statistics": {
+            "coins": 174,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [27, 17, 0, 20, 45, 31, 33, 18, 45, 27, 25, 25, 11, 15, 0, 21, 50, 26, 0, 0, 33, 37, 0, 33, 23, 24, 11, 42, 19, 22, 0]
+        }
+    },
+    {
+        "id": 10030,
+        "firstName": "Terrence",
+        "lastName": "Bevin",
+        "gender": "male",
+        "age": 21,
+        "nickName": "nName030",
+        "image": "user_10030",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10046, 10034],
+        "statistics": {
+            "coins": 566,
+            "hoursPlayed": 12.00,
+            "pointsLast30Days": [24, 0, 20, 0, 21, 20, 36, 41, 44, 0, 11, 33, 0, 44, 19, 36, 0, 0, 46, 19, 44, 38, 27, 0, 0, 0, 14, 20, 25, 0, 42]
+        }
+    },
+    {
+        "id": 10031,
+        "firstName": "Kate",
+        "lastName": "Briggs",
+        "gender": "female",
+        "age": 28,
+        "nickName": "nName031",
+        "image": "user_10031",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10054, 10087, 10075, 10028, 10025],
+        "statistics": {
+            "coins": 483,
+            "hoursPlayed": 1.00,
+            "pointsLast30Days": [0, 18, 37, 23, 45, 0, 32, 17, 26, 0, 17, 35, 22, 28, 42, 0, 0, 22, 0, 10, 17, 27, 50, 20, 0, 39, 0, 17, 0, 18, 28]
+        }
+    },
+    {
+        "id": 10032,
+        "firstName": "Amy",
+        "lastName": "Hubbard",
+        "gender": "female",
+        "age": 29,
+        "nickName": "nName032",
+        "image": "user_10032",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10066, 10024, 10077, 10018, 10008],
+        "statistics": {
+            "coins": 656,
+            "hoursPlayed": 6.00,
+            "pointsLast30Days": [0, 27, 31, 19, 46, 46, 0, 48, 27, 32, 48, 24, 12, 31, 10, 44, 0, 18, 0, 46, 0, 21, 49, 46, 43, 34, 28, 0, 27, 37, 27]
+        }
+    },
+    {
+        "id": 10033,
+        "firstName": "Mike",
+        "lastName": "Berlin",
+        "gender": "male",
+        "age": 19,
+        "nickName": "nName033",
+        "image": "user_10033",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10086],
+        "statistics": {
+            "coins": 958,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [16, 33, 22, 39, 31, 13, 0, 0, 11, 35, 50, 20, 33, 30, 0, 42, 25, 30, 27, 0, 45, 41, 33, 14, 27, 41, 33, 0, 25, 24, 29]
+        }
+    },
+    {
+        "id": 10034,
+        "firstName": "Mary",
+        "lastName": "Jacobson",
+        "gender": "female",
+        "age": 29,
+        "nickName": "nName034",
+        "image": "user_10034",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10004, 10051, 10030, 10018, 10017],
+        "statistics": {
+            "coins": 167,
+            "hoursPlayed": 12.00,
+            "pointsLast30Days": [24, 42, 27, 12, 46, 18, 16, 14, 27, 17, 0, 25, 42, 25, 26, 0, 21, 30, 30, 32, 13, 33, 43, 27, 32, 25, 50, 31, 15, 42, 26]
+        }
+    },
+    {
+        "id": 10035,
+        "firstName": "Andy",
+        "lastName": "Benedict",
+        "gender": "male",
+        "age": 23,
+        "nickName": "nName035",
+        "image": "user_10035",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10041, 10079],
+        "statistics": {
+            "coins": 114,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [0, 21, 25, 45, 20, 31, 34, 0, 40, 0, 15, 44, 0, 31, 44, 47, 49, 0, 41, 44, 27, 35, 23, 23, 0, 44, 42, 25, 37, 19, 42]
+        }
+    },
+    {
+        "id": 10036,
+        "firstName": "Stanley",
+        "lastName": "Benjamin",
+        "gender": "male",
+        "age": 29,
+        "nickName": "nName036",
+        "image": "user_10036",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10063, 10011, 10041, 10062],
+        "statistics": {
+            "coins": 771,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [16, 14, 50, 19, 19, 0, 40, 35, 41, 13, 0, 21, 20, 36, 30, 0, 0, 49, 15, 28, 24, 31, 14, 11, 26, 30, 39, 37, 0, 39, 0]
+        }
+    },
+    {
+        "id": 10037,
+        "firstName": "John",
         "lastName": "Hubbard",
         "gender": "male",
-        "age": 25,
-        "image": "user_1000033_small",
-        "isOnline": false
+        "age": 29,
+        "nickName": "nName037",
+        "image": "user_10037",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10059, 10099, 10039, 10088, 10095, 10002],
+        "statistics": {
+            "coins": 500,
+            "hoursPlayed": 20.00,
+            "pointsLast30Days": [46, 43, 0, 10, 18, 12, 45, 29, 35, 40, 27, 17, 44, 0, 20, 18, 26, 0, 36, 17, 21, 47, 39, 39, 34, 20, 10, 17, 0, 0, 0]
+        }
     },
     {
-        "id": 100034,
-        "userName": "uname034",
-        "profileDescription": "insert description here",
-        "firstName": "Jerry",
-        "lastName": "Robertson",
-        "gender": "male",
-        "age": 19,
-        "image": "user_1000034_small",
-        "isOnline": false
-    },
-    {
-        "id": 100035,
-        "userName": "uname035",
-        "profileDescription": "insert description here",
-        "firstName": "Steven",
-        "lastName": "Scully",
-        "gender": "male",
+        "id": 10038,
+        "firstName": "Becky",
+        "lastName": "Reed",
+        "gender": "female",
         "age": 20,
-        "image": "user_1000035_small",
-        "isOnline": false
+        "nickName": "nName038",
+        "image": "user_10038",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10082, 10012, 10008],
+        "statistics": {
+            "coins": 600,
+            "hoursPlayed": 22.00,
+            "pointsLast30Days": [0, 50, 48, 16, 15, 26, 32, 22, 32, 43, 19, 0, 16, 15, 44, 11, 41, 45, 45, 25, 19, 19, 0, 32, 15, 32, 47, 32, 47, 45, 34]
+        }
     },
     {
-        "id": 100036,
-        "userName": "uname036",
-        "profileDescription": "insert description here",
-        "firstName": "Adrian",
-        "lastName": "Johnson",
+        "id": 10039,
+        "firstName": "Audrey",
+        "lastName": "Skinner",
+        "gender": "female",
+        "age": 21,
+        "nickName": "nName039",
+        "image": "user_10039",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10100, 10037, 10081, 10088, 10053],
+        "statistics": {
+            "coins": 443,
+            "hoursPlayed": 4.00,
+            "pointsLast30Days": [39, 40, 41, 47, 25, 40, 40, 47, 38, 29, 0, 46, 30, 35, 31, 0, 37, 30, 16, 0, 0, 25, 13, 41, 12, 50, 48, 46, 0, 46, 26]
+        }
+    },
+    {
+        "id": 10040,
+        "firstName": "Greg",
+        "lastName": "Richardson",
+        "gender": "male",
+        "age": 28,
+        "nickName": "nName040",
+        "image": "user_10040",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [],
+        "statistics": {
+            "coins": 316,
+            "hoursPlayed": 9.00,
+            "pointsLast30Days": [17, 0, 41, 30, 0, 41, 0, 31, 0, 42, 10, 25, 47, 43, 50, 40, 11, 0, 36, 18, 0, 32, 27, 0, 20, 0, 49, 27, 26, 46, 0]
+        }
+    },
+    {
+        "id": 10041,
+        "firstName": "Nigel",
+        "lastName": "Abraham",
+        "gender": "male",
+        "age": 25,
+        "nickName": "nName041",
+        "image": "user_10041",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10035, 10036, 10087],
+        "statistics": {
+            "coins": 275,
+            "hoursPlayed": 8.00,
+            "pointsLast30Days": [0, 21, 18, 13, 39, 28, 18, 33, 21, 15, 47, 16, 25, 20, 0, 46, 43, 49, 30, 0, 42, 14, 38, 45, 33, 0, 47, 28, 24, 42, 0]
+        }
+    },
+    {
+        "id": 10042,
+        "firstName": "Gabrielle",
+        "lastName": "Richardson",
+        "gender": "female",
+        "age": 28,
+        "nickName": "nName042",
+        "image": "user_10042",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10069, 10043, 10007],
+        "statistics": {
+            "coins": 996,
+            "hoursPlayed": 6.00,
+            "pointsLast30Days": [34, 46, 25, 26, 24, 42, 22, 18, 18, 0, 27, 11, 38, 37, 50, 20, 0, 46, 42, 24, 34, 26, 36, 0, 33, 40, 0, 11, 22, 31, 41]
+        }
+    },
+    {
+        "id": 10043,
+        "firstName": "Mary",
+        "lastName": "Scully",
+        "gender": "female",
+        "age": 29,
+        "nickName": "nName043",
+        "image": "user_10043",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10065, 10045, 10042, 10046, 10021, 10007, 10061],
+        "statistics": {
+            "coins": 116,
+            "hoursPlayed": 6.00,
+            "pointsLast30Days": [33, 33, 48, 17, 27, 16, 41, 15, 41, 33, 37, 16, 0, 11, 42, 11, 39, 0, 41, 43, 31, 22, 29, 42, 13, 20, 14, 0, 30, 38, 34]
+        }
+    },
+    {
+        "id": 10044,
+        "firstName": "June",
+        "lastName": "Benedict",
+        "gender": "female",
+        "age": 18,
+        "nickName": "nName044",
+        "image": "user_10044",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10079, 10097, 10052],
+        "statistics": {
+            "coins": 350,
+            "hoursPlayed": 27.00,
+            "pointsLast30Days": [15, 0, 39, 26, 0, 35, 0, 42, 0, 18, 31, 46, 23, 40, 12, 37, 31, 37, 0, 21, 21, 13, 16, 49, 16, 38, 0, 28, 18, 29, 38]
+        }
+    },
+    {
+        "id": 10045,
+        "firstName": "Emma",
+        "lastName": "Abraham",
+        "gender": "female",
+        "age": 27,
+        "nickName": "nName045",
+        "image": "user_10045",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10043, 10085, 10007, 10076],
+        "statistics": {
+            "coins": 153,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [26, 15, 14, 34, 47, 15, 40, 42, 42, 0, 50, 35, 14, 13, 0, 0, 40, 0, 13, 35, 47, 43, 0, 0, 0, 0, 16, 0, 42, 0, 27]
+        }
+    },
+    {
+        "id": 10046,
+        "firstName": "Jerry",
+        "lastName": "Bishop",
         "gender": "male",
         "age": 19,
-        "image": "user_1000036_small",
-        "isOnline": false
+        "nickName": "nName046",
+        "image": "user_10046",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10070, 10030, 10043, 10089, 10019, 10091],
+        "statistics": {
+            "coins": 880,
+            "hoursPlayed": 25.00,
+            "pointsLast30Days": [16, 22, 0, 26, 12, 20, 0, 48, 12, 50, 11, 0, 10, 0, 0, 0, 19, 45, 18, 43, 15, 19, 21, 0, 27, 37, 34, 38, 45, 0, 29]
+        }
     },
     {
-        "id": 100037,
-        "userName": "uname037",
-        "profileDescription": "insert description here",
+        "id": 10047,
+        "firstName": "Robert",
+        "lastName": "Harvey",
+        "gender": "male",
+        "age": 24,
+        "nickName": "nName047",
+        "image": "user_10047",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10048, 10014, 10028, 10001, 10083, 10027],
+        "statistics": {
+            "coins": 357,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [48, 0, 32, 48, 14, 33, 35, 19, 50, 0, 46, 11, 0, 10, 27, 14, 0, 34, 0, 36, 11, 0, 27, 21, 45, 42, 13, 42, 30, 37, 12]
+        }
+    },
+    {
+        "id": 10048,
+        "firstName": "Hillary",
+        "lastName": "Essex",
+        "gender": "female",
+        "age": 20,
+        "nickName": "nName048",
+        "image": "user_10048",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10055, 10047, 10017, 10011, 10089, 10068],
+        "statistics": {
+            "coins": 366,
+            "hoursPlayed": 5.00,
+            "pointsLast30Days": [0, 36, 30, 0, 20, 27, 0, 0, 29, 0, 41, 0, 23, 39, 41, 0, 0, 37, 43, 34, 0, 16, 10, 41, 0, 46, 11, 41, 41, 32, 28]
+        }
+    },
+    {
+        "id": 10049,
+        "firstName": "Doris",
+        "lastName": "Briggs",
+        "gender": "female",
+        "age": 28,
+        "nickName": "nName049",
+        "image": "user_10049",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10019, 10023],
+        "statistics": {
+            "coins": 787,
+            "hoursPlayed": 27.00,
+            "pointsLast30Days": [0, 0, 0, 15, 38, 19, 0, 48, 0, 47, 40, 19, 17, 0, 0, 0, 10, 0, 30, 36, 48, 25, 23, 33, 50, 15, 10, 25, 41, 36, 0]
+        }
+    },
+    {
+        "id": 10050,
+        "firstName": "Richard",
+        "lastName": "Hugo",
+        "gender": "male",
+        "age": 23,
+        "nickName": "nName050",
+        "image": "user_10050",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10096, 10009],
+        "statistics": {
+            "coins": 669,
+            "hoursPlayed": 17.00,
+            "pointsLast30Days": [23, 0, 11, 11, 28, 36, 0, 0, 48, 29, 15, 18, 23, 44, 21, 50, 25, 21, 0, 13, 36, 0, 13, 0, 18, 20, 13, 34, 25, 25, 0]
+        }
+    },
+    {
+        "id": 10051,
+        "firstName": "Laura",
+        "lastName": "Davidson",
+        "gender": "female",
+        "age": 27,
+        "nickName": "nName051",
+        "image": "user_10051",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10060, 10034],
+        "statistics": {
+            "coins": 927,
+            "hoursPlayed": 17.00,
+            "pointsLast30Days": [38, 40, 20, 29, 31, 42, 0, 13, 32, 45, 34, 43, 14, 16, 15, 46, 36, 49, 40, 0, 17, 21, 22, 35, 31, 11, 34, 0, 38, 0, 36]
+        }
+    },
+    {
+        "id": 10052,
+        "firstName": "Freddy",
+        "lastName": "Abbot",
+        "gender": "male",
+        "age": 28,
+        "nickName": "nName052",
+        "image": "user_10052",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10001, 10025, 10072, 10084, 10044],
+        "statistics": {
+            "coins": 155,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [46, 35, 25, 38, 0, 37, 18, 31, 0, 16, 46, 10, 44, 12, 32, 48, 0, 21, 0, 21, 0, 31, 30, 18, 20, 19, 24, 0, 21, 0, 50]
+        }
+    },
+    {
+        "id": 10053,
+        "firstName": "Grace",
+        "lastName": "Marx",
+        "gender": "female",
+        "age": 18,
+        "nickName": "nName053",
+        "image": "user_10053",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10099, 10054, 10039, 10072, 10091],
+        "statistics": {
+            "coins": 957,
+            "hoursPlayed": 30.00,
+            "pointsLast30Days": [27, 44, 0, 0, 24, 34, 0, 42, 44, 0, 42, 0, 34, 26, 19, 34, 38, 14, 29, 0, 15, 48, 32, 33, 24, 21, 15, 47, 36, 44, 0]
+        }
+    },
+    {
+        "id": 10054,
+        "firstName": "Jenny",
+        "lastName": "Bevin",
+        "gender": "female",
+        "age": 29,
+        "nickName": "nName054",
+        "image": "user_10054",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10031, 10084, 10053, 10094],
+        "statistics": {
+            "coins": 809,
+            "hoursPlayed": 10.00,
+            "pointsLast30Days": [0, 21, 0, 25, 47, 0, 14, 43, 0, 32, 27, 43, 19, 42, 25, 0, 31, 23, 47, 45, 43, 34, 16, 17, 0, 28, 0, 0, 0, 46, 13]
+        }
+    },
+    {
+        "id": 10055,
+        "firstName": "Hillary",
+        "lastName": "Fleming",
+        "gender": "female",
+        "age": 21,
+        "nickName": "nName055",
+        "image": "user_10055",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10005, 10048],
+        "statistics": {
+            "coins": 113,
+            "hoursPlayed": 28.00,
+            "pointsLast30Days": [0, 24, 46, 50, 0, 12, 22, 0, 29, 47, 0, 47, 0, 0, 27, 13, 21, 13, 0, 39, 24, 27, 42, 50, 0, 40, 21, 0, 28, 25, 42]
+        }
+    },
+    {
+        "id": 10056,
+        "firstName": "Boris",
+        "lastName": "Ellis",
+        "gender": "male",
+        "age": 18,
+        "nickName": "nName056",
+        "image": "user_10056",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10092, 10027, 10029, 10019, 10061, 10011, 10094],
+        "statistics": {
+            "coins": 234,
+            "hoursPlayed": 6.00,
+            "pointsLast30Days": [41, 0, 21, 0, 25, 48, 0, 38, 33, 33, 48, 0, 17, 0, 48, 0, 25, 0, 12, 11, 0, 0, 44, 39, 46, 15, 46, 0, 28, 20, 0]
+        }
+    },
+    {
+        "id": 10057,
+        "firstName": "Norma",
+        "lastName": "Newton",
+        "gender": "female",
+        "age": 21,
+        "nickName": "nName057",
+        "image": "user_10057",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [],
+        "statistics": {
+            "coins": 551,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [42, 33, 0, 43, 25, 42, 43, 20, 0, 37, 45, 39, 38, 0, 22, 42, 0, 20, 21, 26, 41, 31, 35, 20, 28, 11, 50, 0, 42, 19, 37]
+        }
+    },
+    {
+        "id": 10058,
+        "firstName": "Terrence",
+        "lastName": "Davidson",
+        "gender": "male",
+        "age": 19,
+        "nickName": "nName058",
+        "image": "user_10058",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10011, 10010],
+        "statistics": {
+            "coins": 919,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [48, 0, 46, 47, 37, 0, 12, 50, 24, 25, 32, 33, 31, 12, 38, 0, 32, 43, 27, 42, 11, 32, 23, 47, 30, 16, 28, 0, 28, 39, 10]
+        }
+    },
+    {
+        "id": 10059,
+        "firstName": "Craig",
+        "lastName": "Essex",
+        "gender": "male",
+        "age": 29,
+        "nickName": "nName059",
+        "image": "user_10059",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10037, 10003, 10016, 10060],
+        "statistics": {
+            "coins": 399,
+            "hoursPlayed": 10.00,
+            "pointsLast30Days": [39, 26, 42, 21, 31, 39, 27, 13, 18, 34, 49, 19, 46, 0, 44, 42, 11, 44, 45, 25, 45, 16, 50, 34, 21, 29, 0, 0, 32, 49, 43]
+        }
+    },
+    {
+        "id": 10060,
+        "firstName": "Beverly",
+        "lastName": "Jamesson",
+        "gender": "female",
+        "age": 27,
+        "nickName": "nName060",
+        "image": "user_10060",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10051, 10087, 10014, 10059, 10063],
+        "statistics": {
+            "coins": 381,
+            "hoursPlayed": 11.00,
+            "pointsLast30Days": [19, 35, 19, 14, 36, 37, 0, 36, 41, 23, 38, 42, 22, 19, 37, 0, 44, 42, 32, 20, 44, 16, 21, 32, 11, 0, 46, 29, 40, 19, 34]
+        }
+    },
+    {
+        "id": 10061,
         "firstName": "Laura",
         "lastName": "Blair",
         "gender": "female",
-        "age": 25,
-        "image": "user_1000037_small",
-        "isOnline": false
+        "age": 21,
+        "nickName": "nName061",
+        "image": "user_10061",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10007, 10015, 10076, 10065, 10056, 10075, 10016, 10005, 10079, 10043],
+        "statistics": {
+            "coins": 200,
+            "hoursPlayed": 4.00,
+            "pointsLast30Days": [0, 31, 39, 40, 39, 0, 24, 45, 50, 24, 36, 19, 10, 46, 49, 50, 15, 19, 0, 34, 41, 14, 29, 20, 46, 37, 44, 16, 23, 0, 31]
+        }
     },
     {
-        "id": 100038,
-        "userName": "uname038",
-        "profileDescription": "insert description here",
-        "firstName": "Logan",
+        "id": 10062,
+        "firstName": "Donna",
         "lastName": "Essex",
-        "gender": "male",
-        "age": 23,
-        "image": "user_1000038_small",
-        "isOnline": false
-    },
-    {
-        "id": 100039,
-        "userName": "uname039",
-        "profileDescription": "insert description here",
-        "firstName": "Andy",
-        "lastName": "Rockwell",
-        "gender": "male",
-        "age": 30,
-        "image": "user_1000039_small",
-        "isOnline": false
-    },
-    {
-        "id": 100040,
-        "userName": "uname040",
-        "profileDescription": "insert description here",
-        "firstName": "Katie",
-        "lastName": "Sherman",
         "gender": "female",
-        "age": 22,
-        "image": "user_1000040_small",
-        "isOnline": false
+        "age": 27,
+        "nickName": "nName062",
+        "image": "user_10062",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10021, 10016, 10036, 10003],
+        "statistics": {
+            "coins": 338,
+            "hoursPlayed": 2.00,
+            "pointsLast30Days": [36, 18, 0, 0, 0, 34, 41, 43, 48, 21, 23, 40, 0, 0, 44, 44, 19, 0, 0, 0, 22, 30, 0, 0, 21, 33, 15, 0, 11, 30, 25]
+        }
     },
     {
-        "id": 100041,
-        "userName": "uname041",
-        "profileDescription": "insert description here",
-        "firstName": "Freddie",
-        "lastName": "Blair",
-        "gender": "male",
-        "age": 23,
-        "image": "user_1000041_small",
-        "isOnline": false
-    },
-    {
-        "id": 100042,
-        "userName": "uname042",
-        "profileDescription": "insert description here",
-        "firstName": "Mike",
-        "lastName": "Blair",
-        "gender": "male",
-        "age": 23,
-        "image": "user_1000042_small",
-        "isOnline": false
-    },
-    {
-        "id": 100043,
-        "userName": "uname043",
-        "profileDescription": "insert description here",
-        "firstName": "Kate",
+        "id": 10063,
+        "firstName": "Michael",
         "lastName": "Marx",
+        "gender": "male",
+        "age": 26,
+        "nickName": "nName063",
+        "image": "user_10063",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10036, 10015, 10027, 10060],
+        "statistics": {
+            "coins": 354,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [43, 18, 15, 40, 22, 25, 0, 44, 17, 15, 13, 0, 0, 38, 50, 22, 39, 48, 42, 23, 22, 35, 0, 42, 23, 34, 12, 37, 20, 42, 34]
+        }
+    },
+    {
+        "id": 10064,
+        "firstName": "Hunter",
+        "lastName": "Hubbard",
+        "gender": "male",
+        "age": 29,
+        "nickName": "nName064",
+        "image": "user_10064",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10070],
+        "statistics": {
+            "coins": 361,
+            "hoursPlayed": 22.00,
+            "pointsLast30Days": [0, 31, 49, 0, 0, 0, 35, 35, 31, 34, 27, 31, 0, 36, 20, 28, 0, 31, 50, 31, 27, 37, 0, 14, 38, 41, 24, 0, 0, 45, 0]
+        }
+    },
+    {
+        "id": 10065,
+        "firstName": "Wilson",
+        "lastName": "Richardson",
+        "gender": "male",
+        "age": 26,
+        "nickName": "nName065",
+        "image": "user_10065",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10043, 10088, 10061, 10076],
+        "statistics": {
+            "coins": 919,
+            "hoursPlayed": 1.00,
+            "pointsLast30Days": [40, 46, 26, 24, 16, 14, 41, 0, 42, 0, 0, 47, 26, 0, 18, 48, 36, 0, 19, 16, 34, 43, 22, 17, 12, 13, 44, 32, 29, 29, 49]
+        }
+    },
+    {
+        "id": 10066,
+        "firstName": "Steven",
+        "lastName": "Blackburn",
+        "gender": "male",
+        "age": 23,
+        "nickName": "nName066",
+        "image": "user_10066",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10032, 10022, 10077, 10070],
+        "statistics": {
+            "coins": 595,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [0, 31, 0, 37, 31, 16, 42, 25, 45, 31, 12, 10, 22, 49, 0, 0, 33, 0, 31, 19, 44, 24, 15, 43, 0, 0, 14, 0, 27, 43, 42]
+        }
+    },
+    {
+        "id": 10067,
+        "firstName": "Rupert",
+        "lastName": "Smith",
+        "gender": "male",
+        "age": 18,
+        "nickName": "nName067",
+        "image": "user_10067",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10094, 10069],
+        "statistics": {
+            "coins": 809,
+            "hoursPlayed": 11.00,
+            "pointsLast30Days": [32, 17, 0, 10, 10, 15, 15, 0, 0, 0, 19, 25, 13, 24, 29, 37, 0, 0, 46, 11, 11, 0, 0, 21, 0, 43, 43, 25, 39, 45, 0]
+        }
+    },
+    {
+        "id": 10068,
+        "firstName": "Dianne",
+        "lastName": "Robertson",
+        "gender": "female",
+        "age": 21,
+        "nickName": "nName068",
+        "image": "user_10068",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10099, 10016, 10094, 10048],
+        "statistics": {
+            "coins": 677,
+            "hoursPlayed": 27.00,
+            "pointsLast30Days": [16, 26, 17, 28, 0, 44, 40, 24, 0, 35, 0, 27, 17, 30, 16, 0, 29, 21, 46, 0, 45, 17, 12, 17, 34, 0, 13, 38, 0, 0, 26]
+        }
+    },
+    {
+        "id": 10069,
+        "firstName": "Connie",
+        "lastName": "Fleming",
+        "gender": "female",
+        "age": 25,
+        "nickName": "nName069",
+        "image": "user_10069",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10029, 10042, 10067],
+        "statistics": {
+            "coins": 916,
+            "hoursPlayed": 21.00,
+            "pointsLast30Days": [37, 11, 49, 19, 15, 0, 33, 0, 16, 40, 25, 13, 37, 39, 27, 39, 30, 41, 24, 15, 26, 21, 32, 48, 11, 0, 0, 27, 39, 38, 23]
+        }
+    },
+    {
+        "id": 10070,
+        "firstName": "Hunter",
+        "lastName": "Berlin",
+        "gender": "male",
+        "age": 29,
+        "nickName": "nName070",
+        "image": "user_10070",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10046, 10066, 10022, 10064],
+        "statistics": {
+            "coins": 593,
+            "hoursPlayed": 23.00,
+            "pointsLast30Days": [45, 23, 40, 30, 31, 40, 50, 17, 0, 34, 12, 12, 15, 26, 12, 0, 17, 48, 48, 28, 0, 11, 18, 23, 33, 0, 11, 35, 19, 48, 40]
+        }
+    },
+    {
+        "id": 10071,
+        "firstName": "Samuel",
+        "lastName": "Kennedy",
+        "gender": "male",
+        "age": 24,
+        "nickName": "nName071",
+        "image": "user_10071",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10088, 10091, 10087],
+        "statistics": {
+            "coins": 942,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [0, 0, 14, 0, 16, 42, 37, 25, 46, 13, 0, 0, 20, 40, 33, 16, 10, 46, 19, 38, 14, 0, 33, 36, 0, 36, 0, 50, 0, 44, 24]
+        }
+    },
+    {
+        "id": 10072,
+        "firstName": "Sally",
+        "lastName": "Garry",
+        "gender": "female",
+        "age": 27,
+        "nickName": "nName072",
+        "image": "user_10072",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10052, 10053],
+        "statistics": {
+            "coins": 176,
+            "hoursPlayed": 10.00,
+            "pointsLast30Days": [16, 0, 32, 13, 42, 42, 21, 0, 0, 15, 18, 27, 30, 26, 0, 29, 26, 35, 29, 47, 19, 38, 15, 40, 28, 38, 0, 27, 18, 19, 0]
+        }
+    },
+    {
+        "id": 10073,
+        "firstName": "Holly",
+        "lastName": "Briggs",
+        "gender": "female",
+        "age": 23,
+        "nickName": "nName073",
+        "image": "user_10073",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10027, 10019, 10080, 10007, 10094, 10091],
+        "statistics": {
+            "coins": 222,
+            "hoursPlayed": 18.00,
+            "pointsLast30Days": [0, 36, 38, 24, 0, 32, 32, 45, 0, 46, 0, 0, 0, 48, 19, 20, 0, 0, 41, 15, 0, 42, 16, 14, 18, 0, 37, 10, 44, 10, 19]
+        }
+    },
+    {
+        "id": 10074,
+        "firstName": "Peter",
+        "lastName": "Blair",
+        "gender": "male",
+        "age": 18,
+        "nickName": "nName074",
+        "image": "user_10074",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10075],
+        "statistics": {
+            "coins": 666,
+            "hoursPlayed": 28.00,
+            "pointsLast30Days": [49, 27, 47, 38, 39, 32, 14, 0, 43, 34, 37, 28, 0, 10, 42, 12, 16, 0, 0, 0, 34, 38, 32, 46, 0, 19, 37, 19, 48, 41, 31]
+        }
+    },
+    {
+        "id": 10075,
+        "firstName": "Doris",
+        "lastName": "Benedict",
         "gender": "female",
         "age": 26,
-        "image": "user_1000043_small",
-        "isOnline": false
+        "nickName": "nName075",
+        "image": "user_10075",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10009, 10074, 10077, 10078, 10061, 10031],
+        "statistics": {
+            "coins": 106,
+            "hoursPlayed": 0.00,
+            "pointsLast30Days": [44, 14, 0, 50, 29, 41, 16, 47, 11, 41, 25, 43, 14, 0, 28, 25, 22, 0, 46, 42, 33, 39, 29, 47, 0, 10, 43, 48, 48, 15, 15]
+        }
     },
     {
-        "id": 100044,
-        "userName": "uname044",
-        "profileDescription": "insert description here",
-        "firstName": "Chloe",
-        "lastName": "Rockwell",
+        "id": 10076,
+        "firstName": "Gabrielle",
+        "lastName": "Bishop",
         "gender": "female",
-        "age": 24,
-        "image": "user_1000044_small",
-        "isOnline": false
+        "age": 25,
+        "nickName": "nName076",
+        "image": "user_10076",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10001, 10061, 10010, 10004, 10065, 10045],
+        "statistics": {
+            "coins": 659,
+            "hoursPlayed": 19.00,
+            "pointsLast30Days": [19, 31, 0, 42, 23, 0, 23, 35, 18, 11, 10, 18, 36, 0, 45, 16, 35, 0, 40, 11, 25, 13, 39, 25, 0, 48, 0, 20, 0, 41, 22]
+        }
     },
     {
-        "id": 100045,
-        "userName": "uname045",
-        "profileDescription": "insert description here",
-        "firstName": "Mary",
-        "lastName": "Reed",
-        "gender": "female",
-        "age": 30,
-        "image": "user_1000045_small",
-        "isOnline": false
-    },
-    {
-        "id": 100046,
-        "userName": "uname046",
-        "profileDescription": "insert description here",
-        "firstName": "Freddie",
-        "lastName": "Scully",
+        "id": 10077,
+        "firstName": "Bob",
+        "lastName": "Hugo",
         "gender": "male",
         "age": 27,
-        "image": "user_1000046_small",
-        "isOnline": false
+        "nickName": "nName077",
+        "image": "user_10077",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10075, 10066, 10098, 10032, 10006],
+        "statistics": {
+            "coins": 370,
+            "hoursPlayed": 16.00,
+            "pointsLast30Days": [42, 33, 39, 36, 16, 16, 0, 34, 0, 25, 0, 0, 42, 47, 10, 0, 34, 25, 47, 19, 47, 40, 27, 0, 0, 47, 43, 37, 40, 32, 21]
+        }
     },
     {
-        "id": 100047,
-        "userName": "uname047",
-        "profileDescription": "insert description here",
+        "id": 10078,
+        "firstName": "Ron",
+        "lastName": "Robertson",
+        "gender": "male",
+        "age": 27,
+        "nickName": "nName078",
+        "image": "user_10078",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10075, 10028, 10022, 10023],
+        "statistics": {
+            "coins": 706,
+            "hoursPlayed": 13.00,
+            "pointsLast30Days": [15, 10, 31, 46, 0, 11, 28, 49, 0, 25, 38, 32, 41, 16, 23, 32, 0, 0, 15, 38, 45, 50, 23, 13, 11, 23, 45, 12, 46, 0, 21]
+        }
+    },
+    {
+        "id": 10079,
+        "firstName": "Doris",
+        "lastName": "Harvey",
+        "gender": "female",
+        "age": 26,
+        "nickName": "nName079",
+        "image": "user_10079",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10044, 10061, 10035],
+        "statistics": {
+            "coins": 921,
+            "hoursPlayed": 24.00,
+            "pointsLast30Days": [12, 0, 35, 17, 0, 0, 0, 46, 0, 0, 43, 13, 33, 27, 15, 0, 17, 29, 33, 0, 19, 33, 12, 26, 32, 10, 36, 10, 26, 49, 36]
+        }
+    },
+    {
+        "id": 10080,
+        "firstName": "Karen",
+        "lastName": "Richardson",
+        "gender": "female",
+        "age": 26,
+        "nickName": "nName080",
+        "image": "user_10080",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10005, 10073, 10096, 10011, 10008],
+        "statistics": {
+            "coins": 391,
+            "hoursPlayed": 12.00,
+            "pointsLast30Days": [14, 37, 0, 31, 25, 0, 42, 37, 37, 29, 39, 23, 24, 12, 0, 48, 0, 20, 40, 41, 40, 25, 0, 49, 27, 18, 49, 39, 38, 33, 27]
+        }
+    },
+    {
+        "id": 10081,
         "firstName": "Sarah",
         "lastName": "Blum",
         "gender": "female",
-        "age": 23,
-        "image": "user_1000047_small",
-        "isOnline": false
-    },
-    {
-        "id": 100048,
-        "userName": "uname048",
-        "profileDescription": "insert description here",
-        "firstName": "Becky",
-        "lastName": "Ellis",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000048_small",
-        "isOnline": false
-    },
-    {
-        "id": 100049,
-        "userName": "uname049",
-        "profileDescription": "insert description here",
-        "firstName": "Jennifer",
-        "lastName": "Philipps",
-        "gender": "female",
-        "age": 21,
-        "image": "user_1000049_small",
-        "isOnline": false
-    },
-    {
-        "id": 100050,
-        "userName": "uname050",
-        "profileDescription": "insert description here",
-        "firstName": "Fred",
-        "lastName": "Blair",
-        "gender": "male",
-        "age": 19,
-        "image": "user_1000050_small",
-        "isOnline": false
-    },
-    {
-        "id": 100051,
-        "userName": "uname051",
-        "profileDescription": "insert description here",
-        "firstName": "Boris",
-        "lastName": "Blair",
-        "gender": "male",
-        "age": 24,
-        "image": "user_1000051_small",
-        "isOnline": false
-    },
-    {
-        "id": 100052,
-        "userName": "uname052",
-        "profileDescription": "insert description here",
-        "firstName": "Becky",
-        "lastName": "Briggs",
-        "gender": "female",
-        "age": 26,
-        "image": "user_1000052_small",
-        "isOnline": false
-    },
-    {
-        "id": 100053,
-        "userName": "uname053",
-        "profileDescription": "insert description here",
-        "firstName": "Audrey",
-        "lastName": "Richardson",
-        "gender": "female",
-        "age": 28,
-        "image": "user_1000053_small",
-        "isOnline": false
-    },
-    {
-        "id": 100054,
-        "userName": "uname054",
-        "profileDescription": "insert description here",
-        "firstName": "Terrence",
-        "lastName": "Newton",
-        "gender": "male",
-        "age": 18,
-        "image": "user_1000054_small",
-        "isOnline": false
-    },
-    {
-        "id": 100055,
-        "userName": "uname055",
-        "profileDescription": "insert description here",
-        "firstName": "Tim",
-        "lastName": "Scully",
-        "gender": "male",
-        "age": 23,
-        "image": "user_1000055_small",
-        "isOnline": false
-    },
-    {
-        "id": 100056,
-        "userName": "uname056",
-        "profileDescription": "insert description here",
-        "firstName": "Jake",
-        "lastName": "Smith",
-        "gender": "male",
-        "age": 29,
-        "image": "user_1000056_small",
-        "isOnline": false
-    },
-    {
-        "id": 100057,
-        "userName": "uname057",
-        "profileDescription": "insert description here",
-        "firstName": "Mike",
-        "lastName": "Lee",
-        "gender": "male",
-        "age": 30,
-        "image": "user_1000057_small",
-        "isOnline": false
-    },
-    {
-        "id": 100058,
-        "userName": "uname058",
-        "profileDescription": "insert description here",
-        "firstName": "Patrick",
-        "lastName": "Rockwell",
-        "gender": "male",
-        "age": 26,
-        "image": "user_1000058_small",
-        "isOnline": false
-    },
-    {
-        "id": 100059,
-        "userName": "uname059",
-        "profileDescription": "insert description here",
-        "firstName": "Samuel",
-        "lastName": "Lee",
-        "gender": "male",
-        "age": 21,
-        "image": "user_1000059_small",
-        "isOnline": false
-    },
-    {
-        "id": 100060,
-        "userName": "uname060",
-        "profileDescription": "insert description here",
-        "firstName": "Debra",
-        "lastName": "Jamesson",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000060_small",
-        "isOnline": false
-    },
-    {
-        "id": 100061,
-        "userName": "uname061",
-        "profileDescription": "insert description here",
-        "firstName": "Karen",
-        "lastName": "Hugo",
-        "gender": "female",
-        "age": 23,
-        "image": "user_1000061_small",
-        "isOnline": false
-    },
-    {
-        "id": 100062,
-        "userName": "uname062",
-        "profileDescription": "insert description here",
-        "firstName": "Greg",
-        "lastName": "Blum",
-        "gender": "male",
-        "age": 28,
-        "image": "user_1000062_small",
-        "isOnline": false
-    },
-    {
-        "id": 100063,
-        "userName": "uname063",
-        "profileDescription": "insert description here",
-        "firstName": "Kathy",
-        "lastName": "Lee",
-        "gender": "female",
-        "age": 30,
-        "image": "user_1000063_small",
-        "isOnline": false
-    },
-    {
-        "id": 100064,
-        "userName": "uname064",
-        "profileDescription": "insert description here",
-        "firstName": "Norma",
-        "lastName": "Jamesson",
-        "gender": "female",
-        "age": 20,
-        "image": "user_1000064_small",
-        "isOnline": false
-    },
-    {
-        "id": 100065,
-        "userName": "uname065",
-        "profileDescription": "insert description here",
-        "firstName": "Felix",
-        "lastName": "Jones",
-        "gender": "male",
-        "age": 30,
-        "image": "user_1000065_small",
-        "isOnline": false
-    },
-    {
-        "id": 100066,
-        "userName": "uname066",
-        "profileDescription": "insert description here",
-        "firstName": "Tom",
-        "lastName": "Lee",
-        "gender": "male",
         "age": 22,
-        "image": "user_1000066_small",
-        "isOnline": false
+        "nickName": "nName081",
+        "image": "user_10081",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10039],
+        "statistics": {
+            "coins": 273,
+            "hoursPlayed": 26.00,
+            "pointsLast30Days": [27, 0, 29, 30, 14, 48, 43, 40, 0, 30, 0, 34, 12, 43, 0, 0, 45, 31, 0, 0, 10, 44, 33, 29, 15, 24, 0, 27, 33, 27, 0]
+        }
     },
     {
-        "id": 100067,
-        "userName": "uname067",
-        "profileDescription": "insert description here",
-        "firstName": "Holly",
-        "lastName": "Hubbard",
-        "gender": "female",
-        "age": 29,
-        "image": "user_1000067_small",
-        "isOnline": false
-    },
-    {
-        "id": 100068,
-        "userName": "uname068",
-        "profileDescription": "insert description here",
-        "firstName": "Joseph",
-        "lastName": "Jeffries",
-        "gender": "male",
-        "age": 24,
-        "image": "user_1000068_small",
-        "isOnline": false
-    },
-    {
-        "id": 100069,
-        "userName": "uname069",
-        "profileDescription": "insert description here",
-        "firstName": "Joseph",
-        "lastName": "Jackson",
-        "gender": "male",
-        "age": 26,
-        "image": "user_1000069_small",
-        "isOnline": false
-    },
-    {
-        "id": 100070,
-        "userName": "uname070",
-        "profileDescription": "insert description here",
-        "firstName": "Mary",
-        "lastName": "Essex",
-        "gender": "female",
-        "age": 26,
-        "image": "user_1000070_small",
-        "isOnline": false
-    },
-    {
-        "id": 100071,
-        "userName": "uname071",
-        "profileDescription": "insert description here",
-        "firstName": "Bob",
-        "lastName": "Jeffries",
-        "gender": "male",
-        "age": 18,
-        "image": "user_1000071_small",
-        "isOnline": false
-    },
-    {
-        "id": 100072,
-        "userName": "uname072",
-        "profileDescription": "insert description here",
-        "firstName": "Donna",
-        "lastName": "Scully",
-        "gender": "female",
-        "age": 30,
-        "image": "user_1000072_small",
-        "isOnline": false
-    },
-    {
-        "id": 100073,
-        "userName": "uname073",
-        "profileDescription": "insert description here",
-        "firstName": "Holly",
-        "lastName": "Bevin",
-        "gender": "female",
-        "age": 29,
-        "image": "user_1000073_small",
-        "isOnline": false
-    },
-    {
-        "id": 100074,
-        "userName": "uname074",
-        "profileDescription": "insert description here",
-        "firstName": "Karen",
-        "lastName": "Smith",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000074_small",
-        "isOnline": false
-    },
-    {
-        "id": 100075,
-        "userName": "uname075",
-        "profileDescription": "insert description here",
-        "firstName": "Amy",
-        "lastName": "Essex",
-        "gender": "female",
-        "age": 27,
-        "image": "user_1000075_small",
-        "isOnline": false
-    },
-    {
-        "id": 100076,
-        "userName": "uname076",
-        "profileDescription": "insert description here",
-        "firstName": "Douglas",
-        "lastName": "Lee",
-        "gender": "male",
-        "age": 27,
-        "image": "user_1000076_small",
-        "isOnline": false
-    },
-    {
-        "id": 100077,
-        "userName": "uname077",
-        "profileDescription": "insert description here",
-        "firstName": "Freddie",
-        "lastName": "Benjamin",
-        "gender": "male",
-        "age": 25,
-        "image": "user_1000077_small",
-        "isOnline": false
-    },
-    {
-        "id": 100078,
-        "userName": "uname078",
-        "profileDescription": "insert description here",
-        "firstName": "Adrian",
-        "lastName": "Hubbard",
-        "gender": "male",
-        "age": 18,
-        "image": "user_1000078_small",
-        "isOnline": false
-    },
-    {
-        "id": 100079,
-        "userName": "uname079",
-        "profileDescription": "insert description here",
+        "id": 10082,
         "firstName": "Laura",
-        "lastName": "Newton",
-        "gender": "female",
-        "age": 30,
-        "image": "user_1000079_small",
-        "isOnline": false
-    },
-    {
-        "id": 100080,
-        "userName": "uname080",
-        "profileDescription": "insert description here",
-        "firstName": "Freddy",
-        "lastName": "Blair",
-        "gender": "male",
-        "age": 23,
-        "image": "user_1000080_small",
-        "isOnline": false
-    },
-    {
-        "id": 100081,
-        "userName": "uname081",
-        "profileDescription": "insert description here",
-        "firstName": "Abby",
-        "lastName": "Robertson",
-        "gender": "female",
-        "age": 24,
-        "image": "user_1000081_small",
-        "isOnline": false
-    },
-    {
-        "id": 100082,
-        "userName": "uname082",
-        "profileDescription": "insert description here",
-        "firstName": "Henry",
-        "lastName": "Hubbard",
-        "gender": "male",
-        "age": 18,
-        "image": "user_1000082_small",
-        "isOnline": false
-    },
-    {
-        "id": 100083,
-        "userName": "uname083",
-        "profileDescription": "insert description here",
-        "firstName": "Holly",
-        "lastName": "Hubbard",
-        "gender": "female",
-        "age": 26,
-        "image": "user_1000083_small",
-        "isOnline": false
-    },
-    {
-        "id": 100084,
-        "userName": "uname084",
-        "profileDescription": "insert description here",
-        "firstName": "Debra",
-        "lastName": "Mann",
-        "gender": "female",
-        "age": 23,
-        "image": "user_1000084_small",
-        "isOnline": false
-    },
-    {
-        "id": 100085,
-        "userName": "uname085",
-        "profileDescription": "insert description here",
-        "firstName": "Madeline",
-        "lastName": "Smith",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000085_small",
-        "isOnline": false
-    },
-    {
-        "id": 100086,
-        "userName": "uname086",
-        "profileDescription": "insert description here",
-        "firstName": "Debra",
-        "lastName": "Abraham",
-        "gender": "female",
-        "age": 24,
-        "image": "user_1000086_small",
-        "isOnline": false
-    },
-    {
-        "id": 100087,
-        "userName": "uname087",
-        "profileDescription": "insert description here",
-        "firstName": "Connie",
-        "lastName": "Abbot",
-        "gender": "female",
-        "age": 27,
-        "image": "user_1000087_small",
-        "isOnline": false
-    },
-    {
-        "id": 100088,
-        "userName": "uname088",
-        "profileDescription": "insert description here",
-        "firstName": "Laura",
-        "lastName": "Essex",
-        "gender": "female",
-        "age": 28,
-        "image": "user_1000088_small",
-        "isOnline": false
-    },
-    {
-        "id": 100089,
-        "userName": "uname089",
-        "profileDescription": "insert description here",
-        "firstName": "Daniel",
-        "lastName": "Richardson",
-        "gender": "male",
-        "age": 21,
-        "image": "user_1000089_small",
-        "isOnline": false
-    },
-    {
-        "id": 100090,
-        "userName": "uname090",
-        "profileDescription": "insert description here",
-        "firstName": "Doug",
-        "lastName": "Hugo",
-        "gender": "male",
-        "age": 27,
-        "image": "user_1000090_small",
-        "isOnline": false
-    },
-    {
-        "id": 100091,
-        "userName": "uname091",
-        "profileDescription": "insert description here",
-        "firstName": "Jennifer",
-        "lastName": "Mann",
-        "gender": "female",
-        "age": 20,
-        "image": "user_1000091_small",
-        "isOnline": false
-    },
-    {
-        "id": 100092,
-        "userName": "uname092",
-        "profileDescription": "insert description here",
-        "firstName": "Katie",
         "lastName": "Marx",
         "gender": "female",
-        "age": 19,
-        "image": "user_1000092_small",
-        "isOnline": false
+        "age": 29,
+        "nickName": "nName082",
+        "image": "user_10082",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10038, 10028],
+        "statistics": {
+            "coins": 637,
+            "hoursPlayed": 10.00,
+            "pointsLast30Days": [0, 24, 11, 26, 46, 41, 0, 11, 17, 0, 0, 50, 18, 10, 21, 28, 25, 23, 43, 43, 0, 0, 24, 31, 31, 43, 14, 38, 29, 36, 15]
+        }
     },
     {
-        "id": 100093,
-        "userName": "uname093",
-        "profileDescription": "insert description here",
-        "firstName": "Doris",
-        "lastName": "Lee",
-        "gender": "female",
-        "age": 19,
-        "image": "user_1000093_small",
-        "isOnline": false
+        "id": 10083,
+        "firstName": "Tom",
+        "lastName": "Marx",
+        "gender": "male",
+        "age": 24,
+        "nickName": "nName083",
+        "image": "user_10083",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10093, 10047, 10100],
+        "statistics": {
+            "coins": 632,
+            "hoursPlayed": 1.00,
+            "pointsLast30Days": [23, 25, 48, 13, 42, 43, 33, 25, 12, 14, 0, 41, 50, 22, 39, 30, 50, 35, 40, 40, 37, 19, 43, 35, 26, 12, 42, 26, 18, 35, 15]
+        }
     },
     {
-        "id": 100094,
-        "userName": "uname094",
-        "profileDescription": "insert description here",
-        "firstName": "Harry",
+        "id": 10084,
+        "firstName": "Boris",
+        "lastName": "Davidson",
+        "gender": "male",
+        "age": 28,
+        "nickName": "nName084",
+        "image": "user_10084",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10054, 10052],
+        "statistics": {
+            "coins": 281,
+            "hoursPlayed": 7.00,
+            "pointsLast30Days": [0, 44, 0, 13, 0, 31, 24, 33, 0, 0, 12, 13, 39, 20, 0, 43, 0, 20, 45, 16, 12, 0, 15, 30, 36, 38, 46, 0, 38, 37, 12]
+        }
+    },
+    {
+        "id": 10085,
+        "firstName": "Heather",
         "lastName": "Mann",
-        "gender": "male",
-        "age": 21,
-        "image": "user_1000094_small",
-        "isOnline": false
-    },
-    {
-        "id": 100095,
-        "userName": "uname095",
-        "profileDescription": "insert description here",
-        "firstName": "Stuart",
-        "lastName": "Bevin",
-        "gender": "male",
-        "age": 20,
-        "image": "user_1000095_small",
-        "isOnline": false
-    },
-    {
-        "id": 100096,
-        "userName": "uname096",
-        "profileDescription": "insert description here",
-        "firstName": "Freddy",
-        "lastName": "Kennedy",
-        "gender": "male",
-        "age": 27,
-        "image": "user_1000096_small",
-        "isOnline": false
-    },
-    {
-        "id": 100097,
-        "userName": "uname097",
-        "profileDescription": "insert description here",
-        "firstName": "Becky",
-        "lastName": "Cole",
         "gender": "female",
-        "age": 26,
-        "image": "user_1000097_small",
-        "isOnline": false
+        "age": 25,
+        "nickName": "nName085",
+        "image": "user_10085",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10045, 10093],
+        "statistics": {
+            "coins": 173,
+            "hoursPlayed": 29.00,
+            "pointsLast30Days": [25, 46, 0, 43, 27, 40, 0, 29, 28, 36, 35, 19, 12, 0, 11, 18, 19, 11, 49, 0, 45, 0, 14, 18, 28, 0, 37, 0, 0, 41, 37]
+        }
     },
     {
-        "id": 100098,
-        "userName": "uname098",
-        "profileDescription": "insert description here",
-        "firstName": "Tim",
+        "id": 10086,
+        "firstName": "Ben",
+        "lastName": "Cole",
+        "gender": "male",
+        "age": 30,
+        "nickName": "nName086",
+        "image": "user_10086",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10021, 10016, 10033, 10090, 10091],
+        "statistics": {
+            "coins": 766,
+            "hoursPlayed": 30.00,
+            "pointsLast30Days": [0, 47, 0, 29, 16, 24, 37, 0, 18, 36, 28, 43, 24, 34, 0, 0, 39, 47, 0, 23, 13, 26, 46, 0, 0, 29, 20, 44, 0, 16, 29]
+        }
+    },
+    {
+        "id": 10087,
+        "firstName": "Jack",
         "lastName": "Berlin",
         "gender": "male",
+        "age": 30,
+        "nickName": "nName087",
+        "image": "user_10087",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10031, 10071, 10005, 10060, 10041],
+        "statistics": {
+            "coins": 997,
+            "hoursPlayed": 28.00,
+            "pointsLast30Days": [0, 27, 21, 39, 44, 20, 11, 23, 46, 26, 43, 0, 43, 0, 16, 33, 23, 41, 41, 23, 38, 41, 46, 0, 49, 50, 20, 23, 26, 33, 10]
+        }
+    },
+    {
+        "id": 10088,
+        "firstName": "Wilson",
+        "lastName": "Abbot",
+        "gender": "male",
+        "age": 19,
+        "nickName": "nName088",
+        "image": "user_10088",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10012, 10065, 10071, 10011, 10037, 10039],
+        "statistics": {
+            "coins": 623,
+            "hoursPlayed": 22.00,
+            "pointsLast30Days": [20, 19, 47, 34, 0, 50, 0, 0, 37, 23, 30, 45, 0, 50, 33, 16, 0, 27, 13, 11, 0, 31, 15, 38, 0, 25, 33, 32, 11, 34, 34]
+        }
+    },
+    {
+        "id": 10089,
+        "firstName": "Hunter",
+        "lastName": "Kennedy",
+        "gender": "male",
+        "age": 20,
+        "nickName": "nName089",
+        "image": "user_10089",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10046, 10048],
+        "statistics": {
+            "coins": 784,
+            "hoursPlayed": 15.00,
+            "pointsLast30Days": [34, 17, 0, 47, 25, 0, 0, 22, 35, 49, 27, 0, 31, 35, 0, 12, 37, 0, 18, 38, 39, 0, 21, 19, 0, 24, 27, 45, 47, 31, 35]
+        }
+    },
+    {
+        "id": 10090,
+        "firstName": "Amy",
+        "lastName": "Berlin",
+        "gender": "female",
+        "age": 20,
+        "nickName": "nName090",
+        "image": "user_10090",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10086],
+        "statistics": {
+            "coins": 241,
+            "hoursPlayed": 23.00,
+            "pointsLast30Days": [0, 17, 18, 18, 31, 47, 24, 29, 49, 29, 50, 14, 24, 13, 38, 15, 46, 15, 37, 49, 0, 11, 39, 17, 30, 24, 0, 0, 35, 46, 12]
+        }
+    },
+    {
+        "id": 10091,
+        "firstName": "Becky",
+        "lastName": "Reed",
+        "gender": "female",
+        "age": 18,
+        "nickName": "nName091",
+        "image": "user_10091",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10071, 10097, 10073, 10046, 10053, 10010, 10086, 10005],
+        "statistics": {
+            "coins": 621,
+            "hoursPlayed": 11.00,
+            "pointsLast30Days": [18, 22, 38, 0, 16, 0, 48, 41, 32, 10, 42, 30, 26, 0, 35, 34, 42, 39, 41, 13, 17, 16, 0, 20, 40, 28, 18, 20, 0, 0, 0]
+        }
+    },
+    {
+        "id": 10092,
+        "firstName": "Abby",
+        "lastName": "Davidson",
+        "gender": "female",
+        "age": 18,
+        "nickName": "nName092",
+        "image": "user_10092",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10056],
+        "statistics": {
+            "coins": 477,
+            "hoursPlayed": 20.00,
+            "pointsLast30Days": [45, 42, 48, 16, 0, 0, 33, 15, 23, 17, 37, 41, 36, 31, 47, 0, 39, 0, 0, 0, 37, 0, 26, 13, 38, 42, 41, 24, 0, 13, 36]
+        }
+    },
+    {
+        "id": 10093,
+        "firstName": "Paul",
+        "lastName": "Bevin",
+        "gender": "male",
+        "age": 29,
+        "nickName": "nName093",
+        "image": "user_10093",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10083, 10085],
+        "statistics": {
+            "coins": 572,
+            "hoursPlayed": 12.00,
+            "pointsLast30Days": [0, 24, 15, 38, 0, 47, 16, 0, 0, 0, 23, 14, 29, 46, 12, 26, 12, 26, 18, 44, 40, 18, 43, 36, 31, 46, 21, 46, 36, 29, 19]
+        }
+    },
+    {
+        "id": 10094,
+        "firstName": "Heather",
+        "lastName": "Jacoby",
+        "gender": "female",
+        "age": 23,
+        "nickName": "nName094",
+        "image": "user_10094",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10067, 10073, 10054, 10068, 10019, 10056],
+        "statistics": {
+            "coins": 762,
+            "hoursPlayed": 5.00,
+            "pointsLast30Days": [20, 29, 46, 20, 0, 27, 35, 46, 30, 38, 18, 22, 46, 25, 29, 25, 15, 22, 44, 34, 0, 12, 35, 0, 22, 44, 46, 35, 32, 0, 22]
+        }
+    },
+    {
+        "id": 10095,
+        "firstName": "Wilson",
+        "lastName": "Jacobson",
+        "gender": "male",
         "age": 26,
-        "image": "user_1000098_small",
-        "isOnline": false
+        "nickName": "nName095",
+        "image": "user_10095",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10025, 10037],
+        "statistics": {
+            "coins": 518,
+            "hoursPlayed": 29.00,
+            "pointsLast30Days": [13, 50, 0, 42, 32, 17, 13, 36, 35, 0, 12, 12, 48, 37, 16, 20, 48, 38, 21, 10, 35, 21, 0, 22, 50, 23, 33, 0, 21, 28, 14]
+        }
     },
     {
-        "id": 100099,
-        "userName": "uname099",
-        "profileDescription": "insert description here",
-        "firstName": "Ernie",
-        "lastName": "Garry",
+        "id": 10096,
+        "firstName": "Stanley",
+        "lastName": "Horne",
         "gender": "male",
-        "age": 22,
-        "image": "user_1000099_small",
-        "isOnline": false
+        "age": 20,
+        "nickName": "nName096",
+        "image": "user_10096",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10050, 10080, 10015, 10013],
+        "statistics": {
+            "coins": 333,
+            "hoursPlayed": 21.00,
+            "pointsLast30Days": [30, 50, 37, 0, 0, 13, 39, 17, 39, 15, 19, 0, 0, 0, 37, 0, 0, 42, 19, 45, 49, 34, 0, 19, 0, 42, 35, 36, 25, 0, 19]
+        }
     },
     {
-        "id": 100100,
-        "userName": "uname100",
-        "profileDescription": "insert description here",
-        "firstName": "Terry",
-        "lastName": "Blair",
+        "id": 10097,
+        "firstName": "Katie",
+        "lastName": "Benjamin",
+        "gender": "female",
+        "age": 24,
+        "nickName": "nName097",
+        "image": "user_10097",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10091, 10044, 10100],
+        "statistics": {
+            "coins": 601,
+            "hoursPlayed": 11.00,
+            "pointsLast30Days": [0, 0, 35, 26, 14, 42, 0, 40, 43, 36, 23, 34, 31, 17, 25, 39, 0, 35, 0, 31, 13, 0, 41, 42, 0, 31, 10, 26, 0, 0, 32]
+        }
+    },
+    {
+        "id": 10098,
+        "firstName": "Richard",
+        "lastName": "Briggs",
         "gender": "male",
-        "age": 27,
-        "image": "user_1000100_small",
-        "isOnline": false
-    }
+        "age": 29,
+        "nickName": "nName098",
+        "image": "user_10098",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10077, 10029],
+        "statistics": {
+            "coins": 138,
+            "hoursPlayed": 17.00,
+            "pointsLast30Days": [0, 49, 0, 20, 30, 36, 49, 45, 0, 17, 11, 18, 30, 27, 10, 23, 0, 0, 28, 43, 32, 35, 0, 31, 21, 18, 0, 18, 36, 27, 46]
+        }
+    },
+    {
+        "id": 10099,
+        "firstName": "Norma",
+        "lastName": "Benjamin",
+        "gender": "female",
+        "age": 18,
+        "nickName": "nName099",
+        "image": "user_10099",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": false,
+        "friends": [10007, 10068, 10012, 10053, 10037, 10022],
+        "statistics": {
+            "coins": 381,
+            "hoursPlayed": 17.00,
+            "pointsLast30Days": [49, 0, 0, 17, 0, 10, 36, 0, 25, 31, 10, 35, 0, 36, 0, 16, 0, 20, 42, 49, 17, 10, 0, 50, 25, 14, 21, 0, 0, 34, 40]
+        }
+    },
+    {
+        "id": 10100,
+        "firstName": "Stuart",
+        "lastName": "Hugo",
+        "gender": "male",
+        "age": 20,
+        "nickName": "nName100",
+        "image": "user_10100",
+        "profileDescription": "This is a placeholder.",
+        "isOnline": true,
+        "friends": [10039, 10097, 10083],
+        "statistics": {
+            "coins": 803,
+            "hoursPlayed": 22.00,
+            "pointsLast30Days": [47, 18, 44, 22, 48, 50, 10, 23, 27, 41, 17, 40, 0, 18, 12, 47, 21, 13, 30, 47, 0, 41, 22, 36, 0, 14, 44, 37, 34, 48, 18]
+        }
+    },
 ]

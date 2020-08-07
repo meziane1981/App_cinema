@@ -8,38 +8,6 @@
 
 import SwiftUI
 
-// User data
-//var friendIDs: [Int] = [100003, 100007, 100009, 100012]
-//var friends: [BasicUserData] = []
-//
-//for index in friendIDs {
-//    GameManager.find
-//}
-
-enum Gender: String, Codable {
-    case male, female
-}
-
-struct BasicUserData: Codable, Identifiable {
-    var id: Int
-    var userName: String
-    var firstName: String
-    var lastName: String
-    var gender: Gender
-}
-
-struct UserData: Codable, Identifiable {
-    var id: Int
-    var userName: String
-    var profileDescription: String
-    var firstName: String
-    var lastName: String
-    var gender: Gender
-    var age: Int
-    var image: String
-    var isOnline: Bool
-}
-
 struct Question: Codable, Identifiable {
     enum CorrectAnswer: Int, Codable {
         case answerA, answerB, answerC, answerD
@@ -58,16 +26,16 @@ final class GameManager {
     var publicUserData: [BasicUserData]
     var questions: [Question]
     
-    private static var instance = GameManager(userFile: "UserDataGenerated", quizFile: "QuizData")
+    public private(set) static var instance = GameManager(userFile: "UserDataGenerated", quizFile: "QuizData")
     
-    static func getInstance() -> GameManager {
-        return Self.instance
-    }
+//    static func getInstance() -> GameManager {
+//        return Self.instance
+//    }
     
     private init(userFile: String, quizFile: String) {
         self.userData = loadJSON(userFile)
         self.publicUserData = self.userData.map {
-            BasicUserData(id: $0.id, userName: $0.userName, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
+            BasicUserData(id: $0.id, nickName: $0.nickName, image: $0.image, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
         }
         self.questions = loadJSON(quizFile)
         
@@ -75,14 +43,9 @@ final class GameManager {
         self.currentUserID = userData[0].id
         }
         
-        
-    
-    
-    // computed property that is the relevant info depending on whether the current user is friends with the other user
-    // this will be removed only exists so we can test permission
     func requestUserDetails(_ id: Int) -> Optional<UserData> {
         for user in userData {
-            if user.id == id {
+            if user.id == id || user.friends.contains(id) {
                 return user
             }
         }

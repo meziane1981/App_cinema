@@ -20,10 +20,13 @@ struct UserRankProfileView: View {
                 .padding(.leading, 40)
                 .padding(.trailing, 20)
             HStack{
-                Image(systemName: "person.circle.fill")
-                    .font(.system(size: 50, weight: .regular))
+                userData.getProfileImage(size: PictureSize.small)
+                .clipShape(Circle())
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                
                 VStack(alignment: .leading) {
-                    Text(userData.userName)
+                    Text(userData.nickName)
                     Text("#\(userData.id)")
                         .font(.caption)
                         .fontWeight(.thin)
