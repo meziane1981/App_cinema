@@ -8,39 +8,62 @@
 
 import SwiftUI
 
-struct UserData: Codable, Identifiable {
-    var id: Int
-    var username: String
-    var profileDescription: String
-    var firstName: String
-    var lastName: String
-    var image: String
-    var isOnline: Bool
-}
-
 struct Question: Codable, Identifiable {
+    enum CorrectAnswer: Int, Codable {
+        case answerA, answerB, answerC, answerD
+    }
+    
     var id: String
     var text: String
     var image: String
-    var correctAnswer: Int
+    var correctAnswer: CorrectAnswer
     var options: [String]
 }
 
 final class GameManager {
-    var userData: [UserData]
+    private var currentUserID: Int
+    private var userData: [UserData]
+    var publicUserData: [BasicUserData]
     var questions: [Question]
     
-    private static var instance = GameManager(userFile: "UserData", quizFile: "QuizData")
+    public private(set) static var instance = GameManager(userFile: "UserDataGenerated", quizFile: "QuizData")
     
-    func getInstance() -> GameManager {
-        return Self.instance
-    }
+//    static func getInstance() -> GameManager {
+//        return Self.instance
+//    }
     
     private init(userFile: String, quizFile: String) {
         self.userData = loadJSON(userFile)
+        self.publicUserData = self.userData.map {
+            BasicUserData(id: $0.id, nickName: $0.nickName, image: $0.image, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
+        }
         self.questions = loadJSON(quizFile)
+        
+            // For permissions
+        self.currentUserID = userData[0].id
+        }
+        
+    func requestUserDetails(_ id: Int) -> Optional<UserData> {
+        for user in userData {
+            if user.id == id || user.friends.contains(id) {
+                return user
+            }
+        }
+        return nil
     }
     
+    func findUsers<PropertyType: Equatable>(_ searchFor: PropertyType, _ keyPath: KeyPath<BasicUserData, PropertyType>) -> Array<BasicUserData> {
+        // Anything that matches searchFor
+        var matchedSearch: Array<BasicUserData> = []
+        
+        // Inefficient fix later, maybe we should sort the array first but that might slow things down further unless we just keep an array of sorted references
+        for basicUser in publicUserData {
+            if basicUser[keyPath: keyPath] == searchFor {
+                matchedSearch.append(basicUser)
+            }
+        }
+        return matchedSearch
+    }
     
 }
 
