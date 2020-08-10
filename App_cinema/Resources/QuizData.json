@@ -5,5 +5,34 @@
         "image": "ClownDancing",
         "correctAnswer": 2,
         "possibleAnswers": ["Heath Ledger", "Teddy Roosevelt", "Joaquin Phoenix", "Arthur Fleck"]
+    },
+    {
+        "id": "Q0002",
+        "questionText": "Combien il y t-il de volets dans la sage Star Wars",
+        "image": "ClownDancing",
+        "correctAnswer": 0,
+        "possibleAnswers": ["9", "6", "3", "10"]
+    },
+    {
+        "id": "Q0003",
+        "questionText": "Quel acteur a reçu un l'oscar du meilleur acteur dans le film The revenant(2016)",
+        "image": "ClownDancing",
+        "correctAnswer": 3,
+        "possibleAnswers": ["Brad Pitt", "Casey Affleck", "Tom Brady", "Leonardo DiCaprio"]
+    },
+    {
+        "id": "Q0004",
+        "questionText": "Qui est l'auteur de la phrase culte 'You're talking to me'",
+        "image": "ClownDancing",
+        "correctAnswer": 2,
+        "possibleAnswers": ["Vincent cassel(La haine)", "Al Pacino(Scarface)", "Robert de Niro(Taxi Driver)", "Clint Eastwood(Gran Torino)"]
+    },
+    {
+        "id": "Q0005",
+        "questionText": "Combien de fois Marlon Brando à t-il remporté un oscar",
+        "image": "ClownDancing",
+        "correctAnswer": 1,
+        "possibleAnswers": ["1", "2", "3", "4"]
     }
 ]
+
