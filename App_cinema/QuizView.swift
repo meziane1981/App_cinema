@@ -12,8 +12,8 @@ struct ButtonBackground<S: Shape>: View {
 
     var isCorrectResponse: Bool
     
-    @State private var gradientCorrect = LinearGradient( Color.green, Color.blue)
-    @State private var gradientIncorrect = LinearGradient( Color.pink, Color.red)
+    var gradientCorrect = LinearGradient( Color.green, Color.blue)
+    var gradientIncorrect = LinearGradient( Color.pink, Color.red)
 
     
     var isHightlighted: Bool
@@ -44,17 +44,6 @@ struct QuestionTestingView: View {
     var question: Question
     @State private var response: Int? = nil
     
-    // Style
-    @State private var gradientCorrect = [Color.green, Color.blue]
-    @State private var gradientIncorrect = [Color.pink, Color.red]
-    
-    //@State private var bgColour: Color = Color.white
-    @State private var primaryTextColor: Color = Color.white
-    @State private var secondaryTextColor: Color = Color.white
-    
-    @State private var isToggled = [false, false, false, false]
-    
-    
     var body: some View {
         ZStack {
 //            bgColour
@@ -65,7 +54,7 @@ struct QuestionTestingView: View {
                 // The question
                 Text("\(question.questionText + "?")")
                     .fontWeight(.semibold)
-                    .foregroundColor(primaryTextColor)
+                    .foregroundColor(.white)
                     .padding(40)
                     .font(.title)
                 
@@ -86,7 +75,7 @@ struct QuestionTestingView: View {
                 .padding(.horizontal, 25)
             }
         }
-        .foregroundColor(secondaryTextColor)
+        .foregroundColor(.white)
         .edgesIgnoringSafeArea(.all)
     }
 }
