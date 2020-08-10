@@ -8,43 +8,49 @@
 
 import SwiftUI
 
-//struct DataUser: Identifiable {
-//
-//    var id = UUID()
-//    let name: String
-//    let lastname: String
-//    let nickname: String
-//    let pointToday: Int
-//    let pointWeek: Int
-//    let pointMonth: Int
-//}
-
 struct RankView: View {
     
-    
     @State var pickerSelection = 0
-    var selectedSortedArray: [UserData]{
+    var selectedSortedArray: [UserData] {
         switch pickerSelection {
-        case 0:
-            return sortedArrayToday
-       case 1:
-            return sortedArrayToday
-        case 2:
-            return sortedArrayToday
-        default:
-            return sortedArrayToday
+        case 0 :
+            return self.sortedArrayToday
+        case 1:
+            return self.sortedArrayWeek
+        case 2 :
+            return self.sortedArrayMonth
+        default :
+            return self.sortedArrayToday
+        }
+    }
+    
+    var selectedSortRank: Statistics.RankScoreByTime {
+        switch pickerSelection {
+        case 0 :
+            return .day
+        case 1:
+            return .week
+        case 2 :
+            return .month
+        default :
+            return .day
         }
     }
     
     var users: [UserData] = loadJSON("UserDataGenerated")
     
     let sortedArrayToday: [UserData]
+    let sortedArrayWeek: [UserData]
+    let sortedArrayMonth: [UserData]
     
     init() {
         sortedArrayToday = users.sorted
-            {$0.statistics.pointsLast30Days[0] > $1.statistics.pointsLast30Days[0]}
+            {$0.statistics.scoreSum(days: Statistics.RankScoreByTime.day) > $1.statistics.scoreSum(days: Statistics.RankScoreByTime.day)}
+        sortedArrayWeek = users.sorted
+            {$0.statistics.scoreSum(days: Statistics.RankScoreByTime.week) > $1.statistics.scoreSum(days: Statistics.RankScoreByTime.week)}
+        sortedArrayMonth = users.sorted
+            {$0.statistics.scoreSum(days: Statistics.RankScoreByTime.month) > $1.statistics.scoreSum(days: Statistics.RankScoreByTime.month)}
     }
-    
     
     var body: some View {
         ZStack{
@@ -65,7 +71,7 @@ struct RankView: View {
                     
                     HStack {
                         ForEach(0...2, id: \.self) { index in
-                            UserTopRankProfileView(userData: self.selectedSortedArray[index], rankScoreByTime: RankScoreByTime(rawValue: 30), rank: index + 1)
+                            UserTopRankProfileView(userData: self.selectedSortedArray[index], rankScoreByTime: self.selectedSortRank,  rank: index + 1)
                         }
                     }
                     .padding(.top, 40)
@@ -80,7 +86,7 @@ struct RankView: View {
                     Spacer()
                     VStack(alignment: .leading) {
                         ForEach(3..<50, id: \.self) { index in
-                            UserRankProfileView(userData: self.selectedSortedArray[index], rankScoreByTime: RankScoreByTime(rawValue: 30), rank: index + 1)
+                            UserRankProfileView(userData: self.selectedSortedArray[index], rankScoreByTime: self.selectedSortRank, rank: index + 1)
                         }
                     }
                 }

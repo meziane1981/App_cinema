@@ -10,7 +10,7 @@ import SwiftUI
 
 struct UserRankProfileView: View {
     var userData: UserData
-    var rankScoreByTime: RankScoreByTime?
+    var rankScoreByTime: Statistics.RankScoreByTime
     var rank: Int
     
     var body: some View {

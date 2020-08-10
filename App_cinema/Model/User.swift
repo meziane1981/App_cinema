@@ -51,7 +51,7 @@ class UserData: Codable, Identifiable {
     
     func getProfileImage(size: PictureSize) -> Image {
         var cgImage: CGImage? = ImageStore.instance.getCGImage(imageName: image + size.rawValue)
-        
+
         if cgImage == nil {
              cgImage = ImageStore.instance.getCGImage(imageName: "user_default" + size.rawValue)
         }
@@ -81,14 +81,16 @@ struct BasicUserData: Decodable, Identifiable {
     }
 }
 
-enum RankScoreByTime: Int {
-    case day = 1, week = 7, month = 30
-}
+
 
 struct Statistics: Codable {
     var hoursPlayed: Double
     var coins: Int
     var pointsLast30Days: [Int]
+    
+    enum RankScoreByTime: Int {
+        case day = 1, week = 7, month = 30
+    }
     
     func scoreSum (days: RankScoreByTime?) -> Int {
         var scoreTotal: Int = 0
