@@ -9,6 +9,8 @@
 import SwiftUI
 
 extension Color {
+    static let darkBlueStart = Color(red: 0 / 255, green: 78 / 255, blue: 146 / 255)
+    static let darkBlueEnd = Color(red: 0 / 255, green: 4 / 255, blue: 40 / 255)
 	/// Helper method to initialize a `UIColor` object with a given hex String
 	///
 	/// - Parameter hex: String value (#RRGGBB or RRGGBB)
@@ -43,4 +45,10 @@ extension Color {
 	}
 }
 
+
+extension LinearGradient {
+    init(_ colors: Color...) {
+        self.init(gradient: Gradient(colors: colors), startPoint: .bottomTrailing, endPoint: .topLeading)
+    }
+}
 
