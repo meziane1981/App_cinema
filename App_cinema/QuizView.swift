@@ -80,10 +80,10 @@ struct QuestionTestingView: View {
     }
 }
 
-struct Quiz_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionTestingView(question: GameManager.instance.questions[0])
-    }
-}
+//struct Quiz_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuestionTestingView(question: GameManager.instance.questions[0])
+//    }
+//}
 
 

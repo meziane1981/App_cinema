@@ -60,11 +60,11 @@ final class ImageStore {
             }
             return Image(rawImage, scale: 1, label: Text("some kind of image"))
         }
-        
         // Return the image
         return Image(image, scale: 1, label: Text("some kind of image"))
     }
     
+    // Needs to be rewritten as it was written with profile images in mind
     func getCGImage(imageName key: String) -> CGImage? {
         guard let image = storedImages[key] else {
             // If the image is not currently stored we try to load it
@@ -75,7 +75,6 @@ final class ImageStore {
             // If not we return the CGImage.
             return rawImage
         }
-        
         // return the image
         return image
     }
@@ -91,9 +90,11 @@ final class ImageStore {
             }
         return image
     }
-
-
 }
 
-
+enum ImageSize: String {
+    case small = "_small"
+    case medium = "_medium"
+    case large = "_large"
+}
 

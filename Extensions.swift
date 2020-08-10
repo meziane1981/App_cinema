@@ -9,10 +9,14 @@
 import SwiftUI
 
 extension Color {
+    // Quiz
     static let darkStart = Color(red: 50 / 255, green: 60 / 255, blue: 65 / 255)
     static let darkEnd = Color(red: 25 / 255, green: 25 / 255, blue: 30 / 255)
     static let lightStart = Color(red: 60 / 255, green: 160 / 255, blue: 240 / 255)
     static let lightEnd = Color(red: 30 / 255, green: 80 / 255, blue: 120 / 255)
+    
+    // Profile
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
 }
 
 extension LinearGradient {
@@ -20,7 +24,15 @@ extension LinearGradient {
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
     
-    
+    // Profile
+    static let profileOnlineIndicatorGradient = LinearGradient(gradient: Gradient(colors: [
+        Color(.green),
+        Color(red: 0.0, green: 0.4, blue: 0.0)
+    ]), startPoint: .top, endPoint: .bottom)
+    static let profileOfflineIndicatorGradient = LinearGradient(gradient: Gradient(colors: [
+        Color(red: 0.3, green: 0.3, blue: 0.3),
+        Color(.gray)
+    ]), startPoint: .top, endPoint: .bottom)
     
 }
 

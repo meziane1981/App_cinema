@@ -9,35 +9,48 @@
 import SwiftUI
 
 final class GameManager {
-    private var currentUserID: Int
-    private var userData: [UserData]
-    var publicUserData: [BasicUserData]
-    var questions: [Question]
+    public private(set) var userData: [UserData]
+    public private(set) var publicUserData: [BasicUserData]
+    public private(set) var currentUser: UserData
     
     public private(set) static var instance = GameManager(userFile: "UserDataGenerated", quizFile: "QuizData")
-    
-//    static func getInstance() -> GameManager {
-//        return Self.instance
-//    }
     
     private init(userFile: String, quizFile: String) {
         self.userData = loadJSON(userFile)
         self.publicUserData = self.userData.map {
-            BasicUserData(id: $0.id, nickName: $0.nickName, image: $0.image, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
+            BasicUserData(id: $0.id, nickName: $0.nickName, profileImageName: $0.profileImageName, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
         }
-        self.questions = loadJSON(quizFile)
-        
-            // For permissions
-        self.currentUserID = userData[0].id
+        // For permissions
+        self.currentUser = userData[0]
         }
-        
+    
+    func requestUserBasicInfo(_ id: Int) -> Optional<BasicUserData> {
+        return publicUserData.first {
+            $0.id == id
+        }
+    }
+    
+    // If we are the user or a friends with the user this will return the details
     func requestUserDetails(_ id: Int) -> Optional<UserData> {
-        for user in userData {
-            if user.id == id || user.friends.contains(id) {
-                return user
-            }
+        // Need to fix this
+        let details = userData.first {
+            $0.id == id
         }
-        return nil
+        
+        // If the profile belongs to the current user or a friend
+        if currentUser.id == id || currentUser.friends.contains(id) {
+            return details
+        }
+        else {
+            return nil
+        }
+    }
+    
+    func fetchUserImage(imageName: String, size: ImageSize) -> CGImage {
+        guard let cgImage = ImageStore.instance.getCGImage(imageName: imageName + size.rawValue) else {
+            return ImageStore.instance.getCGImage(imageName: "user_default" + size.rawValue)!
+        }
+        return cgImage
     }
     
     func findUsers<PropertyType: Equatable>(_ searchFor: PropertyType, _ keyPath: KeyPath<BasicUserData, PropertyType>) -> Array<BasicUserData> {
