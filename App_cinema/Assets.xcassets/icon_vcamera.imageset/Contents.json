@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_vcamera.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
