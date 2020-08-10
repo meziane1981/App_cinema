@@ -8,12 +8,6 @@
 
 import SwiftUI
 
-enum PictureSize: String {
-    case small = "_small"
-    case medium = "_medium"
-    case large = "_large"
-}
-
 class UserData: Codable, Identifiable {
     var id: Int
     // Personal Info
@@ -89,4 +83,10 @@ struct Statistics: Codable {
 
 enum Gender: String, Codable {
     case male, female
+}
+
+enum PictureSize: String {
+    case small = "_small"
+    case medium = "_medium"
+    case large = "_large"
 }

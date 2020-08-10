@@ -42,7 +42,7 @@ struct RootView: View {
                 }.tag(3)
                 
                 VStack{
-                    RankView()
+                    Text("Rank View")
                 }.tabItem {
                     VStack {
                         Image(systemName: selectedTab == 4 ? "arrow.up.arrow.down.circle.fill" : "arrow.up.arrow.down.circle")

@@ -1,9 +1,9 @@
 [
     {
         "id": "Q0001",
-        "text": "Quel acteur a joué le Joker dans Joker(2019)",
+        "questionText": "Quel acteur a joué le Joker dans Joker(2019)",
         "image": "ClownDancing",
         "correctAnswer": 2,
-        "options": ["Heath Ledger", "Teddy Roosevelt", "Joaquin Phoenix", "Arthur Fleck"]
+        "possibleAnswers": ["Heath Ledger", "Teddy Roosevelt", "Joaquin Phoenix", "Arthur Fleck"]
     }
 ]

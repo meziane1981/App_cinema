@@ -8,18 +8,6 @@
 
 import SwiftUI
 
-struct Question: Codable, Identifiable {
-    enum CorrectAnswer: Int, Codable {
-        case answerA, answerB, answerC, answerD
-    }
-    
-    var id: String
-    var text: String
-    var image: String
-    var correctAnswer: CorrectAnswer
-    var options: [String]
-}
-
 final class GameManager {
     private var currentUserID: Int
     private var userData: [UserData]
