@@ -85,7 +85,7 @@ final class ImageStore {
             let imageSource = CGImageSourceCreateWithURL(url as NSURL, nil),
             let image = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
             else {
-                os_log("Failed to load image %@", log: .default, type: .fault, fileName)
+//                os_log("Failed to load image %@.png", log: .default, type: .fault, fileName)
                 return nil
             }
         return image

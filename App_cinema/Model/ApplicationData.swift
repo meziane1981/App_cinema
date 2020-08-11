@@ -18,28 +18,38 @@ final class GameManager {
     private init(userFile: String, quizFile: String) {
         self.userData = loadJSON(userFile)
         self.publicUserData = self.userData.map {
-            BasicUserData(id: $0.id, nickName: $0.nickName, profileImageName: $0.profileImageName, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
+            BasicUserData(id: $0.id, nickName: $0.nickName, profileImageName: $0.profileImageName, isOnline: $0.isOnline)
         }
         // For permissions
         self.currentUser = userData[0]
         }
     
+    // Transactions
+    
     func requestUserBasicInfo(_ id: Int) -> Optional<BasicUserData> {
-        return publicUserData.first {
+        var user = publicUserData.first {
             $0.id == id
         }
+        
+        if currentUser.id == id || currentUser.friends.contains(id) {
+            return user
+        } else {
+            user?.isOnline = false
+            return user
+        }
+        
     }
     
     // If we are the user or a friends with the user this will return the details
     func requestUserDetails(_ id: Int) -> Optional<UserData> {
         // Need to fix this
-        let details = userData.first {
+        let user = userData.first {
             $0.id == id
         }
         
         // If the profile belongs to the current user or a friend
         if currentUser.id == id || currentUser.friends.contains(id) {
-            return details
+            return user
         }
         else {
             return nil
