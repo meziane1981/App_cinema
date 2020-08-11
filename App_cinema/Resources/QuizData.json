@@ -33,6 +33,41 @@
         "image": "ClownDancing",
         "correctAnswer": 1,
         "possibleAnswers": ["1", "2", "3", "4"]
+    },
+    {
+        "id": "Q0006",
+        "questionText": "A quel date fut créé le cinéma",
+        "image": "ClownDancing",
+        "correctAnswer": 3,
+        "possibleAnswers": ["1920", "1850", "1800", "1895"]
+    },
+    {
+        "id": "Q0007",
+        "questionText": "Quel est le film le plus cher de l'histoire du cinéma(370,73 millions de $)",
+        "image": "ClownDancing",
+        "correctAnswer": 0,
+        "possibleAnswers": ["Pirate des caraïbes jusqu'au bout du monde", "Avenger End Game", "Avatar", "Titanic"]
+    },
+    {
+        "id": "Q0008",
+        "questionText": "En quel année Herbert Kalmus a mis au point la caméra qui permet de filmer en couleur",
+        "image": "ClownDancing",
+        "correctAnswer": 1,
+        "possibleAnswers": ["1910", "1932", "1914", "1940"]
+    },
+    {
+        "id": "Q0009",
+        "questionText": "Pour quel film Matthew McConaughey a remporté un oscar",
+        "image": "ClownDancing",
+        "correctAnswer": 2,
+        "possibleAnswers": ["Interstellar", "Le Loup de Wall Street", "The Dallas Buyers Club", "Le droit de tuer ?"]
+    },
+    {
+        "id": "Q0010",
+        "questionText": "Dans quel film Leonardo DiCaprio n'a t-il pas joué",
+        "image": "ClownDancing",
+        "correctAnswer": 3,
+        "possibleAnswers": ["Django Unchained", "Inception", "Gangs of New York", "Inglourious Basterds"]
     }
 ]
 
