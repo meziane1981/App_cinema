@@ -18,7 +18,9 @@ extension Color {
     static let greenEnd = Color(red: 6 / 255, green: 23 / 255, blue: 0 / 255)
     
     // Profile
-    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
+    static let profileBackgroundColor = Color(red: 4 / 255, green: 80 / 255, blue: 80 / 255)
+    static let offWhite1 = Color(red: 225 / 255, green: 225 / 255, blue: 225 / 255)
+    static let offWhite2 = Color(red: 205 / 255, green: 205 / 255, blue: 205 / 255)
 }
 
 extension LinearGradient {
