@@ -52,6 +52,24 @@ struct Statistics: Codable {
     var hoursPlayed: Double
     var coins: Int
     var pointsLast30Days: [Int]
+    
+    enum RankScoreByTime: Int {
+        case day = 1, week = 7, month = 30
+    }
+    
+    func scoreSum (days: RankScoreByTime?) -> Int {
+        var scoreTotal: Int = 0
+        
+        if let myValue = days {
+            for index in 0..<myValue.rawValue {
+                scoreTotal += pointsLast30Days[index]
+            }
+        } else {
+            scoreTotal = 99
+        }
+        
+        return scoreTotal
+    }
 }
 
 enum Gender: String, Codable {

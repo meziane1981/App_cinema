@@ -30,14 +30,11 @@ struct ProfileView: View {
     
     var body: some View {
         ZStack {
-            
-            Color.blue
-                .opacity(0.7)
+            LinearGradient(Color.darkBlueEnd, Color.darkBlueStart)
                 .edgesIgnoringSafeArea(.all)
             
             // THE PROFILE
-            VStack(alignment: .center, spacing: 75) {
-                    // Image must be in centre so that the progress bar can be aligned properly
+            VStack(alignment: .center, spacing: 20) {
                     VStack {
                         Image(profileVM.user.profileImage, scale: 1, label: Text("\("Profile picture of " + profileVM.user.nickName)"))
                             .clipShape(Circle())
@@ -51,7 +48,7 @@ struct ProfileView: View {
                                     Text(profileVM.user.nickName)
                                         .fontWeight(.bold)
                                         .font(.headline).lineLimit(1)
-                                        
+                                    
                                     StatusIndicator(isOnline: profileVM.user.isOnline ?? false)
                                 }
                                 Text("#\(profileVM.user.id)")
@@ -60,34 +57,53 @@ struct ProfileView: View {
                             }
                             .padding(5)
                             .frame(maxWidth: 150)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.offWhite1))
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            .background(ForegroundCard())
+                            
                         }
                     }
-                .frame(width: UIScreen.main.bounds.size.width, height: 300)
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.offWhite1.opacity(0.95))
-                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10))
-                .edgesIgnoringSafeArea(.top)
+                    .frame(width: UIScreen.main.bounds.size.width - 20, height: 300)
+                    .background(BackgroundCard())
+                
+                
                 
                 // USER STATISTICS SECTION
                 if profileVM.user.statistics != nil {
-                    VStack {
-                        Text("\("Hours Played: " + String(format: "%.0f", profileVM.user.statistics!.hoursPlayed))")
-                            .font(.headline)
+                    VStack(alignment: .center, spacing: 10.0) {
+                        
+                        // The section label
                         HStack {
-                            Text("Coins: \(profileVM.user.statistics!.coins)")
-                                .font(.headline)
-                            Image("icon_token_wh")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                            // If the current user is not the owner of the profile
+                            if GameManager.instance.currentUser.id != profileVM.user.id {
+                                Text("Statistiques de \(profileVM.user.nickName):")
+                                    .font(.subheadline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            } else {
+                                Text("Vos statistiques:")
+                                    .font(.subheadline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                        }
+                        .padding()
+                        .frame(width: UIScreen.main.bounds.width - 20, height: 20)
+                        
+                        Text("\("Heures jouées: " + String(format: "%.1f", profileVM.user.statistics!.hoursPlayed))")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                        HStack(alignment: .center, spacing: 10.0) {
+                            Text("Jetons: \(profileVM.user.statistics!.coins)")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                            Image("token")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .shadow(radius: 10)
                         }
                     }
-                .padding()
-                    .background(CardShadowedBlended())
+                    .frame(width: UIScreen.main.bounds.width - 20)
+                    .padding(.vertical)
+                    .background(BackgroundCard())
                 }
                 // END OF USER STATISTICS SECTION
                 
@@ -99,10 +115,11 @@ struct ProfileView: View {
                         HStack {
                             // If the current user is not the owner of the profile
                             if GameManager.instance.currentUser.id != profileVM.user.id {
-                                Text("\(profileVM.user.nickName + String(profileVM.user.nickName[profileVM.user.nickName.index(before: profileVM.user.nickName.endIndex)] != "s" ? "'s" : "'")) friends:")
+                                Text("Les amis de \(profileVM.user.nickName):")
                                     .font(.subheadline)
+                                    .fontWeight(.bold)
                             } else {
-                                Text("Your friends:")
+                                Text("Vos amis:")
                                     .font(.subheadline)
                                     .fontWeight(.bold)
                             }
@@ -120,7 +137,7 @@ struct ProfileView: View {
                             }
                         }
                         .padding()
-                        .frame(height: 20)
+                        .frame(width: UIScreen.main.bounds.width - 20, height: 20)
                         
                         // The list of friends itself
                         HStack(alignment: .center, spacing: 10) {
@@ -128,14 +145,17 @@ struct ProfileView: View {
                                 ForEach(0..<4, id: \.self) { index in
                                     NavigationLink(destination: ProfileView(profileVM: ProfileViewModel(userID: self.profileVM.friends[index].id))) {
                                         UserProfilePreview(user: self.profileVM.friends[index])
-                                            .offset(x: 0, y: 20)
+                                            .foregroundColor(.black)
+                                            .padding(.horizontal, -2.5)
+                                            .offset(x: 0, y: 25)
+                                            .padding(.top, -15)
                                     }
                                 }
                             }
                         }
                     }
                     .padding(.vertical)
-                    .background(CardShadowedBlended())
+                    .background(BackgroundCard())
                 }
                 else {
                     VStack {
@@ -147,22 +167,28 @@ struct ProfileView: View {
                 Spacer()
                 
             }
+            .sheet(isPresented: $profileVM.isShowingAllFriends) {
+                FriendSheet(friendList: self.profileVM.friends)
+            }
         }
-        .sheet(isPresented: $profileVM.isShowingAllFriends) {
-            FriendSheet(friendList: self.profileVM.friends)
-        }
+        .edgesIgnoringSafeArea(.all)
         
     }
+    
 }
 
 // OTHER STUFF
-
 struct FriendSheet: View {
     var friendList: [ProfilePreview]
     var body: some View {
-        List {
-            ForEach(friendList) { friend in
-                UserProfilePreview(user: friend)
+        VStack {
+            Text("Friends")
+                .padding()
+                .font(.title)
+            ScrollView{
+                ForEach(friendList) { friend in
+                    UserProfilePreviewLarge(user: friend)
+                }.padding()
             }
         }
     }
@@ -185,37 +211,24 @@ struct Profile_Previews: PreviewProvider {
     }
 }
 
-struct CardShadowed: View {
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.offWhite2)
-                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-        }
-    }
-}
-
-// Will become the same color as the background
-struct CardShadowedOverlayed: View {
+struct ForegroundCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.offWhite1)
-                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                .blendMode(.overlay)
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10)
         }
     }
 }
 
-struct CardShadowedBlended: View {
+struct BackgroundCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.profileBackgroundColor)
-                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                .fill(Color.offWhite1)
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10)
                 .blendMode(.overlay)
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.offWhite1)

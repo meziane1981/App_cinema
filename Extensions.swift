@@ -9,6 +9,12 @@
 import SwiftUI
 
 extension Color {
+    // App
+    static let darkBlueStart = Color(red: 0 / 255, green: 78 / 255, blue: 146 / 255)
+    .opacity(0.9)
+    static let darkBlueEnd = Color(red: 0 / 255, green: 4 / 255, blue: 40 / 255)
+    .opacity(0.9)
+    
     // Quiz
     static let darkStart = Color(red: 50 / 255, green: 60 / 255, blue: 65 / 255)
     static let darkEnd = Color(red: 25 / 255, green: 25 / 255, blue: 30 / 255)
