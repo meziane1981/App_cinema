@@ -11,8 +11,10 @@ import SwiftUI
 struct RootView: View {
     @State private var selectedTab: Int = 1
     var body: some View {
-        VStack {
-//             Text("Everything is under control, don't panic!")
+        
+        //Text("Everything is under control, don't panic!")
+        
+        NavigationView {
             TabView(selection: $selectedTab) {
                 VStack {
                     Image(systemName: "clock")
@@ -22,7 +24,7 @@ struct RootView: View {
                         Text("Game")
                     }
                 }.tag(1)
-
+                
                 VStack{
                     ProfileView(profileVM: ProfileViewModel(userID: GameManager.instance.currentUser.id))
                 }.tabItem {
@@ -31,7 +33,7 @@ struct RootView: View {
                         Text("Profiles")
                     }
                 }.tag(2)
-
+                
                 VStack{
                     Text("Test3")
                 }.tabItem {
@@ -40,7 +42,7 @@ struct RootView: View {
                         Text("Rewards")
                     }
                 }.tag(3)
-
+                
                 VStack{
                     Text("Rank View")
                 }.tabItem {
