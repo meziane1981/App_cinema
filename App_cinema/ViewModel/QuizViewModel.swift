@@ -31,6 +31,9 @@ final class QuizViewModel: ObservableObject {
             }
         }
     }
+    // finish the game
+    @Published var gameIsEnded = false
+    
     //points
     @Published var point: Int
     
@@ -41,9 +44,13 @@ final class QuizViewModel: ObservableObject {
     }
     
     func nextQuestion() {
+        if self.currentIndex == questions.count - 1 {
+            self.gameIsEnded = true
+            self.currentIndex = 0
+            return
+        }
         self.currentIndex+=1
         self.response = nil
-        
     }
     
     func increasePoint() {

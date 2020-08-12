@@ -40,17 +40,30 @@ struct ButtonBackground<S: Shape>: View {
     }
 }
 
+struct TimerBackground<S: Shape>: View {
+    var shape: S
+    
+    var body: some View {
+        ZStack {
+            shape
+                .fill(LinearGradient(Color.darkStart, Color.darkEnd))
+                .shadow(color: Color.darkStart.opacity(0.5), radius: 10, x: -10, y: -10)
+                .shadow(color: Color.darkEnd.opacity(0.5), radius: 10, x: 10, y: 10)
+        }
+    }
+}
+
 struct ProgressBar: View {
     @Binding var progress: Float
     
     var body: some View {
         ZStack {
             Circle()
-                .stroke(lineWidth: 10.0)
+                .stroke(lineWidth: 5.0)
                 .foregroundColor(.red)
             Circle()
                 .trim(from: 0.0, to: CGFloat(self.progress))
-                .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
+                .stroke(style: StrokeStyle(lineWidth: 5.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.orange)
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.easeInOut(duration: 0.1))
@@ -66,7 +79,7 @@ struct GameView: View {
     @State private var timeRemaining: Float = 60
     @State private var isActive = true
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
-    @State var gameIsEnded = false
+    
     
     //progress bar
     @State var progresValue: Float = 1
@@ -78,40 +91,42 @@ struct GameView: View {
                 //            bgColour
                 LinearGradient(Color.darkStart, Color.darkEnd)
                 
-                NavigationLink(destination: EndGameView(quizViewModel: quizViewModel), isActive: $gameIsEnded) {
+                NavigationLink(destination: EndGameView(quizViewModel: quizViewModel), isActive: $quizViewModel.gameIsEnded) {
                     Text("")
                 }
                 // The answers
                 VStack(alignment: .center, spacing: 40) {
                     
                     
-                    HStack(spacing: 100) {
+                    HStack(spacing: 60) {
                         Text("Questions: \n\t\(self.quizViewModel.currentIndex + 1) / \(self.quizViewModel.questions.count)")
                         Text("Points: \n\t\(self.quizViewModel.point)")
+                        
+                        ZStack {
+                            Text("\(String(format: "%.f", timeRemaining))")
+                                //.font(.largeTitle)
+                                .foregroundColor(.white)
+                            ProgressBar(progress: self.$progresValue)
+                                .frame(width: 50.0, height: 50.0)
+                                .padding(10.0)
+                        }
+                        .background(TimerBackground(shape: Circle()))
                     }
                     // The question
-                    
                     Text("\(quizViewModel.questions[quizViewModel.currentIndex].questionText + "?")")
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .padding(40)
-                        .font(.title)
-                    
-                    ZStack {
-                        Text("\(String(format: "%.f", timeRemaining))")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                        ProgressBar(progress: self.$progresValue)
-                            .frame(width: 100.0, height: 100.0)
-                            .padding(10.0)
-                    }
-                    
+                        .padding(20)
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                    Spacer()
+                        .frame(height: 150)
                     
                     ForEach(0..<quizViewModel.questions[quizViewModel.currentIndex].possibleAnswers.count) { index in
                         Button(action: {
                             withAnimation(.easeInOut(duration: 0.5)) {
                                 self.quizViewModel.response = index
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                     self.quizViewModel.nextQuestion()
                                 }
                             }
@@ -137,7 +152,7 @@ struct GameView: View {
                 self.progresValue = self.timeRemaining / self.startTime
             } else {
                 self.timer.upstream.connect().cancel()
-                self.gameIsEnded = true
+                self.quizViewModel.gameIsEnded = true
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
@@ -152,14 +167,14 @@ struct GameView: View {
 
 struct EndGameView: View {
     @ObservedObject var quizViewModel: QuizViewModel
-
+    
     var body: some View {
         ZStack {
-
+            
             if self.quizViewModel.point < 500 {
                 //            bgColour
                 LinearGradient(Color.redStart, Color.redEnd)
-
+                
                 VStack(spacing: 100) {
                     Text("Vous avez Perdu")
                         .foregroundColor(.white)
@@ -172,7 +187,7 @@ struct EndGameView: View {
             } else {
                 //            bgColour
                 LinearGradient(Color.greenStart, Color.greenEnd)
-
+                
                 VStack(spacing: 100) {
                     Text("Vous avez Gagné")
                         .foregroundColor(.white)
@@ -180,7 +195,7 @@ struct EndGameView: View {
                     Text("Vous avez répondu à \(self.quizViewModel.numberOfAnswers) / \(self.quizViewModel.questions.count) questions")
                         .foregroundColor(.white)
                     Text("Félicitation vous avez gagné \(self.quizViewModel.point) points")
-                    .foregroundColor(.white)
+                        .foregroundColor(.white)
                 }
             }
         }
