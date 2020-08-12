@@ -23,6 +23,14 @@ final class QuizViewModel: ObservableObject {
             }
         }
     }
+    // number of answers
+    @Published var numberOfAnswers: Int = 0 {
+        didSet {
+            if questions[currentIndex].correctAnswer == response {
+                increaseNumberOfAnswers()
+            }
+        }
+    }
     //points
     @Published var point: Int
     
@@ -40,5 +48,8 @@ final class QuizViewModel: ObservableObject {
     
     func increasePoint() {
         self.point += 100
+    }
+    func increaseNumberOfAnswers() {
+        self.numberOfAnswers += 1
     }
 }

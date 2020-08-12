@@ -40,16 +40,37 @@ struct ButtonBackground<S: Shape>: View {
     }
 }
 
+struct ProgressBar: View {
+    @Binding var progress: Float
+    
+    var body: some View {
+        ZStack {
+            Circle()
+                .stroke(lineWidth: 10.0)
+                .foregroundColor(.red)
+            Circle()
+                .trim(from: 0.0, to: CGFloat(self.progress))
+                .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.orange)
+                .rotationEffect(Angle(degrees: 270.0))
+                .animation(.easeInOut(duration: 0.1))
+        }
+    }
+}
+
 struct GameView: View {
     // Now only a single question, will create a parent view called game that will handle this
     @ObservedObject var quizViewModel: QuizViewModel
     
     //Timer for game
-    @State private var timeRemaining = 20
+    @State private var timeRemaining: Float = 60
     @State private var isActive = true
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @State var gameIsEnded = false
     
+    //progress bar
+    @State var progresValue: Float = 1
+    var startTime: Float = 60
     
     var body: some View {
         NavigationView {
@@ -57,16 +78,11 @@ struct GameView: View {
                 //            bgColour
                 LinearGradient(Color.darkStart, Color.darkEnd)
                 
-                NavigationLink(destination: EndGameView(quizViewModel: QuizViewModel()), isActive: $gameIsEnded) {
+                NavigationLink(destination: EndGameView(quizViewModel: quizViewModel), isActive: $gameIsEnded) {
                     Text("")
                 }
                 // The answers
                 VStack(alignment: .center, spacing: 40) {
-                    VStack {
-                        Text("Time: \(timeRemaining)")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    }
                     
                     
                     HStack(spacing: 100) {
@@ -80,6 +96,16 @@ struct GameView: View {
                         .foregroundColor(.white)
                         .padding(40)
                         .font(.title)
+                    
+                    ZStack {
+                        Text("\(String(format: "%.f", timeRemaining))")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                        ProgressBar(progress: self.$progresValue)
+                            .frame(width: 100.0, height: 100.0)
+                            .padding(10.0)
+                    }
+                    
                     
                     ForEach(0..<quizViewModel.questions[quizViewModel.currentIndex].possibleAnswers.count) { index in
                         Button(action: {
@@ -107,7 +133,8 @@ struct GameView: View {
         .onReceive(timer) { time in
             guard self.isActive else { return }
             if self.timeRemaining > 0 {
-                self.timeRemaining -= 1
+                self.timeRemaining -= 0.01
+                self.progresValue = self.timeRemaining / self.startTime
             } else {
                 self.timer.upstream.connect().cancel()
                 self.gameIsEnded = true
@@ -125,19 +152,37 @@ struct GameView: View {
 
 struct EndGameView: View {
     @ObservedObject var quizViewModel: QuizViewModel
-    
+
     var body: some View {
         ZStack {
-            //            bgColour
+
             if self.quizViewModel.point < 500 {
+                //            bgColour
                 LinearGradient(Color.redStart, Color.redEnd)
+
+                VStack(spacing: 100) {
+                    Text("Vous avez Perdu")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                    Text("Vous avez répondu à \(self.quizViewModel.numberOfAnswers) / \(self.quizViewModel.questions.count) questions")
+                        .foregroundColor(.white)
+                    Text("Félicitation vous avez gagné \(self.quizViewModel.point) points")
+                        .foregroundColor(.white)
+                }
             } else {
+                //            bgColour
                 LinearGradient(Color.greenStart, Color.greenEnd)
+
+                VStack(spacing: 100) {
+                    Text("Vous avez Gagné")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                    Text("Vous avez répondu à \(self.quizViewModel.numberOfAnswers) / \(self.quizViewModel.questions.count) questions")
+                        .foregroundColor(.white)
+                    Text("Félicitation vous avez gagné \(self.quizViewModel.point) points")
+                    .foregroundColor(.white)
+                }
             }
-            
-            Text("Hello world")
-                .foregroundColor(.white)
-            
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden(true)
