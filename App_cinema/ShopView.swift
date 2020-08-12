@@ -1,23 +1,12 @@
 //
-//  ShopView.swift
+//  ShopButtonView.swift
 //  App_cinema
 //
-//  Created by lucie besson on 10/08/2020.
+//  Created by lucie besson on 06/08/2020.
 //  Copyright © 2020 Groupe Cinéma. All rights reserved.
 //
 
 import SwiftUI
-
-extension Color {
-    static let darkBlueStart = Color(red: 0 / 255, green: 78 / 255, blue: 146 / 255)
-    static let darkBlueEnd = Color(red: 0 / 255, green: 4 / 255, blue: 40 / 255)
-}
-
-extension LinearGradient {
-    init(colors: Color...) {
-        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
-}
 
 struct ShopBackground: View {
     var isHighlighted: Bool
@@ -58,30 +47,31 @@ struct ShopButtonStyle: ButtonStyle {
 }
 
 
-
 struct ShopView: View {
         @State private var coins: Int = 300
         @State private var tickets: Int = 2
         @State private var popcorn: Int = 1
         @State private var drink: Int = 1
+        @State private var drivin: Int = 1
         @State var alertCart: Bool = false
-        
     
     var body: some View {
         
         ZStack {
-            LinearGradient(Color.darkBlueStart, Color.darkBlueEnd)
+            LinearGradient(Color.darkBlueEnd, Color.darkBlueStart)
                 .edgesIgnoringSafeArea(.all)
             VStack {
+
                 HStack {
-                    Image("icon_token_sm")
-                    .resizable()
-                    .frame(width: 30.0, height: 30.0)
-                    Text("\(Int(coins)) jetons")
-                        .font(.caption)
-                        .foregroundColor(.white)
+                Image("icon_token_sm")
+                .resizable()
+                .frame(width: 30.0, height: 30.0)
+                .padding(.leading, 250.0)
+                Text("\(Int(coins)) jetons")
+                    .font(.caption)
+                    .foregroundColor(.white)
                 }
-                .padding(.leading, 300.0)
+                .padding(.top, 30.0)
                 
                 HStack {
                     Text("Boutique")
@@ -109,6 +99,14 @@ struct ShopView: View {
                         Text("\(Int(tickets)) places de cinéma")
                             .font(.caption)
                             .foregroundColor(Color.white)
+                        HStack {
+                        Image("icon_token_sm")
+                        .resizable()
+                            .frame(width: 15.0, height: 15.0)
+                        Text("1300 jetons")
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        }
                     }
                     .padding()
                     
@@ -131,6 +129,14 @@ struct ShopView: View {
                         Text("\(Int(popcorn)) popcorn")
                             .font(.caption)
                             .foregroundColor(Color.white)
+                        HStack {
+                        Image("icon_token_sm")
+                        .resizable()
+                        .frame(width: 15.0, height: 15.0)
+                        Text("550 jetons")
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        }
                     }
                     .padding()
                     
@@ -138,6 +144,8 @@ struct ShopView: View {
                     Button(action: {
                         if  self.drink > 0 {
                             self.drink -= 1
+                            } else {
+                                self.alertCart = true
                         }
                     })
                     {
@@ -150,13 +158,28 @@ struct ShopView: View {
                         Text("\(Int(drink)) boisson")
                             .font(.caption)
                             .foregroundColor(Color.white)
+                        HStack {
+                            Image("icon_token_sm")
+                            .resizable()
+                            .frame(width: 15.0, height: 15.0)
+                        Text("300 jetons")
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        }
                     }
                     .padding()
                 }
             
                 HStack {
                     VStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        if  self.drivin > 0 {
+                            self.drivin -= 1
+                            
+                            } else {
+                                self.alertCart = true
+                        }
+                    }) {
                         Image("icon_vcamera")
                             .resizable()
                             .frame(width: 60.0, height: 50.0)
@@ -164,12 +187,16 @@ struct ShopView: View {
                     }
                     .buttonStyle(ShopButtonStyle(colorStart: .white, colorEnd: .blue) )
                         
+                        Text("\(Int(drivin)) évènement")
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                        
                         HStack {
                         Image("icon_token_sm")
                         .resizable()
                         .frame(width: 15.0, height: 15.0)
                         
-                        Text("\(Int(coins)) jetons")
+                        Text("1230 jetons")
                             .font(.caption)
                             .foregroundColor(Color.white)
                         }
@@ -177,15 +204,38 @@ struct ShopView: View {
                     .padding()
                     
                     VStack {
-                    Button(action: {
-                        self.coins -= 300
-                    })
-                    {
-                        Image("icon_token_wh")
-                            .resizable()
-                            .frame(width: 60.0, height: 60.0)
+                    ZStack {
+                        Button(action: {
+                            if  self.coins > 0 {
+                                self.coins -= 300
+                                } else {
+                                    self.alertCart = true
+                            }
+                        })
+                        {
+                            Image("icon_token_wh")
+                                .resizable()
+                                .frame(width: 60.0, height: 60.0)
+                        }
+                        .buttonStyle(ShopButtonStyle(colorStart: .pink, colorEnd: .white) )
+                        .overlay(VStack {
+                            HStack {
+                                Image(systemName: "play.circle.fill")
+                                .resizable()
+                                .frame(width: 30.0, height: 30.0, alignment:
+                                    .bottom)
+                                    .foregroundColor(Color.blue)
+                                    Spacer()
+                            }
+                            Spacer()
+                        })
                     }
-                    .buttonStyle(ShopButtonStyle(colorStart: .pink, colorEnd: .white) )
+                        
+                        
+                        
+                        Image("icon_token_sm")
+                        .resizable()
+                        .frame(width: 15.0, height: 15.0)
                         
                         Text("\(Int(coins)) jetons gratuits")
                             .font(.caption)
@@ -196,7 +246,7 @@ struct ShopView: View {
                 Spacer()
             }
             .alert(isPresented: $alertCart) {
-                Alert(title: Text("Votre gain est dans votre panier"))
+                Alert(title: Text("Vérifiez votre panier"))
             }
         }
     }
@@ -205,5 +255,7 @@ struct ShopView: View {
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
         ShopView()
+        
+//        ShopView(GameManager.instance.currentUser.coins)
     }
 }
