@@ -233,7 +233,6 @@
 			children = (
 				D789776F24D8433100AD4DDB /* App_cinema */,
 				D789776E24D8433100AD4DDB /* Products */,
-				BD7436E624DC3DBD00AAA10B /* Extensions.swift */,
 				8C2B146124E52C9B00703A82 /* Assets.xcassets */,
 			);
 			sourceTree = "<group>";
@@ -263,6 +262,7 @@
 				8C4C70D824DA80CC00C68B86 /* QuizView.swift */,
 				8C06A59724E3E3CB00ABB86E /* Home.swift */,
 				D789777E24D8433300AD4DDB /* Info.plist */,
+				BD7436E624DC3DBD00AAA10B /* Extensions.swift */,
 				D789777824D8433300AD4DDB /* Preview Content */,
 			);
 			path = App_cinema;
