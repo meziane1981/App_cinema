@@ -6,21 +6,13 @@
         "gender": "male",
         "age": 24,
         "nickName": "nName001",
-<<<<<<< HEAD
-        "image": "user_10001",
-=======
         "profileImageName": "user_10001",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10076, 10052, 10047, 10004, 10016, 10013, 10020, 10027],
         "statistics": {
             "coins": 498,
-<<<<<<< HEAD
-            "hoursPlayed": 29.00,
-=======
             "hoursPlayed": 9.00,
->>>>>>> model
             "pointsLast30Days": [15, 31, 16, 43, 45, 22, 44, 27, 29, 23, 0, 0, 0, 17, 31, 31, 29, 20, 31, 14, 30, 21, 34, 50, 0, 18, 0, 43, 30, 18, 0]
         }
     },
@@ -31,11 +23,7 @@
         "gender": "female",
         "age": 26,
         "nickName": "nName002",
-<<<<<<< HEAD
-        "image": "user_10002",
-=======
         "profileImageName": "user_10002",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10037],
@@ -52,11 +40,7 @@
         "gender": "male",
         "age": 19,
         "nickName": "nName003",
-<<<<<<< HEAD
-        "image": "user_10003",
-=======
         "profileImageName": "user_10003",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10026, 10025, 10059, 10021, 10062],
@@ -73,11 +57,7 @@
         "gender": "male",
         "age": 25,
         "nickName": "nName004",
-<<<<<<< HEAD
-        "image": "user_10004",
-=======
         "profileImageName": "user_10004",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10034, 10024, 10007, 10015, 10001, 10076, 10026, 10008],
@@ -94,11 +74,7 @@
         "gender": "male",
         "age": 22,
         "nickName": "nName005",
-<<<<<<< HEAD
-        "image": "user_10005",
-=======
         "profileImageName": "user_10005",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10055, 10080, 10016, 10087, 10061, 10020, 10027, 10091],
@@ -115,11 +91,7 @@
         "gender": "male",
         "age": 30,
         "nickName": "nName006",
-<<<<<<< HEAD
-        "image": "user_10006",
-=======
         "profileImageName": "user_10006",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10077],
@@ -136,11 +108,7 @@
         "gender": "male",
         "age": 24,
         "nickName": "nName007",
-<<<<<<< HEAD
-        "image": "user_10007",
-=======
         "profileImageName": "user_10007",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10061, 10099, 10042, 10073, 10004, 10043, 10045],
@@ -157,11 +125,7 @@
         "gender": "male",
         "age": 26,
         "nickName": "nName008",
-<<<<<<< HEAD
-        "image": "user_10008",
-=======
         "profileImageName": "user_10008",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10016, 10080, 10032, 10038, 10004],
@@ -178,11 +142,7 @@
         "gender": "female",
         "age": 29,
         "nickName": "nName009",
-<<<<<<< HEAD
-        "image": "user_10009",
-=======
         "profileImageName": "user_10009",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10075, 10050, 10015],
@@ -199,11 +159,7 @@
         "gender": "female",
         "age": 19,
         "nickName": "nName010",
-<<<<<<< HEAD
-        "image": "user_10010",
-=======
         "profileImageName": "user_10010",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10076, 10091, 10058],
@@ -220,11 +176,7 @@
         "gender": "female",
         "age": 22,
         "nickName": "nName011",
-<<<<<<< HEAD
-        "image": "user_10011",
-=======
         "profileImageName": "user_10011",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10058, 10036, 10019, 10088, 10022, 10048, 10080, 10056],
@@ -241,11 +193,7 @@
         "gender": "female",
         "age": 19,
         "nickName": "nName012",
-<<<<<<< HEAD
-        "image": "user_10012",
-=======
         "profileImageName": "user_10012",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10088, 10099, 10038],
@@ -262,11 +210,7 @@
         "gender": "male",
         "age": 30,
         "nickName": "nName013",
-<<<<<<< HEAD
-        "image": "user_10013",
-=======
         "profileImageName": "user_10013",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10001, 10096],
@@ -283,11 +227,7 @@
         "gender": "female",
         "age": 26,
         "nickName": "nName014",
-<<<<<<< HEAD
-        "image": "user_10014",
-=======
         "profileImageName": "user_10014",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10047, 10060],
@@ -304,11 +244,7 @@
         "gender": "female",
         "age": 28,
         "nickName": "nName015",
-<<<<<<< HEAD
-        "image": "user_10015",
-=======
         "profileImageName": "user_10015",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10061, 10063, 10096, 10004, 10026, 10009],
@@ -325,11 +261,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName016",
-<<<<<<< HEAD
-        "image": "user_10016",
-=======
         "profileImageName": "user_10016",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10062, 10017, 10086, 10059, 10005, 10008, 10068, 10061, 10001, 10023],
@@ -346,11 +278,7 @@
         "gender": "male",
         "age": 21,
         "nickName": "nName017",
-<<<<<<< HEAD
-        "image": "user_10017",
-=======
         "profileImageName": "user_10017",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10016, 10048, 10034, 10019],
@@ -367,11 +295,7 @@
         "gender": "female",
         "age": 26,
         "nickName": "nName018",
-<<<<<<< HEAD
-        "image": "user_10018",
-=======
         "profileImageName": "user_10018",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10034, 10032],
@@ -388,11 +312,7 @@
         "gender": "male",
         "age": 18,
         "nickName": "nName019",
-<<<<<<< HEAD
-        "image": "user_10019",
-=======
         "profileImageName": "user_10019",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10011, 10073, 10056, 10049, 10046, 10017, 10094],
@@ -409,11 +329,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName020",
-<<<<<<< HEAD
-        "image": "user_10020",
-=======
         "profileImageName": "user_10020",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10022, 10028, 10005, 10001],
@@ -430,11 +346,7 @@
         "gender": "male",
         "age": 23,
         "nickName": "nName021",
-<<<<<<< HEAD
-        "image": "user_10021",
-=======
         "profileImageName": "user_10021",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10086, 10062, 10043, 10003],
@@ -451,11 +363,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName022",
-<<<<<<< HEAD
-        "image": "user_10022",
-=======
         "profileImageName": "user_10022",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10066, 10011, 10020, 10070, 10078, 10099],
@@ -472,11 +380,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName023",
-<<<<<<< HEAD
-        "image": "user_10023",
-=======
         "profileImageName": "user_10023",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10078, 10016, 10049],
@@ -493,11 +397,7 @@
         "gender": "female",
         "age": 28,
         "nickName": "nName024",
-<<<<<<< HEAD
-        "image": "user_10024",
-=======
         "profileImageName": "user_10024",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10032, 10004],
@@ -514,11 +414,7 @@
         "gender": "male",
         "age": 18,
         "nickName": "nName025",
-<<<<<<< HEAD
-        "image": "user_10025",
-=======
         "profileImageName": "user_10025",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10095, 10003, 10052, 10031],
@@ -535,11 +431,7 @@
         "gender": "male",
         "age": 26,
         "nickName": "nName026",
-<<<<<<< HEAD
-        "image": "user_10026",
-=======
         "profileImageName": "user_10026",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10003, 10015, 10004],
@@ -556,11 +448,7 @@
         "gender": "male",
         "age": 21,
         "nickName": "nName027",
-<<<<<<< HEAD
-        "image": "user_10027",
-=======
         "profileImageName": "user_10027",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10056, 10073, 10063, 10047, 10005, 10001],
@@ -577,11 +465,7 @@
         "gender": "male",
         "age": 24,
         "nickName": "nName028",
-<<<<<<< HEAD
-        "image": "user_10028",
-=======
         "profileImageName": "user_10028",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10047, 10078, 10020, 10082, 10031],
@@ -598,11 +482,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName029",
-<<<<<<< HEAD
-        "image": "user_10029",
-=======
         "profileImageName": "user_10029",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10069, 10056, 10098],
@@ -619,11 +499,7 @@
         "gender": "male",
         "age": 21,
         "nickName": "nName030",
-<<<<<<< HEAD
-        "image": "user_10030",
-=======
         "profileImageName": "user_10030",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10046, 10034],
@@ -640,11 +516,7 @@
         "gender": "female",
         "age": 28,
         "nickName": "nName031",
-<<<<<<< HEAD
-        "image": "user_10031",
-=======
         "profileImageName": "user_10031",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10054, 10087, 10075, 10028, 10025],
@@ -661,11 +533,7 @@
         "gender": "female",
         "age": 29,
         "nickName": "nName032",
-<<<<<<< HEAD
-        "image": "user_10032",
-=======
         "profileImageName": "user_10032",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10066, 10024, 10077, 10018, 10008],
@@ -682,11 +550,7 @@
         "gender": "male",
         "age": 19,
         "nickName": "nName033",
-<<<<<<< HEAD
-        "image": "user_10033",
-=======
         "profileImageName": "user_10033",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10086],
@@ -703,11 +567,7 @@
         "gender": "female",
         "age": 29,
         "nickName": "nName034",
-<<<<<<< HEAD
-        "image": "user_10034",
-=======
         "profileImageName": "user_10034",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10004, 10051, 10030, 10018, 10017],
@@ -724,11 +584,7 @@
         "gender": "male",
         "age": 23,
         "nickName": "nName035",
-<<<<<<< HEAD
-        "image": "user_10035",
-=======
         "profileImageName": "user_10035",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10041, 10079],
@@ -745,11 +601,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName036",
-<<<<<<< HEAD
-        "image": "user_10036",
-=======
         "profileImageName": "user_10036",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10063, 10011, 10041, 10062],
@@ -766,11 +618,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName037",
-<<<<<<< HEAD
-        "image": "user_10037",
-=======
         "profileImageName": "user_10037",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10059, 10099, 10039, 10088, 10095, 10002],
@@ -787,11 +635,7 @@
         "gender": "female",
         "age": 20,
         "nickName": "nName038",
-<<<<<<< HEAD
-        "image": "user_10038",
-=======
         "profileImageName": "user_10038",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10082, 10012, 10008],
@@ -808,11 +652,7 @@
         "gender": "female",
         "age": 21,
         "nickName": "nName039",
-<<<<<<< HEAD
-        "image": "user_10039",
-=======
         "profileImageName": "user_10039",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10100, 10037, 10081, 10088, 10053],
@@ -829,11 +669,7 @@
         "gender": "male",
         "age": 28,
         "nickName": "nName040",
-<<<<<<< HEAD
-        "image": "user_10040",
-=======
         "profileImageName": "user_10040",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [],
@@ -850,11 +686,7 @@
         "gender": "male",
         "age": 25,
         "nickName": "nName041",
-<<<<<<< HEAD
-        "image": "user_10041",
-=======
         "profileImageName": "user_10041",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10035, 10036, 10087],
@@ -871,11 +703,7 @@
         "gender": "female",
         "age": 28,
         "nickName": "nName042",
-<<<<<<< HEAD
-        "image": "user_10042",
-=======
         "profileImageName": "user_10042",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10069, 10043, 10007],
@@ -892,11 +720,7 @@
         "gender": "female",
         "age": 29,
         "nickName": "nName043",
-<<<<<<< HEAD
-        "image": "user_10043",
-=======
         "profileImageName": "user_10043",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10065, 10045, 10042, 10046, 10021, 10007, 10061],
@@ -913,11 +737,7 @@
         "gender": "female",
         "age": 18,
         "nickName": "nName044",
-<<<<<<< HEAD
-        "image": "user_10044",
-=======
         "profileImageName": "user_10044",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10079, 10097, 10052],
@@ -934,11 +754,7 @@
         "gender": "female",
         "age": 27,
         "nickName": "nName045",
-<<<<<<< HEAD
-        "image": "user_10045",
-=======
         "profileImageName": "user_10045",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10043, 10085, 10007, 10076],
@@ -955,11 +771,7 @@
         "gender": "male",
         "age": 19,
         "nickName": "nName046",
-<<<<<<< HEAD
-        "image": "user_10046",
-=======
         "profileImageName": "user_10046",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10070, 10030, 10043, 10089, 10019, 10091],
@@ -976,11 +788,7 @@
         "gender": "male",
         "age": 24,
         "nickName": "nName047",
-<<<<<<< HEAD
-        "image": "user_10047",
-=======
         "profileImageName": "user_10047",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10048, 10014, 10028, 10001, 10083, 10027],
@@ -997,11 +805,7 @@
         "gender": "female",
         "age": 20,
         "nickName": "nName048",
-<<<<<<< HEAD
-        "image": "user_10048",
-=======
         "profileImageName": "user_10048",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10055, 10047, 10017, 10011, 10089, 10068],
@@ -1018,11 +822,7 @@
         "gender": "female",
         "age": 28,
         "nickName": "nName049",
-<<<<<<< HEAD
-        "image": "user_10049",
-=======
         "profileImageName": "user_10049",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10019, 10023],
@@ -1039,11 +839,7 @@
         "gender": "male",
         "age": 23,
         "nickName": "nName050",
-<<<<<<< HEAD
-        "image": "user_10050",
-=======
         "profileImageName": "user_10050",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10096, 10009],
@@ -1060,11 +856,7 @@
         "gender": "female",
         "age": 27,
         "nickName": "nName051",
-<<<<<<< HEAD
-        "image": "user_10051",
-=======
         "profileImageName": "user_10051",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10060, 10034],
@@ -1081,11 +873,7 @@
         "gender": "male",
         "age": 28,
         "nickName": "nName052",
-<<<<<<< HEAD
-        "image": "user_10052",
-=======
         "profileImageName": "user_10052",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10001, 10025, 10072, 10084, 10044],
@@ -1102,11 +890,7 @@
         "gender": "female",
         "age": 18,
         "nickName": "nName053",
-<<<<<<< HEAD
-        "image": "user_10053",
-=======
         "profileImageName": "user_10053",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10099, 10054, 10039, 10072, 10091],
@@ -1123,11 +907,7 @@
         "gender": "female",
         "age": 29,
         "nickName": "nName054",
-<<<<<<< HEAD
-        "image": "user_10054",
-=======
         "profileImageName": "user_10054",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10031, 10084, 10053, 10094],
@@ -1144,11 +924,7 @@
         "gender": "female",
         "age": 21,
         "nickName": "nName055",
-<<<<<<< HEAD
-        "image": "user_10055",
-=======
         "profileImageName": "user_10055",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10005, 10048],
@@ -1165,11 +941,7 @@
         "gender": "male",
         "age": 18,
         "nickName": "nName056",
-<<<<<<< HEAD
-        "image": "user_10056",
-=======
         "profileImageName": "user_10056",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10092, 10027, 10029, 10019, 10061, 10011, 10094],
@@ -1186,11 +958,7 @@
         "gender": "female",
         "age": 21,
         "nickName": "nName057",
-<<<<<<< HEAD
-        "image": "user_10057",
-=======
         "profileImageName": "user_10057",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [],
@@ -1207,11 +975,7 @@
         "gender": "male",
         "age": 19,
         "nickName": "nName058",
-<<<<<<< HEAD
-        "image": "user_10058",
-=======
         "profileImageName": "user_10058",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10011, 10010],
@@ -1228,11 +992,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName059",
-<<<<<<< HEAD
-        "image": "user_10059",
-=======
         "profileImageName": "user_10059",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10037, 10003, 10016, 10060],
@@ -1249,11 +1009,7 @@
         "gender": "female",
         "age": 27,
         "nickName": "nName060",
-<<<<<<< HEAD
-        "image": "user_10060",
-=======
         "profileImageName": "user_10060",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10051, 10087, 10014, 10059, 10063],
@@ -1270,11 +1026,7 @@
         "gender": "female",
         "age": 21,
         "nickName": "nName061",
-<<<<<<< HEAD
-        "image": "user_10061",
-=======
         "profileImageName": "user_10061",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10007, 10015, 10076, 10065, 10056, 10075, 10016, 10005, 10079, 10043],
@@ -1291,11 +1043,7 @@
         "gender": "female",
         "age": 27,
         "nickName": "nName062",
-<<<<<<< HEAD
-        "image": "user_10062",
-=======
         "profileImageName": "user_10062",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10021, 10016, 10036, 10003],
@@ -1312,11 +1060,7 @@
         "gender": "male",
         "age": 26,
         "nickName": "nName063",
-<<<<<<< HEAD
-        "image": "user_10063",
-=======
         "profileImageName": "user_10063",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10036, 10015, 10027, 10060],
@@ -1333,11 +1077,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName064",
-<<<<<<< HEAD
-        "image": "user_10064",
-=======
         "profileImageName": "user_10064",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10070],
@@ -1354,11 +1094,7 @@
         "gender": "male",
         "age": 26,
         "nickName": "nName065",
-<<<<<<< HEAD
-        "image": "user_10065",
-=======
         "profileImageName": "user_10065",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10043, 10088, 10061, 10076],
@@ -1375,11 +1111,7 @@
         "gender": "male",
         "age": 23,
         "nickName": "nName066",
-<<<<<<< HEAD
-        "image": "user_10066",
-=======
         "profileImageName": "user_10066",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10032, 10022, 10077, 10070],
@@ -1396,11 +1128,7 @@
         "gender": "male",
         "age": 18,
         "nickName": "nName067",
-<<<<<<< HEAD
-        "image": "user_10067",
-=======
         "profileImageName": "user_10067",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10094, 10069],
@@ -1417,11 +1145,7 @@
         "gender": "female",
         "age": 21,
         "nickName": "nName068",
-<<<<<<< HEAD
-        "image": "user_10068",
-=======
         "profileImageName": "user_10068",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10099, 10016, 10094, 10048],
@@ -1438,11 +1162,7 @@
         "gender": "female",
         "age": 25,
         "nickName": "nName069",
-<<<<<<< HEAD
-        "image": "user_10069",
-=======
         "profileImageName": "user_10069",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10029, 10042, 10067],
@@ -1459,11 +1179,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName070",
-<<<<<<< HEAD
-        "image": "user_10070",
-=======
         "profileImageName": "user_10070",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10046, 10066, 10022, 10064],
@@ -1480,11 +1196,7 @@
         "gender": "male",
         "age": 24,
         "nickName": "nName071",
-<<<<<<< HEAD
-        "image": "user_10071",
-=======
         "profileImageName": "user_10071",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10088, 10091, 10087],
@@ -1501,11 +1213,7 @@
         "gender": "female",
         "age": 27,
         "nickName": "nName072",
-<<<<<<< HEAD
-        "image": "user_10072",
-=======
         "profileImageName": "user_10072",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10052, 10053],
@@ -1522,11 +1230,7 @@
         "gender": "female",
         "age": 23,
         "nickName": "nName073",
-<<<<<<< HEAD
-        "image": "user_10073",
-=======
         "profileImageName": "user_10073",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10027, 10019, 10080, 10007, 10094, 10091],
@@ -1543,11 +1247,7 @@
         "gender": "male",
         "age": 18,
         "nickName": "nName074",
-<<<<<<< HEAD
-        "image": "user_10074",
-=======
         "profileImageName": "user_10074",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10075],
@@ -1564,11 +1264,7 @@
         "gender": "female",
         "age": 26,
         "nickName": "nName075",
-<<<<<<< HEAD
-        "image": "user_10075",
-=======
         "profileImageName": "user_10075",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10009, 10074, 10077, 10078, 10061, 10031],
@@ -1585,11 +1281,7 @@
         "gender": "female",
         "age": 25,
         "nickName": "nName076",
-<<<<<<< HEAD
-        "image": "user_10076",
-=======
         "profileImageName": "user_10076",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10001, 10061, 10010, 10004, 10065, 10045],
@@ -1606,11 +1298,7 @@
         "gender": "male",
         "age": 27,
         "nickName": "nName077",
-<<<<<<< HEAD
-        "image": "user_10077",
-=======
         "profileImageName": "user_10077",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10075, 10066, 10098, 10032, 10006],
@@ -1627,11 +1315,7 @@
         "gender": "male",
         "age": 27,
         "nickName": "nName078",
-<<<<<<< HEAD
-        "image": "user_10078",
-=======
         "profileImageName": "user_10078",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10075, 10028, 10022, 10023],
@@ -1648,11 +1332,7 @@
         "gender": "female",
         "age": 26,
         "nickName": "nName079",
-<<<<<<< HEAD
-        "image": "user_10079",
-=======
         "profileImageName": "user_10079",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10044, 10061, 10035],
@@ -1669,11 +1349,7 @@
         "gender": "female",
         "age": 26,
         "nickName": "nName080",
-<<<<<<< HEAD
-        "image": "user_10080",
-=======
         "profileImageName": "user_10080",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10005, 10073, 10096, 10011, 10008],
@@ -1690,11 +1366,7 @@
         "gender": "female",
         "age": 22,
         "nickName": "nName081",
-<<<<<<< HEAD
-        "image": "user_10081",
-=======
         "profileImageName": "user_10081",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10039],
@@ -1711,11 +1383,7 @@
         "gender": "female",
         "age": 29,
         "nickName": "nName082",
-<<<<<<< HEAD
-        "image": "user_10082",
-=======
         "profileImageName": "user_10082",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10038, 10028],
@@ -1732,11 +1400,7 @@
         "gender": "male",
         "age": 24,
         "nickName": "nName083",
-<<<<<<< HEAD
-        "image": "user_10083",
-=======
         "profileImageName": "user_10083",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10093, 10047, 10100],
@@ -1753,11 +1417,7 @@
         "gender": "male",
         "age": 28,
         "nickName": "nName084",
-<<<<<<< HEAD
-        "image": "user_10084",
-=======
         "profileImageName": "user_10084",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10054, 10052],
@@ -1774,11 +1434,7 @@
         "gender": "female",
         "age": 25,
         "nickName": "nName085",
-<<<<<<< HEAD
-        "image": "user_10085",
-=======
         "profileImageName": "user_10085",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10045, 10093],
@@ -1795,11 +1451,7 @@
         "gender": "male",
         "age": 30,
         "nickName": "nName086",
-<<<<<<< HEAD
-        "image": "user_10086",
-=======
         "profileImageName": "user_10086",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10021, 10016, 10033, 10090, 10091],
@@ -1816,11 +1468,7 @@
         "gender": "male",
         "age": 30,
         "nickName": "nName087",
-<<<<<<< HEAD
-        "image": "user_10087",
-=======
         "profileImageName": "user_10087",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10031, 10071, 10005, 10060, 10041],
@@ -1837,11 +1485,7 @@
         "gender": "male",
         "age": 19,
         "nickName": "nName088",
-<<<<<<< HEAD
-        "image": "user_10088",
-=======
         "profileImageName": "user_10088",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10012, 10065, 10071, 10011, 10037, 10039],
@@ -1858,11 +1502,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName089",
-<<<<<<< HEAD
-        "image": "user_10089",
-=======
         "profileImageName": "user_10089",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10046, 10048],
@@ -1879,11 +1519,7 @@
         "gender": "female",
         "age": 20,
         "nickName": "nName090",
-<<<<<<< HEAD
-        "image": "user_10090",
-=======
         "profileImageName": "user_10090",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10086],
@@ -1900,11 +1536,7 @@
         "gender": "female",
         "age": 18,
         "nickName": "nName091",
-<<<<<<< HEAD
-        "image": "user_10091",
-=======
         "profileImageName": "user_10091",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10071, 10097, 10073, 10046, 10053, 10010, 10086, 10005],
@@ -1921,11 +1553,7 @@
         "gender": "female",
         "age": 18,
         "nickName": "nName092",
-<<<<<<< HEAD
-        "image": "user_10092",
-=======
         "profileImageName": "user_10092",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10056],
@@ -1942,11 +1570,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName093",
-<<<<<<< HEAD
-        "image": "user_10093",
-=======
         "profileImageName": "user_10093",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10083, 10085],
@@ -1963,11 +1587,7 @@
         "gender": "female",
         "age": 23,
         "nickName": "nName094",
-<<<<<<< HEAD
-        "image": "user_10094",
-=======
         "profileImageName": "user_10094",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10067, 10073, 10054, 10068, 10019, 10056],
@@ -1984,11 +1604,7 @@
         "gender": "male",
         "age": 26,
         "nickName": "nName095",
-<<<<<<< HEAD
-        "image": "user_10095",
-=======
         "profileImageName": "user_10095",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10025, 10037],
@@ -2005,11 +1621,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName096",
-<<<<<<< HEAD
-        "image": "user_10096",
-=======
         "profileImageName": "user_10096",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10050, 10080, 10015, 10013],
@@ -2026,11 +1638,7 @@
         "gender": "female",
         "age": 24,
         "nickName": "nName097",
-<<<<<<< HEAD
-        "image": "user_10097",
-=======
         "profileImageName": "user_10097",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10091, 10044, 10100],
@@ -2047,11 +1655,7 @@
         "gender": "male",
         "age": 29,
         "nickName": "nName098",
-<<<<<<< HEAD
-        "image": "user_10098",
-=======
         "profileImageName": "user_10098",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10077, 10029],
@@ -2068,11 +1672,7 @@
         "gender": "female",
         "age": 18,
         "nickName": "nName099",
-<<<<<<< HEAD
-        "image": "user_10099",
-=======
         "profileImageName": "user_10099",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": false,
         "friends": [10007, 10068, 10012, 10053, 10037, 10022],
@@ -2089,11 +1689,7 @@
         "gender": "male",
         "age": 20,
         "nickName": "nName100",
-<<<<<<< HEAD
-        "image": "user_10100",
-=======
         "profileImageName": "user_10100",
->>>>>>> model
         "profileDescription": "This is a placeholder.",
         "isOnline": true,
         "friends": [10039, 10097, 10083],

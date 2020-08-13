@@ -21,7 +21,7 @@ final class ProfileViewModel: ObservableObject {
     @Published var isShowingSearch: Bool = false
     
     init(userID: Int) {
-        // For permissions we need the current user 
+        // For permissions we need the current user
         let currentUser = GameManager.instance.currentUser
         
         os_log("Creating profile of user(%i)", log: .default, type: .info, userID)
