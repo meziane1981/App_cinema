@@ -247,7 +247,6 @@
 		D789776F24D8433100AD4DDB /* App_cinema */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B146124E52C9B00703A82 /* Assets.xcassets */,
 				8C11E1EC24D94A7100D4CAB4 /* Model */,
 				8C3F42C024E15E3500201FE4 /* ViewModel */,
 				8C11E1F124D94ACA00D4CAB4 /* Resources */,
@@ -263,6 +262,7 @@
 				8C06A59724E3E3CB00ABB86E /* Home.swift */,
 				D789777E24D8433300AD4DDB /* Info.plist */,
 				BD7436E624DC3DBD00AAA10B /* Extensions.swift */,
+				8C2B146124E52C9B00703A82 /* Assets.xcassets */,
 				D789777824D8433300AD4DDB /* Preview Content */,
 			);
 			path = App_cinema;
