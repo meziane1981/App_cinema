@@ -20,17 +20,12 @@ final class QuizViewModel: ObservableObject {
         didSet {
             if questions[currentIndex].correctAnswer == response {
                 increasePoint()
+                numCorrectAnswers += 1
             }
         }
     }
     // number of answers
-    @Published var numberOfAnswers: Int = 0 {
-        didSet {
-            if questions[currentIndex].correctAnswer == response {
-                increaseNumberOfAnswers()
-            }
-        }
-    }
+    @Published var numCorrectAnswers: Int = 0
     // finish the game
     @Published var gameIsEnded = false
     
@@ -57,6 +52,6 @@ final class QuizViewModel: ObservableObject {
         self.point += 100
     }
     func increaseNumberOfAnswers() {
-        self.numberOfAnswers += 1
+        self.numCorrectAnswers += 1
     }
 }

@@ -63,6 +63,17 @@ final class GameManager {
         return cgImage
     }
     
+    func findUsersByNickName(_ searchFor: String) -> Array<BasicUserData> {
+        var matchedSearch: Array<BasicUserData> = []
+        
+        for user in publicUserData {
+            if user.nickName.lowercased().contains(searchFor.lowercased()) {
+                matchedSearch.append(user)
+            }
+        }
+        return matchedSearch
+    }
+    
     func findUsers<PropertyType: Equatable>(_ searchFor: PropertyType, _ keyPath: KeyPath<BasicUserData, PropertyType>) -> Array<BasicUserData> {
         // Anything that matches searchFor
         var matchedSearch: Array<BasicUserData> = []
@@ -75,7 +86,6 @@ final class GameManager {
         }
         return matchedSearch
     }
-    
 }
 
 

@@ -16,14 +16,19 @@ struct RootView: View {
         VStack(spacing: 0) {
             ZStack {
                 if self.index == 0{
-                    HomeView()
-                   // HomeView()
+                    NavigationView {
+                        HomeView()
+                    }
+                    // HomeView()
                 } else if self.index == 1{
+                    
                     NavigationView {
                         ProfileView(profileVM: ProfileViewModel(userID: GameManager.instance.currentUser.id))
+                        
                     }
+                    
                 } else if self.index == 2{
-                   ShopView()
+                    ShopView()
                 } else {
                     RankView()
                 }
@@ -45,9 +50,9 @@ struct CircleTab: View {
             }) {
                 VStack {
                     if self.index != 0{
-                        Image("quiz-icon").foregroundColor(Color.black.opacity(0.2))
+                        Image(systemName: "gamecontroller").foregroundColor(Color.black.opacity(0.2))
                     } else {
-                        Image("quiz-icon")
+                        Image(systemName: "gamecontroller")
                             .foregroundColor(Color.white)
                             .padding()
                             .background(Color("3779F4"))
@@ -69,9 +74,9 @@ struct CircleTab: View {
             }) {
                 VStack {
                     if self.index != 1{
-                        Image("profil-icon").foregroundColor(Color.black.opacity(0.2))
+                        Image(systemName: "person").foregroundColor(Color.black.opacity(0.2))
                     } else {
-                        Image("profil-icon")
+                        Image(systemName: "person")
                             .foregroundColor(Color.white)
                             .padding()
                             .background(Color("3779F4"))
@@ -93,9 +98,9 @@ struct CircleTab: View {
             }) {
                 VStack {
                     if self.index != 2{
-                        Image("shop-icon").foregroundColor(Color.black.opacity(0.2))
+                        Image(systemName: "film").foregroundColor(Color.black.opacity(0.2))
                     } else {
-                        Image("shop-icon")
+                        Image(systemName: "film")
                             .foregroundColor(Color.white)
                             .padding()
                             .background(Color("3779F4"))
@@ -117,9 +122,9 @@ struct CircleTab: View {
             }) {
                 VStack {
                     if self.index != 3{
-                        Image("rank-icon").foregroundColor(Color.black.opacity(0.2))
+                        Image(systemName: "rosette").foregroundColor(Color.black.opacity(0.2))
                     } else {
-                        Image("rank-icon")
+                        Image(systemName: "rosette")
                             .foregroundColor(Color.white)
                             .padding()
                             .background(Color("3779F4"))

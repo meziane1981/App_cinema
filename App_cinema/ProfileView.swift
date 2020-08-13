@@ -29,17 +29,34 @@ struct ProfileView: View {
     // Style, get from player preferences if there is time
     
     var body: some View {
+        
         ZStack {
+            
             LinearGradient(Color.darkBlueEnd, Color.darkBlueStart)
                 .edgesIgnoringSafeArea(.all)
             
+            
             // THE PROFILE
             VStack(alignment: .center, spacing: 20) {
+                // Image must be in centre so that the progress bar can be aligned properly
+                ZStack {
+                    
+                    // Shadow blended with background
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.offWhite1)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10)
+                        .blendMode(.overlay)
+                    // The card
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.offWhite1.opacity(0.95))
+                    
                     VStack {
+                        // Main user image
                         Image(profileVM.user.profileImage, scale: 1, label: Text("\("Profile picture of " + profileVM.user.nickName)"))
                             .clipShape(Circle())
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10)
                         
                         // NICKNAME LABEL
                         VStack {
@@ -56,19 +73,18 @@ struct ProfileView: View {
                                     .foregroundColor(Color.gray)
                             }
                             .padding(5)
-                            .frame(maxWidth: 150)
+                            .frame(maxWidth: 125)
                             .background(ForegroundCard())
                             
                         }
                     }
-                    .frame(width: UIScreen.main.bounds.size.width - 20, height: 300)
-                    .background(BackgroundCard())
-                
-                
+                }
+                .padding(.top, 85)
+                .frame(width: UIScreen.main.bounds.size.width - 20, height: 300)
                 
                 // USER STATISTICS SECTION
                 if profileVM.user.statistics != nil {
-                    VStack(alignment: .center, spacing: 10.0) {
+                    VStack(alignment: .leading, spacing: 10.0) {
                         
                         // The section label
                         HStack {
@@ -85,34 +101,137 @@ struct ProfileView: View {
                                 Spacer()
                             }
                         }
-                        .padding()
+                        .padding(15)
                         .frame(width: UIScreen.main.bounds.width - 20, height: 20)
                         
-                        Text("\("Heures jouées: " + String(format: "%.1f", profileVM.user.statistics!.hoursPlayed))")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                        HStack(alignment: .center, spacing: 10.0) {
-                            Text("Jetons: \(profileVM.user.statistics!.coins)")
+                        HStack(alignment: .firstTextBaseline, spacing: 10) {
+                            //                            Image(systemName: "h.circle.fill")
+                            Text("Heures jouées:")
                                 .font(.subheadline)
-                                .fontWeight(.bold)
-                            Image("token")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .shadow(radius: 10)
+                            Text(String(format: "%.1f", profileVM.user.statistics!.hoursPlayed))
+                                .font(.subheadline)
                         }
+                        .padding(.horizontal, 15)
+                        HStack(alignment: .firstTextBaseline, spacing: 10) {
+                            //                            Image(systemName: "j.circle.fill")
+                            Text("Jetons gagnés:")
+                                .font(.subheadline)
+                            Text(String(profileVM.user.statistics!.coins))
+                                .font(.subheadline)
+                        }
+                        .padding(.horizontal, 15)
                     }
-                    .frame(width: UIScreen.main.bounds.width - 20)
-                    .padding(.vertical)
-                    .background(BackgroundCard())
+                        // Width must be fixed, but height will change depending on the contents
+                        .frame(width: UIScreen.main.bounds.width - 20)
+                        .padding(.vertical)
+                        .background(BackgroundCard())
                 }
                 // END OF USER STATISTICS SECTION
+                
+                // USER ACHIEVEMENTS SECTION
+                if profileVM.user.statistics != nil {
+                    VStack(alignment: .center, spacing: 10.0) {
+                        
+                        // The section label
+                        HStack {
+                            // If the current user is not the owner of the profile
+                            if GameManager.instance.currentUser.id != profileVM.user.id {
+                                Text("Récompenses de \(profileVM.user.nickName):")
+                                    .font(.subheadline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            } else {
+                                Text("Vos récompenses:")
+                                    .font(.subheadline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                        }
+                        .padding(15)
+                        .frame(width: UIScreen.main.bounds.width - 20, height: 20)
+                        
+                        HStack(alignment: .firstTextBaseline, spacing: 10) {
+                            // Achievements
+                            ZStack {
+                                Image(systemName: "hexagon.fill")
+                                    .foregroundColor(.orange)
+                                    .font(Font.system(size: 40))
+                                Image(systemName: "10.circle.fill")
+                                    .foregroundColor(.red)
+                                .font(Font.system(size: 25))
+                            }
+                            .frame(width: 50, height: 50)
+                            .background(ForegroundCardColored(color: Color.red.opacity(0.8)))
+                            
+                            ZStack {
+                                Image(systemName: "hexagon.fill")
+                                    .foregroundColor(.green)
+                                    .font(Font.system(size: 40))
+                                Image(systemName: "flame.fill")
+                                    .foregroundColor(Color.purple.opacity(0.8))
+                                .font(Font.system(size: 25))
+                            }
+                            .frame(width: 50, height: 50)
+                            .background(ForegroundCardColored(color: Color.purple.opacity(0.8)))
+                            
+                            ZStack {
+                                Image(systemName: "circle.fill")
+                                    .foregroundColor(Color.pink)
+                                    .font(Font.system(size: 40))
+                                Image(systemName: "bolt.fill")
+                                    .foregroundColor(Color.yellow.opacity(0.8))
+                                    .font(Font.system(size: 25))
+                            }
+                            .frame(width: 50, height: 50)
+                            .background(ForegroundCardColored(color: Color.blue.opacity(0.8)))
+                            
+                            ZStack {
+                                Image(systemName: "circle.fill")
+                                    .foregroundColor(Color.green)
+                                    .font(Font.system(size: 40))
+                                Image(systemName: "clock.fill")
+                                    .foregroundColor(Color.black.opacity(0.8))
+                                    .font(Font.system(size: 25))
+                            }
+                            .frame(width: 50, height: 50)
+                            .background(ForegroundCardColored(color: Color.black.opacity(0.8)))
+                            
+                            ZStack {
+                                Image(systemName: "circle.fill")
+                                    .foregroundColor(Color.yellow)
+                                    .font(Font.system(size: 40))
+                                Image(systemName: "lightbulb.fill")
+                                    .foregroundColor(Color.white.opacity(0.7))
+                                    .font(Font.system(size: 25))
+                            }
+                            .frame(width: 50, height: 50)
+                            .background(ForegroundCardColored(color: Color.orange.opacity(0.8)))
+                            
+                            // Empty only here
+                            ZStack {
+                                Image(systemName: "circle.fill")
+                                    .foregroundColor(Color.yellow)
+                                    .font(Font.system(size: 40))
+                            }
+                            .frame(width: 50, height: 50)
+                            .background(ForegroundCardColored(color: Color.orange.opacity(0.8)))
+                            .opacity(0.0)
+                        }
+                        .padding(.horizontal, 15)
+                    }
+                        // Width must be fixed, but height will change depending on the contents
+                        .frame(width: UIScreen.main.bounds.width - 20)
+                        .padding(.vertical)
+                        .background(BackgroundCard())
+                }
+                // END OF USER ACHIEVEMENTS SECTION
                 
                 // FRIENDS SECTION
                 if profileVM.userHasPermission {
                     VStack(alignment: .center) {
                         
                         // The section label
-                        HStack {
+                        HStack(alignment: .firstTextBaseline) {
                             // If the current user is not the owner of the profile
                             if GameManager.instance.currentUser.id != profileVM.user.id {
                                 Text("Les amis de \(profileVM.user.nickName):")
@@ -135,8 +254,14 @@ struct ProfileView: View {
                                 Image(systemName: "ellipsis.circle.fill")
                                     .foregroundColor(Color.gray)
                             }
+                            Button(action: {
+                                self.profileVM.isShowingSearch = true
+                            }) {
+                                Image(systemName: "magnifyingglass.circle.fill")
+                                    .foregroundColor(Color.gray)
+                            }
                         }
-                        .padding()
+                        .padding(15)
                         .frame(width: UIScreen.main.bounds.width - 20, height: 20)
                         
                         // The list of friends itself
@@ -147,8 +272,9 @@ struct ProfileView: View {
                                         UserProfilePreview(user: self.profileVM.friends[index])
                                             .foregroundColor(.black)
                                             .padding(.horizontal, -2.5)
-                                            .offset(x: 0, y: 25)
-                                            .padding(.top, -15)
+                                        // So the card overlaps is slightly pushed over the edge of the card
+//                                            .offset(x: 0, y: 25)
+//                                            .padding(.top, -15)
                                     }
                                 }
                             }
@@ -164,14 +290,21 @@ struct ProfileView: View {
                 }
                 // END OF FRIEND SECTION
                 
+                
                 Spacer()
                 
             }
+            .edgesIgnoringSafeArea(.all)
             .sheet(isPresented: $profileVM.isShowingAllFriends) {
                 FriendSheet(friendList: self.profileVM.friends)
             }
+            .sheet(isPresented: $profileVM.isShowingSearch) {
+                SearchView()
+            }
         }
-        .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            self.profileVM.loadUsersFriends()
+        }
         
     }
     
@@ -216,6 +349,18 @@ struct ForegroundCard: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.offWhite1)
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10)
+        }
+    }
+}
+
+struct ForegroundCardColored: View {
+    var color: Color
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(color)
                 .shadow(color: Color.black.opacity(0.3), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -10, y: -10)
         }

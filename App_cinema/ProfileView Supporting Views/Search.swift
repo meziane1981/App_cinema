@@ -20,17 +20,20 @@ struct SearchView: View {
                 TextField("search for user", text: $searchStr)
 
                 Button(action: {
-                    self.users = GameManager.instance.findUsers(self.searchStr, \.nickName)
+                    self.users = GameManager.instance.findUsersByNickName(self.searchStr)
+//                    self.users = GameManager.instance.findUsers(self.searchStr, \.nickName)
                 }) {
                     Image(systemName: "magnifyingglass.circle.fill")
                         .font(Font.system(size: 30))
                 }
             }.padding(20)
-
-            ForEach(users) {
-                UserProfilePreview(user: ProfilePreview(basicUserData: $0))
-                Divider()
-            }.padding(.horizontal, 20)
+                List {
+                    ForEach(users) { user in
+                        NavigationLink(destination: ProfileView(profileVM: ProfileViewModel(userID: user.id))) {
+                            UserProfilePreviewLarge(user: ProfilePreview(basicUserData: user))
+                        }
+                    }
+                }
             Spacer()
         }
     }

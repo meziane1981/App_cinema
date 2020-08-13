@@ -18,28 +18,50 @@ struct HomeButtonStyle: ButtonStyle {
 }
 
 struct HomeView: View {
+    @State var linkIsActive: Bool = false
     var body: some View {
-        NavigationView {
-            ZStack {
-                LinearGradient(Color.darkBlueEnd, Color.darkBlueStart)
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            LinearGradient(Color.darkBlueEnd, Color.darkBlueStart)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(alignment: .center) {
                 
-                VStack {
-                    
-                    Image("mOvWie")
-                        .padding(.bottom, 20.0)
-                    
-                    ZStack {
-                        NavigationLink(destination: GameView(quizViewModel: QuizViewModel())) {
-                            Text("Play")
-                            .padding(20)
-                                .foregroundColor(.white)
-                                .background(RoundedRectangle(cornerRadius: 10).fill(Color.purple))
+                LinearGradient(Color.purple, Color.pink)
+                    .frame(width: 300, height: 100)
+                    .mask(
+                        GeometryReader { geometry in
+                            Image("mOvWie")
+                                .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                            
                         }
+                    .shadow(color: Color.white.opacity(0.3), radius: 2, x: 5, y: 5)
+                    .shadow(color: Color.white.opacity(0.3), radius: 2, x: -5, y: -5)
+                )
+                
+                //                    GeometryReader { geometry in
+                //                        Image("mOvWie")
+                //                            .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                //
+                //                    }
+                
+                ZStack {
+                    NavigationLink(destination: GameView(quizViewModel: QuizViewModel()), isActive: self.$linkIsActive) {
+                        
+                        Button(action: {
+                            self.linkIsActive = true
+                        }) {
+                            Text("PLAY !")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                                .padding(.horizontal, 43.0)
+                        }
+                        .buttonStyle(ShopButtonStyle(colorStart: Color(red: 0.5, green: 0.001, blue: 1.0), colorEnd: Color(hue: 0.75, saturation: 0.47, brightness: 0.874)) )
                     }
                 }
             }
         }
+        
     }
 }
 

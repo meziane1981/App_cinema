@@ -1,71 +1,71 @@
 [
     {
         "id": "Q0001",
-        "questionText": "Quel acteur a joué le Joker dans Joker(2019)",
-        "image": "ClownDancing",
+        "questionText": "Quel acteur a joué le Joker dans Joker (2019) ?",
+        "image": "quiz_question_joker",
         "correctAnswer": 2,
         "possibleAnswers": ["Heath Ledger", "Teddy Roosevelt", "Joaquin Phoenix", "Arthur Fleck"]
     },
     {
         "id": "Q0002",
-        "questionText": "Combien il y t-il de volets dans la sage Star Wars",
-        "image": "ClownDancing",
+        "questionText": "Combien y t-il de volets dans la saga Star Wars ?",
+        "image": "quiz_question_starwars",
         "correctAnswer": 0,
         "possibleAnswers": ["9", "6", "3", "10"]
     },
     {
         "id": "Q0003",
-        "questionText": "Quel acteur a reçu un l'oscar du meilleur acteur dans le film The revenant(2016)",
-        "image": "ClownDancing",
+        "questionText": "Quel acteur a reçu l'Oscar du meilleur acteur dans le film The revenant (2016) ?",
+        "image": "quiz_question_therevenant",
         "correctAnswer": 3,
         "possibleAnswers": ["Brad Pitt", "Casey Affleck", "Tom Brady", "Leonardo DiCaprio"]
     },
     {
         "id": "Q0004",
-        "questionText": "Qui est l'auteur de la phrase culte 'You're talking to me'",
-        "image": "ClownDancing",
+        "questionText": "Qui est l'auteur de la phrase culte 'You're talking to me ?' ?",
+        "image": "quiz_question_talktome",
         "correctAnswer": 2,
         "possibleAnswers": ["Vincent cassel(La haine)", "Al Pacino(Scarface)", "Robert de Niro(Taxi Driver)", "Clint Eastwood(Gran Torino)"]
     },
     {
         "id": "Q0005",
-        "questionText": "Combien de fois Marlon Brando à t-il remporté un oscar",
-        "image": "ClownDancing",
+        "questionText": "Combien de fois Marlon Brando à t-il remporté un Oscar ?",
+        "image": "quiz_question_marlon",
         "correctAnswer": 1,
         "possibleAnswers": ["1", "2", "3", "4"]
     },
     {
         "id": "Q0006",
-        "questionText": "A quel date fut créé le cinéma",
-        "image": "ClownDancing",
+        "questionText": "A quelle date fut créé le cinéma ?",
+        "image": "quiz_question_default",
         "correctAnswer": 3,
         "possibleAnswers": ["1920", "1850", "1800", "1895"]
     },
     {
         "id": "Q0007",
-        "questionText": "Quel est le film le plus cher de l'histoire du cinéma(370,73 millions de $)",
-        "image": "ClownDancing",
+        "questionText": "Quel est le film le plus cher de l'histoire du cinéma (370.73 millions de dollars) ?",
+        "image": "quiz_question_default",
         "correctAnswer": 0,
         "possibleAnswers": ["Pirate des caraïbes jusqu'au bout du monde", "Avenger End Game", "Avatar", "Titanic"]
     },
     {
         "id": "Q0008",
-        "questionText": "En quel année Herbert Kalmus a mis au point la caméra qui permet de filmer en couleur",
-        "image": "ClownDancing",
+        "questionText": "En quel année Herbert Kalmus a t-il mis au point la caméra qui permet de filmer en couleur ?",
+        "image": "quiz_question_default",
         "correctAnswer": 1,
         "possibleAnswers": ["1910", "1932", "1914", "1940"]
     },
     {
         "id": "Q0009",
-        "questionText": "Pour quel film Matthew McConaughey a remporté un oscar",
-        "image": "ClownDancing",
+        "questionText": "Pour quel film Matthew McConaughey a remporté un Oscar ?",
+        "image": "quiz_question_interstellar",
         "correctAnswer": 2,
         "possibleAnswers": ["Interstellar", "Le Loup de Wall Street", "The Dallas Buyers Club", "Le droit de tuer ?"]
     },
     {
         "id": "Q0010",
-        "questionText": "Dans quel film Leonardo DiCaprio n'a t-il pas joué",
-        "image": "ClownDancing",
+        "questionText": "Dans quel film Leonardo DiCaprio n'a t-il pas joué ?",
+        "image": "quiz_question_leodicaprio",
         "correctAnswer": 3,
         "possibleAnswers": ["Django Unchained", "Inception", "Gangs of New York", "Inglourious Basterds"]
     }

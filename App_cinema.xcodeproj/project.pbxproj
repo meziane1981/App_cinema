@@ -13,6 +13,7 @@
 		8C06A59824E3E3CB00ABB86E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06A59724E3E3CB00ABB86E /* Home.swift */; };
 		8C11E1EE24D94A9700D4CAB4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11E1ED24D94A9700D4CAB4 /* Data.swift */; };
 		8C11E1F524D94DC300D4CAB4 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11E1F424D94DC300D4CAB4 /* ApplicationData.swift */; };
+		8C2B146224E52C9B00703A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B146124E52C9B00703A82 /* Assets.xcassets */; };
 		8C2D4C8124E2901100E3C481 /* popcorn-unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D4C7724E2901100E3C481 /* popcorn-unlock.png */; };
 		8C2D4C8224E2901100E3C481 /* two-tickets-unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D4C7824E2901100E3C481 /* two-tickets-unlock.png */; };
 		8C2D4C8324E2901100E3C481 /* soda-unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D4C7924E2901100E3C481 /* soda-unlock.png */; };
@@ -46,7 +47,6 @@
 		BD7436E724DC3DBD00AAA10B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7436E624DC3DBD00AAA10B /* Extensions.swift */; };
 		D789777124D8433100AD4DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789777024D8433100AD4DDB /* AppDelegate.swift */; };
 		D789777324D8433100AD4DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789777224D8433100AD4DDB /* SceneDelegate.swift */; };
-		D789777724D8433300AD4DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D789777624D8433300AD4DDB /* Assets.xcassets */; };
 		D789777A24D8433300AD4DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D789777924D8433300AD4DDB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +57,7 @@
 		8C06A59724E3E3CB00ABB86E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8C11E1ED24D94A9700D4CAB4 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8C11E1F424D94DC300D4CAB4 /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
+		8C2B146124E52C9B00703A82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C2D4C7724E2901100E3C481 /* popcorn-unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popcorn-unlock.png"; sourceTree = "<group>"; };
 		8C2D4C7824E2901100E3C481 /* two-tickets-unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two-tickets-unlock.png"; sourceTree = "<group>"; };
 		8C2D4C7924E2901100E3C481 /* soda-unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soda-unlock.png"; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		D789776D24D8433100AD4DDB /* App_cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_cinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D789777024D8433100AD4DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D789777224D8433100AD4DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D789777624D8433300AD4DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D789777924D8433300AD4DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D789777E24D8433300AD4DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +131,7 @@
 		8C11E1F124D94ACA00D4CAB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C93FA7224E4717F00838639 /* QuizImages */,
 				8C2D4C7524E2901000E3C481 /* assets */,
 				8C88C76E24DD4A730016EE2F /* ProfilePhotos */,
 				8CC034E024DA04BD00C53191 /* QuizData.json */,
@@ -189,6 +190,13 @@
 			path = ProfilePhotos;
 			sourceTree = "<group>";
 		};
+		8C93FA7224E4717F00838639 /* QuizImages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuizImages;
+			sourceTree = "<group>";
+		};
 		8CE7411E24DD462E0069BA69 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +234,7 @@
 				D789776F24D8433100AD4DDB /* App_cinema */,
 				D789776E24D8433100AD4DDB /* Products */,
 				BD7436E624DC3DBD00AAA10B /* Extensions.swift */,
+				8C2B146124E52C9B00703A82 /* Assets.xcassets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,7 +262,6 @@
 				B10F81AD24E17FA600ABD619 /* ShopView.swift */,
 				8C4C70D824DA80CC00C68B86 /* QuizView.swift */,
 				8C06A59724E3E3CB00ABB86E /* Home.swift */,
-				D789777624D8433300AD4DDB /* Assets.xcassets */,
 				D789777E24D8433300AD4DDB /* Info.plist */,
 				D789777824D8433300AD4DDB /* Preview Content */,
 			);
@@ -330,6 +338,7 @@
 				8CE7412C24DD46A50069BA69 /* user_10003_medium.png in Resources */,
 				8CE7412F24DD46A50069BA69 /* user_10002_medium.png in Resources */,
 				8C2D4C8624E2901100E3C481 /* soda.png in Resources */,
+				8C2B146224E52C9B00703A82 /* Assets.xcassets in Resources */,
 				8CE7412D24DD46A50069BA69 /* user_default_medium.png in Resources */,
 				D789777A24D8433300AD4DDB /* Preview Assets.xcassets in Resources */,
 				8CC034DF24D9FB7300C53191 /* UserDataGenerated.json in Resources */,
@@ -339,7 +348,6 @@
 				8C2D4C8524E2901100E3C481 /* two-tickets.png in Resources */,
 				8C2D4C8324E2901100E3C481 /* soda-unlock.png in Resources */,
 				8CE7412E24DD46A50069BA69 /* user_10001_medium.png in Resources */,
-				D789777724D8433300AD4DDB /* Assets.xcassets in Resources */,
 				8C2D4C8824E2901100E3C481 /* camera.png in Resources */,
 				8CE7412724DD467E0069BA69 /* user_default_small.png in Resources */,
 				8C2D4C8924E2901100E3C481 /* coinFromUser.png in Resources */,

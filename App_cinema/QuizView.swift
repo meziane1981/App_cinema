@@ -113,15 +113,19 @@ struct GameView: View {
                         .background(TimerBackground(shape: Circle()))
                     }
                     // The question
-                    Text("\(quizViewModel.questions[quizViewModel.currentIndex].questionText + "?")")
+                    Text("\(quizViewModel.questions[quizViewModel.currentIndex].questionText)")
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(20)
                         .font(.headline)
                         .multilineTextAlignment(.center)
-                    Spacer()
-                        .frame(height: 150)
                     
+                    Image(quizViewModel.questions[quizViewModel.currentIndex].image)
+                    .resizable()
+                        .frame(height: 250)
+//                    .aspectRatio(contentMode: )
+                    
+                    // The buttons
                     ForEach(0..<quizViewModel.questions[quizViewModel.currentIndex].possibleAnswers.count) { index in
                         Button(action: {
                             withAnimation(.easeInOut(duration: 0.5)) {
@@ -133,7 +137,6 @@ struct GameView: View {
                         }) {
                             Text(self.quizViewModel.questions[self.quizViewModel.currentIndex].possibleAnswers[index])
                                 .frame(maxWidth: .infinity)
-                                .padding(10)
                                 .background(ButtonBackground(isCorrectResponse: self.quizViewModel.response == self.quizViewModel.questions[self.quizViewModel.currentIndex].correctAnswer, isHightlighted: self.quizViewModel.response == index, shape: RoundedRectangle(cornerRadius: 15)))
                             
                         }
@@ -142,9 +145,13 @@ struct GameView: View {
                     .padding(.horizontal, 25)
                 }
             }
+                
+            
+            .navigationBarHidden(true)
             .foregroundColor(.white)
             .edgesIgnoringSafeArea(.all)
         }
+        .navigationBarBackButtonHidden(true)
         .onReceive(timer) { time in
             guard self.isActive else { return }
             if self.timeRemaining > 0 {
@@ -162,6 +169,10 @@ struct GameView: View {
             _ in
             self.isActive = true
         }
+            // Otherwise it will just continue even when we move to another screen
+//        .onDisappear {
+//            self.timer.upstream.connect().cancel()
+//        }
     }
 }
 
@@ -179,7 +190,7 @@ struct EndGameView: View {
                     Text("Vous avez Perdu")
                         .foregroundColor(.white)
                         .font(.largeTitle)
-                    Text("Vous avez répondu à \(self.quizViewModel.numberOfAnswers) / \(self.quizViewModel.questions.count) questions")
+                    Text("Vous avez répondu à \(self.quizViewModel.numCorrectAnswers) / \(self.quizViewModel.questions.count) questions")
                         .foregroundColor(.white)
                     Text("Félicitation vous avez gagné \(self.quizViewModel.point) points")
                         .foregroundColor(.white)
@@ -192,15 +203,15 @@ struct EndGameView: View {
                     Text("Vous avez Gagné")
                         .foregroundColor(.white)
                         .font(.largeTitle)
-                    Text("Vous avez répondu à \(self.quizViewModel.numberOfAnswers) / \(self.quizViewModel.questions.count) questions")
+                    Text("Vous avez répondu à \(self.quizViewModel.numCorrectAnswers) / \(self.quizViewModel.questions.count) questions")
                         .foregroundColor(.white)
                     Text("Félicitation vous avez gagné \(self.quizViewModel.point) points")
                         .foregroundColor(.white)
                 }
             }
         }
-        .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
