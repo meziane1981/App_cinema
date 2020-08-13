@@ -86,7 +86,7 @@ struct CircleTab: View {
                             .offset(y: -20)
                             .padding(.bottom, -20)
                         
-                        Text("Profile").foregroundColor(Color.black.opacity(0.7))
+                        Text("Profil").foregroundColor(Color.black.opacity(0.7))
                     }
                 }
             }
@@ -110,7 +110,7 @@ struct CircleTab: View {
                             .offset(y: -20)
                             .padding(.bottom, -20)
                         
-                        Text("Shop").foregroundColor(Color.black.opacity(0.7))
+                        Text("Boutique").foregroundColor(Color.black.opacity(0.7))
                     }
                 }
             }
@@ -134,7 +134,7 @@ struct CircleTab: View {
                             .offset(y: -20)
                             .padding(.bottom, -20)
                         
-                        Text("Rank").foregroundColor(Color.black.opacity(0.7))
+                        Text("Classement").foregroundColor(Color.black.opacity(0.7))
                     }
                 }
             }

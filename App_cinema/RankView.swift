@@ -62,9 +62,9 @@ struct RankView: View {
                         .foregroundColor(Color.white)
                         .fontWeight(.heavy)
                     Picker(selection: $pickerSelection, label: Text("rank")) {
-                        Text("TODAY").tag(0)
-                        Text("WEEK").tag(1)
-                        Text("MONTH").tag(2)
+                        Text("JOUR").tag(0)
+                        Text("SEMAINE").tag(1)
+                        Text("MOIS").tag(2)
                     }
                     .padding()
                     .pickerStyle(SegmentedPickerStyle())
