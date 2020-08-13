@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct UserTopRankProfileView: View {
+<<<<<<< HEAD
     var userData: UserData
     var rankScoreByTime: Statistics.RankScoreByTime
+=======
+    var userData: BasicUserData
+>>>>>>> model
     var rank: Int
     
     var body: some View {
@@ -25,7 +29,11 @@ struct UserTopRankProfileView: View {
                 Text("#\(userData.id)")
                     .font(.caption)
                     .fontWeight(.thin)
+<<<<<<< HEAD
                 Text("\(userData.statistics.scoreSum(days: rankScoreByTime))")
+=======
+                Text("score")
+>>>>>>> model
                     .fontWeight(.heavy)
                     .font(.headline)
             }

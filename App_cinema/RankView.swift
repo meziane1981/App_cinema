@@ -54,7 +54,11 @@ struct RankView: View {
     
     var body: some View {
         ZStack{
+<<<<<<< HEAD
             LinearGradient(Color.darkBlueStart, Color.darkBlueEnd).edgesIgnoringSafeArea(.all)
+=======
+            LinearGradient(Color.darkBlueEnd, Color.darkBlueStart).edgesIgnoringSafeArea(.all)
+>>>>>>> model
             VStack {
                 VStack {
                     Text("Classement")

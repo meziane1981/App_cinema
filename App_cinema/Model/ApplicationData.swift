@@ -8,48 +8,70 @@
 
 import SwiftUI
 
-struct Question: Codable, Identifiable {
-    enum CorrectAnswer: Int, Codable {
-        case answerA, answerB, answerC, answerD
-    }
-    
-    var id: String
-    var text: String
-    var image: String
-    var correctAnswer: CorrectAnswer
-    var options: [String]
-}
-
 final class GameManager {
-    private var currentUserID: Int
-    private var userData: [UserData]
-    var publicUserData: [BasicUserData]
-    var questions: [Question]
+    public private(set) var userData: [UserData]
+    public private(set) var publicUserData: [BasicUserData]
+    public private(set) var currentUser: UserData
     
     public private(set) static var instance = GameManager(userFile: "UserDataGenerated", quizFile: "QuizData")
-    
-//    static func getInstance() -> GameManager {
-//        return Self.instance
-//    }
     
     private init(userFile: String, quizFile: String) {
         self.userData = loadJSON(userFile)
         self.publicUserData = self.userData.map {
-            BasicUserData(id: $0.id, nickName: $0.nickName, image: $0.image, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender.self)
+            BasicUserData(id: $0.id, nickName: $0.nickName, profileImageName: $0.profileImageName, isOnline: $0.isOnline)
         }
-        self.questions = loadJSON(quizFile)
-        
-            // For permissions
-        self.currentUserID = userData[0].id
+        // For permissions
+        self.currentUser = userData[0]
+        }
+    
+    // Transactions
+    
+    func requestUserBasicInfo(_ id: Int) -> Optional<BasicUserData> {
+        var user = publicUserData.first {
+            $0.id == id
         }
         
+        if currentUser.id == id || currentUser.friends.contains(id) {
+            return user
+        } else {
+            user?.isOnline = false
+            return user
+        }
+        
+    }
+    
+    // If we are the user or a friends with the user this will return the details
     func requestUserDetails(_ id: Int) -> Optional<UserData> {
-        for user in userData {
-            if user.id == id || user.friends.contains(id) {
-                return user
+        // Need to fix this
+        let user = userData.first {
+            $0.id == id
+        }
+        
+        // If the profile belongs to the current user or a friend
+        if currentUser.id == id || currentUser.friends.contains(id) {
+            return user
+        }
+        else {
+            return nil
+        }
+    }
+    
+    func fetchUserImage(imageName: String, size: ImageSize) -> CGImage {
+        guard let cgImage = ImageStore.instance.getCGImage(imageName: imageName + size.rawValue) else {
+            return ImageStore.instance.getCGImage(imageName: "user_default" + size.rawValue)!
+        }
+        return cgImage
+    }
+    
+    func findUsersByNickName(_ searchFor: String) -> Array<BasicUserData> {
+        var matchedSearch: Array<BasicUserData> = []
+        
+        for user in publicUserData {
+            if user.nickName.lowercased().contains(searchFor.lowercased()) {
+                matchedSearch.append(user)
             }
         }
-        return nil
+        return matchedSearch
     }
     
     func findUsers<PropertyType: Equatable>(_ searchFor: PropertyType, _ keyPath: KeyPath<BasicUserData, PropertyType>) -> Array<BasicUserData> {
@@ -64,7 +86,6 @@ final class GameManager {
         }
         return matchedSearch
     }
-    
 }
 
 
