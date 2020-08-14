@@ -67,7 +67,7 @@ struct ShopView: View {
                 .resizable()
                 .frame(width: 30.0, height: 30.0)
                 .padding(.leading, 250.0)
-                Text("\(Int(coins)) jetons")
+                    Text("\(Int(GameManager.instance.currentUser.statistics.coins)) jetons")
                     .font(.caption)
                     .foregroundColor(.white)
                 }

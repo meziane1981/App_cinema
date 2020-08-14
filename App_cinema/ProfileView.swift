@@ -130,18 +130,18 @@ struct ProfileView: View {
                 
                 // USER ACHIEVEMENTS SECTION
                 if profileVM.user.statistics != nil {
-                    VStack(alignment: .center, spacing: 10.0) {
+                    VStack(alignment: .leading, spacing: 10.0) {
                         
                         // The section label
                         HStack {
                             // If the current user is not the owner of the profile
                             if GameManager.instance.currentUser.id != profileVM.user.id {
-                                Text("Récompenses de \(profileVM.user.nickName):")
+                                Text("Succès de \(profileVM.user.nickName):")
                                     .font(.subheadline)
                                     .fontWeight(.bold)
                                 Spacer()
                             } else {
-                                Text("Vos récompenses:")
+                                Text("Vos succès:")
                                     .font(.subheadline)
                                     .fontWeight(.bold)
                                 Spacer()
@@ -174,6 +174,8 @@ struct ProfileView: View {
                             .frame(width: 50, height: 50)
                             .background(ForegroundCardColored(color: Color.purple.opacity(0.8)))
                             
+                            if profileVM.user.id == GameManager.instance.currentUser.id {
+                            
                             ZStack {
                                 Image(systemName: "circle.fill")
                                     .foregroundColor(Color.pink)
@@ -196,26 +198,17 @@ struct ProfileView: View {
                             .frame(width: 50, height: 50)
                             .background(ForegroundCardColored(color: Color.black.opacity(0.8)))
                             
-                            ZStack {
-                                Image(systemName: "circle.fill")
-                                    .foregroundColor(Color.yellow)
-                                    .font(Font.system(size: 40))
-                                Image(systemName: "lightbulb.fill")
-                                    .foregroundColor(Color.white.opacity(0.7))
-                                    .font(Font.system(size: 25))
+                                ZStack {
+                                    Image(systemName: "circle.fill")
+                                        .foregroundColor(Color.yellow)
+                                        .font(Font.system(size: 40))
+                                    Image(systemName: "lightbulb.fill")
+                                        .foregroundColor(Color.white.opacity(0.7))
+                                        .font(Font.system(size: 25))
+                                }
+                                .frame(width: 50, height: 50)
+                                .background(ForegroundCardColored(color: Color.orange.opacity(0.8)))
                             }
-                            .frame(width: 50, height: 50)
-                            .background(ForegroundCardColored(color: Color.orange.opacity(0.8)))
-                            
-                            // Empty only here
-                            ZStack {
-                                Image(systemName: "circle.fill")
-                                    .foregroundColor(Color.yellow)
-                                    .font(Font.system(size: 40))
-                            }
-                            .frame(width: 50, height: 50)
-                            .background(ForegroundCardColored(color: Color.orange.opacity(0.8)))
-                            .opacity(0.0)
                         }
                         .padding(.horizontal, 15)
                     }
