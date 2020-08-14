@@ -184,10 +184,10 @@ struct EndGameView: View {
             
             if self.quizViewModel.point < 500 {
                 //            bgColour
-                LinearGradient(Color.redStart, Color.redEnd)
+                LinearGradient(Color.darkBlueStart, Color.darkBlueEnd)
                 
                 VStack(spacing: 100) {
-                    Text("Vous avez Perdu")
+                    Text("Vous avez Gagné")
                         .foregroundColor(.white)
                         .font(.largeTitle)
                     Text("Vous avez répondu à \(self.quizViewModel.numCorrectAnswers) / \(self.quizViewModel.questions.count) questions")
@@ -197,7 +197,7 @@ struct EndGameView: View {
                 }
             } else {
                 //            bgColour
-                LinearGradient(Color.greenStart, Color.greenEnd)
+                LinearGradient(Color.darkBlueStart, Color.darkBlueEnd)
                 
                 VStack(spacing: 100) {
                     Text("Vous avez Gagné")
